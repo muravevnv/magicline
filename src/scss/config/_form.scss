@@ -1,0 +1,72 @@
+.form {
+  &-group {
+    width: 100%;
+    margin-top: 20px;
+
+    @include media(sm) {
+      margin-top: 16px;
+    }
+  }
+
+  &-label {
+    display: none;
+  }
+
+  &-control {
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 18px */
+    padding: 16px 16px 15px;
+    border: none;
+    outline: none;
+
+    @include media(sm) {
+      font-size: 16px;
+      padding: 12px;
+    }
+
+    &::placeholder {
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%; /* 18px */
+      opacity: 0.6;
+
+      @include media(sm) {
+        font-size: 16px;
+      }
+    }
+
+    &:focus::placeholder {
+      display: none;
+    }
+  }
+
+  &-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include media(sm) {
+      gap: 0;
+      display: block;
+    }
+  }
+
+  &-btn {
+    margin-top: 44px;
+  }
+
+  &-agree {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 16px */
+    opacity: 0.6;
+    margin-top: 16px;
+  }
+}
