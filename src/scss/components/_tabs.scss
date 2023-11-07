@@ -1,0 +1,53 @@
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow-x: auto;
+  margin: 40px 0;
+
+  @include media(md) {
+    margin: 30px 0;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    line-height: 1.4;
+    padding: 9px 29px;
+    border-radius: 15px;
+    border: 1px solid var(--border-green);
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.05);
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    span {
+      display: block;
+      min-width: 25px;
+      height: 25px;
+      border-radius: 20px;
+      line-height: 25px;
+      padding: 0 8px;
+      font-size: 18px;
+      background: var(--border);
+      color: var(--white-text);
+      flex-shrink: 0;
+    }
+
+    &.is-active {
+      background-color: var(--border-green);
+      border-color: transparent;
+
+      span {
+        background-color: var(--primary);
+        color: var(--black); 
+      }
+    }
+  }
+}

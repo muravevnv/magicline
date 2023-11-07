@@ -1,0 +1,25 @@
+.nav 
+  .nav-main 
+    a.nav__logo(href="#")
+      img(src="images/logo.svg", alt="")
+    ul.nav-list 
+      li.nav-item.is-active
+        +svgSprite(30, 30, 'chat')
+        a(href="").nav-link Заявки
+      li.nav-item 
+        +svgSprite(30, 30, 'play')
+        a(href="").nav-link Очередь на печать
+      li.nav-item 
+        +svgSprite(30, 30, 'clients')
+        a(href="").nav-link Пациенты
+      li.nav-item 
+        +svgSprite(30, 30, 'payments')
+        a(href="").nav-link Оплаты
+      li.nav-item 
+        +svgSprite(30, 30, 'debts')
+        a(href="").nav-link Долги
+  .nav-user 
+    .nav-user__name Циванюк Ольга
+    .nav-user__post Заведующий
+  .nav-bottom «Настоящее украшение  — это здоровая и красивая улыбка»
+    

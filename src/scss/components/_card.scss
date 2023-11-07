@@ -1,0 +1,35 @@
+.card {
+  border-radius: 20px;
+  border: 1px solid  rgba(38, 215, 144, 0.2);
+  background: var(--ffffff-5, rgba(255, 255, 255, 0.05));
+  margin: 40px 0;
+
+  @include media(md)  {
+    margin: 30px 0;
+  }
+
+  &-head {
+    width: 100%;
+    padding: 20px 30px 10px;
+  }
+
+  &-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    span {
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%; /* 25.2px */
+      min-width: 25px;
+      height: 25px;
+      background-color: var(--primary);
+      color: var(--black);
+      border-radius: 20px;
+      text-align: center;
+      line-height: 25px;
+    }
+  }
+}
