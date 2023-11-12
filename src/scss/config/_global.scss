@@ -32,7 +32,10 @@ body {
   font-family: var(--font-main);
   font-size: 18px;
   color: var(--white-text);
-  background: var(--Background_color, radial-gradient(111.08% 104.98% at 85.52% 14.92%, #072619 0%, #000 100%));
+  background: var(
+    --Background_color,
+    radial-gradient(111.08% 104.98% at 85.52% 14.92%, #072619 0%, #000 100%)
+  );
   text-rendering: optimizespeed;
   position: relative;
   font-weight: 400;
@@ -51,7 +54,6 @@ main {
   display: block;
   width: 100%;
 }
-
 
 ul,
 ol {
@@ -114,4 +116,59 @@ select {
     padding-top: 0px;
     padding-left: 0;
   }
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  margin: 40px 0;
+
+  @include media(sm) {
+    flex-wrap: wrap;
+  }
+}
+
+.dept-price {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--white);
+
+  &__title {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  &__num {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.5;
+
+    span {
+      font-size: 20px;
+      line-height: 1.5;
+      padding-left: 12px;
+      color: var(--white-text-darken);
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: '/';
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+}
+
+
+.search {
+  width: 100%;
 }

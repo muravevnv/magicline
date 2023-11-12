@@ -13,53 +13,45 @@ html(lang="en")
     main.main
       .content
         .container 
-          h1.title Заявки
+          h1.title Пациенты
           .tabs 
-            .tabs-item.is-active Новые
-               span 7
-            .tabs-item На пациентов (архив)
-              span 231
-            .tabs-item Печать (архив)
-              span 1233
-            .tabs-item Изменение лечения (архив)
-              span 43
+            .tabs-item.is-active Группировка по клиникам
+            .tabs-item Показать все
+              span 186
+          .row 
+            .dept-price
+              .dept-price__title Долг
+              .dept-price__num 1 000 000 ₽
+                span 8 000 000 ₽
+            .btn.btn--icon.btn--big
+              span Внести оплату
+              +svgSprite(30, 30, 'plus')
           .card 
-            .card-head 
-              h2.card-title Новые пациенты
-                span 3
             .card-body 
               .table-responsive
                 table.table
                   thead 
                     tr 
-                      th Номер
-                      th Дата
                       th Клиника
-                      th Врач
+                      th.t-center.t-patients Пациентов
                       th
                   tbody 
                     tr
-                      td #32456
-                      td 23.09.2023
                       td SmileClinic
-                      td Дорофеева Виолетта
-                      td
+                      td.t-center.t-patients  143
+                      td.t-button
                         .show-more
                           +svgSprite(7, 14, 'arrow-right')
                     tr
-                      td #32456
-                      td 23.09.2023
-                      td SmileClinic
-                      td Дорофеева Виолетта
-                      td
+                      td TeethClinic
+                      td.t-center.t-patients  143
+                      td.t-button
                         .show-more
                           +svgSprite(7, 14, 'arrow-right')
                     tr
-                      td #32456
-                      td 23.09.2023
-                      td SmileClinic
-                      td Дорофеева Виолетта
-                      td
+                      td Доктор Дент
+                      td.t-center.t-patients  143
+                      td.t-button
                         .show-more
                           +svgSprite(7, 14, 'arrow-right')
     include components/footer

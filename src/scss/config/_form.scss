@@ -2,14 +2,27 @@
   &-group {
     width: 100%;
     margin-top: 20px;
-
+      
     @include media(sm) {
       margin-top: 16px;
+    }
+
+    &--sm {
+      max-width: 235px;
+      width: 100%;
     }
   }
 
   &-label {
-    display: none;
+    display: block;
+    color: var(--white-text-darken);
+    font-size: 14px;
+    line-height: 160%; 
+    margin-bottom: 5px;
+
+    span {
+      color: var(--red);
+    }
   }
 
   &-control {
@@ -20,9 +33,12 @@
     font-style: normal;
     font-weight: 400;
     line-height: 100%; /* 18px */
-    padding: 16px 16px 15px;
+    padding: 16.5px 14px;
+    height: 60px;
     border: none;
     outline: none;
+    border-radius: 15px;
+    border: 1px solid var(--ffffff-20, rgba(255, 255, 255, 0.20));
 
     @include media(sm) {
       font-size: 16px;
@@ -49,7 +65,8 @@
   &-row {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
+    width: 100%;
 
     @include media(sm) {
       gap: 0;
