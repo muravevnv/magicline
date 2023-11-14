@@ -9,7 +9,7 @@
 @import 'config/typography';
 @import 'config/form';
 
-//Sections
+
 
 // Components
 
@@ -24,5 +24,14 @@
 @import 'components/tabs';
 @import 'components/pagination';
 @import 'components/modal';
+@import 'components/doc';
+@import 'components/photo';
+@import 'components/mouthguards';
+@import 'components/3d-setup';
+@import 'components/progress';
 
 // Pages
+
+//Sections
+@import 'sections/order';
+@import 'sections/auth';

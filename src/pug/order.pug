@@ -1,0 +1,88 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href="css/main.css" rel="stylesheet")
+    title Главная
+  body
+    include mixins/_mixins
+    include components/header
+    include components/navigation
+    main.main
+      .content
+        .container 
+          .wrapper
+            h1.title Заявка на нового пациента #234
+            .info 
+              .info__item 
+                span Дата создания заявки
+                | 23.09.2023
+              .info__item 
+                span ФИО пациента
+                | Гончаров Андрей Владимирович
+              .info__item 
+                span Клиника
+                | SmileClinic
+              .info__item 
+                span Врач
+                | Дорофеева Виолетта
+            .section 
+              .section__title КЛКТ челюсти
+              .docs
+                .doc
+                  .doc__name Жданов.zip
+                  .doc__size 54.6 Кб
+            .section 
+              .section__title Сканы (.stl)
+              .docs
+                .doc
+                  .doc__name 2023-09-02_100_063-LowerJaw.stl
+                  .doc__size 54.6 Кб
+                .doc
+                  .doc__name 2023-09-02_100_063-LowerJaw.stl
+                  .doc__size 54.6 Кб
+                .doc
+                  .doc__name 2023-09-02_100_063-LowerJaw.stl
+                  .doc__size 54.6 Кб
+                .doc
+                  .doc__name 2023-09-02_100_063-LowerJaw.stl
+                  .doc__size 54.6 Кб
+            .section 
+              .section__title Фотографии пациента
+              .photos 
+                .photos__item 
+                  img(src="images/photo/photo-1.png", alt="")
+                .photos__item 
+                  img(src="images/photo/photo-1.png", alt="")
+                .photos__item 
+                  img(src="images/photo/photo-2.png", alt="")
+                .photos__item 
+                  img(src="images/photo/photo-2.png", alt="")
+                .photos__item 
+                  img(src="images/photo/photo-2.png", alt="")
+                .photos__item 
+                  img(src="images/photo/photo-2.png", alt="")
+                .photos__item 
+                  img(src="images/photo/photo-2.png", alt="")
+                .photos__item 
+                  img(src="images/photo/photo-2.png", alt="")
+                .photos__item 
+                  img(src="images/photo/photo-2.png", alt="")
+                .photos__item 
+                  img(src="images/photo/photo-2.png", alt="")
+                .photos__item 
+                  img(src="images/photo/photo-2.png", alt="")
+                .photos__item 
+                  img(src="images/photo/photo-2.png", alt="")
+            .section 
+              .section__title Комментарий от врача
+              .comment Хочет, чтобы все было ровненько
+            .action
+              .btn.btn--big.btn--primary.btn--icon
+                span Создать карточку
+                +svgSprite(30, 30, 'plus')
+              .btn.btn--big Отклонить заявку
+    include components/footer
+    include includes/scripts

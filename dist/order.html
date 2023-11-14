@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/main.css" rel="stylesheet">
+    <title>Главная</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-burger"> <span></span><span></span><span></span></div>
+    </header>
+    <div class="nav"> 
+      <div class="nav-main"> <a class="nav__logo" href="#"><img src="images/logo.svg" alt=""></a>
+        <ul class="nav-list"> 
+          <li class="nav-item is-active">
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#chat"></use>
+                </svg><a class="nav-link" href="">Заявки</a>
+          </li>
+          <li class="nav-item"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#play"></use>
+                </svg><a class="nav-link" href="">Очередь на печать</a>
+          </li>
+          <li class="nav-item"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#clients"></use>
+                </svg><a class="nav-link" href="">Пациенты</a>
+          </li>
+          <li class="nav-item"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#payments"></use>
+                </svg><a class="nav-link" href="">Оплаты</a>
+          </li>
+          <li class="nav-item"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#debts"></use>
+                </svg><a class="nav-link" href="">Долги</a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-user"> 
+        <div class="nav-user__name">Циванюк Ольга</div>
+        <div class="nav-user__post">Заведующий</div>
+      </div>
+      <div class="nav-bottom">«Настоящее украшение  — это здоровая и красивая улыбка»</div>
+    </div>
+    <main class="main">
+      <div class="content">
+        <div class="container"> 
+          <div class="wrapper">
+            <h1 class="title">Заявка на нового пациента #234</h1>
+            <div class="info"> 
+              <div class="info__item"> <span>Дата создания заявки</span>23.09.2023</div>
+              <div class="info__item"> <span>ФИО пациента</span>Гончаров Андрей Владимирович</div>
+              <div class="info__item"> <span>Клиника</span>SmileClinic</div>
+              <div class="info__item"> <span>Врач</span>Дорофеева Виолетта</div>
+            </div>
+            <div class="section"> 
+              <div class="section__title">КЛКТ челюсти</div>
+              <div class="docs">
+                <div class="doc">
+                  <div class="doc__name">Жданов.zip</div>
+                  <div class="doc__size">54.6 Кб</div>
+                </div>
+              </div>
+            </div>
+            <div class="section"> 
+              <div class="section__title">Сканы (.stl)</div>
+              <div class="docs">
+                <div class="doc">
+                  <div class="doc__name">2023-09-02_100_063-LowerJaw.stl</div>
+                  <div class="doc__size">54.6 Кб</div>
+                </div>
+                <div class="doc">
+                  <div class="doc__name">2023-09-02_100_063-LowerJaw.stl</div>
+                  <div class="doc__size">54.6 Кб</div>
+                </div>
+                <div class="doc">
+                  <div class="doc__name">2023-09-02_100_063-LowerJaw.stl</div>
+                  <div class="doc__size">54.6 Кб</div>
+                </div>
+                <div class="doc">
+                  <div class="doc__name">2023-09-02_100_063-LowerJaw.stl</div>
+                  <div class="doc__size">54.6 Кб</div>
+                </div>
+              </div>
+            </div>
+            <div class="section"> 
+              <div class="section__title">Фотографии пациента</div>
+              <div class="photos"> 
+                <div class="photos__item"> <img src="images/photo/photo-1.png" alt=""></div>
+                <div class="photos__item"> <img src="images/photo/photo-1.png" alt=""></div>
+                <div class="photos__item"> <img src="images/photo/photo-2.png" alt=""></div>
+                <div class="photos__item"> <img src="images/photo/photo-2.png" alt=""></div>
+                <div class="photos__item"> <img src="images/photo/photo-2.png" alt=""></div>
+                <div class="photos__item"> <img src="images/photo/photo-2.png" alt=""></div>
+                <div class="photos__item"> <img src="images/photo/photo-2.png" alt=""></div>
+                <div class="photos__item"> <img src="images/photo/photo-2.png" alt=""></div>
+                <div class="photos__item"> <img src="images/photo/photo-2.png" alt=""></div>
+                <div class="photos__item"> <img src="images/photo/photo-2.png" alt=""></div>
+                <div class="photos__item"> <img src="images/photo/photo-2.png" alt=""></div>
+                <div class="photos__item"> <img src="images/photo/photo-2.png" alt=""></div>
+              </div>
+            </div>
+            <div class="section"> 
+              <div class="section__title">Комментарий от врача</div>
+              <div class="comment">Хочет, чтобы все было ровненько</div>
+            </div>
+            <div class="action">
+              <div class="btn btn--big btn--primary btn--icon"><span>Создать карточку</span>
+                    <svg width="30" height="30">
+                      <use xlink:href="images/sprite.svg#plus"></use>
+                    </svg>
+              </div>
+              <div class="btn btn--big">Отклонить заявку</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/main.css" rel="stylesheet">
+    <title>Главная</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-burger"> <span></span><span></span><span></span></div>
+    </header>
+    <div class="nav"> 
+      <div class="nav-main"> <a class="nav__logo" href="#"><img src="images/logo.svg" alt=""></a>
+        <ul class="nav-list"> 
+          <li class="nav-item is-active">
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#chat"></use>
+                </svg><a class="nav-link" href="">Заявки</a>
+          </li>
+          <li class="nav-item"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#play"></use>
+                </svg><a class="nav-link" href="">Очередь на печать</a>
+          </li>
+          <li class="nav-item"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#clients"></use>
+                </svg><a class="nav-link" href="">Пациенты</a>
+          </li>
+          <li class="nav-item"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#payments"></use>
+                </svg><a class="nav-link" href="">Оплаты</a>
+          </li>
+          <li class="nav-item"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#debts"></use>
+                </svg><a class="nav-link" href="">Долги</a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-user"> 
+        <div class="nav-user__name">Циванюк Ольга</div>
+        <div class="nav-user__post">Заведующий</div>
+      </div>
+      <div class="nav-bottom">«Настоящее украшение  — это здоровая и красивая улыбка»</div>
+    </div>
+    <main class="main">
+      <div class="content" data-role="tab">
+        <div class="container"> 
+          <h1 class="title">Заявки</h1>
+          <div class="tabs"> 
+            <div class="tabs-item is-active" data-tab="1">Новые<span>7</span></div>
+            <div class="tabs-item" data-tab="2">На пациентов (архив)<span>231</span></div>
+            <div class="tabs-item" data-tab="3">Печать (архив)<span>1233</span></div>
+            <div class="tabs-item" data-tab="4">Изменение лечения (архив)<span>43</span></div>
+          </div>
+          <div class="tabs-content is-open" data-tab="1">
+            <div class="card"> 
+              <div class="card-head"> 
+                <h2 class="card-title">Новые пациенты<span>3</span></h2>
+              </div>
+              <div class="card-body"> 
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead> 
+                      <tr> 
+                        <th>Номер</th>
+                        <th>Дата</th>
+                        <th>Клиника</th>
+                        <th>Врач</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody> 
+                      <tr>
+                        <td>#32456</td>
+                        <td>23.09.2023</td>
+                        <td>SmileClinic</td>
+                        <td>Дорофеева Виолетта</td>
+                        <td>
+                          <div class="show-more">
+                                <svg width="7" height="14">
+                                  <use xlink:href="images/sprite.svg#arrow-right"></use>
+                                </svg>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#32456</td>
+                        <td>23.09.2023</td>
+                        <td>SmileClinic</td>
+                        <td>Дорофеева Виолетта</td>
+                        <td>
+                          <div class="show-more">
+                                <svg width="7" height="14">
+                                  <use xlink:href="images/sprite.svg#arrow-right"></use>
+                                </svg>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#32456</td>
+                        <td>23.09.2023</td>
+                        <td>SmileClinic</td>
+                        <td>Дорофеева Виолетта</td>
+                        <td>
+                          <div class="show-more">
+                                <svg width="7" height="14">
+                                  <use xlink:href="images/sprite.svg#arrow-right"></use>
+                                </svg>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tabs-content" data-tab="2">
+            <div class="card">
+              <div class="card-body"> 
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead> 
+                      <tr> 
+                        <th>Номер</th>
+                        <th>Дата</th>
+                        <th>Клиника</th>
+                        <th>Врач</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody> 
+                      <tr>
+                        <td>#32456</td>
+                        <td>23.09.2023</td>
+                        <td>SmileClinic</td>
+                        <td>Дорофеева Виолетта</td>
+                        <td>
+                          <div class="show-more">
+                                <svg width="7" height="14">
+                                  <use xlink:href="images/sprite.svg#arrow-right"></use>
+                                </svg>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#32456</td>
+                        <td>23.09.2023</td>
+                        <td>SmileClinic</td>
+                        <td>Дорофеева Виолетта</td>
+                        <td>
+                          <div class="show-more">
+                                <svg width="7" height="14">
+                                  <use xlink:href="images/sprite.svg#arrow-right"></use>
+                                </svg>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#32456</td>
+                        <td>23.09.2023</td>
+                        <td>SmileClinic</td>
+                        <td>Дорофеева Виолетта</td>
+                        <td>
+                          <div class="show-more">
+                                <svg width="7" height="14">
+                                  <use xlink:href="images/sprite.svg#arrow-right"></use>
+                                </svg>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#32456</td>
+                        <td>23.09.2023</td>
+                        <td>SmileClinic</td>
+                        <td>Дорофеева Виолетта</td>
+                        <td>
+                          <div class="show-more">
+                                <svg width="7" height="14">
+                                  <use xlink:href="images/sprite.svg#arrow-right"></use>
+                                </svg>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#32456</td>
+                        <td>23.09.2023</td>
+                        <td>SmileClinic</td>
+                        <td>Дорофеева Виолетта</td>
+                        <td>
+                          <div class="show-more">
+                                <svg width="7" height="14">
+                                  <use xlink:href="images/sprite.svg#arrow-right"></use>
+                                </svg>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#32456</td>
+                        <td>23.09.2023</td>
+                        <td>SmileClinic</td>
+                        <td>Дорофеева Виолетта</td>
+                        <td>
+                          <div class="show-more">
+                                <svg width="7" height="14">
+                                  <use xlink:href="images/sprite.svg#arrow-right"></use>
+                                </svg>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#32456</td>
+                        <td>23.09.2023</td>
+                        <td>SmileClinic</td>
+                        <td>Дорофеева Виолетта</td>
+                        <td>
+                          <div class="show-more">
+                                <svg width="7" height="14">
+                                  <use xlink:href="images/sprite.svg#arrow-right"></use>
+                                </svg>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#32456</td>
+                        <td>23.09.2023</td>
+                        <td>SmileClinic</td>
+                        <td>Дорофеева Виолетта</td>
+                        <td>
+                          <div class="show-more">
+                                <svg width="7" height="14">
+                                  <use xlink:href="images/sprite.svg#arrow-right"></use>
+                                </svg>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#32456</td>
+                        <td>23.09.2023</td>
+                        <td>SmileClinic</td>
+                        <td>Дорофеева Виолетта</td>
+                        <td>
+                          <div class="show-more">
+                                <svg width="7" height="14">
+                                  <use xlink:href="images/sprite.svg#arrow-right"></use>
+                                </svg>
+                            <div class="more-btn"> </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="btn btn--big btn--icon"> <span>Загрузить</span></div>
+            <div class="pagination"> 
+              <div class="pagination-item is-active">1</div>
+              <div class="pagination-item">2</div>
+              <div class="pagination-item">3</div>
+              <div class="pagination-dots">...</div>
+              <div class="pagination-item">4</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

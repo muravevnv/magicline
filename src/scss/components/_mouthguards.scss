@@ -1,0 +1,67 @@
+.mouthguards {
+
+  &-line {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 14px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+
+    + .mouthguards-line {
+      margin-top: 8px;
+    }
+  }
+
+  &__symbol {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    svg {
+      color: var(--white);
+      opacity: .4;
+    }
+  }
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 5px;
+  }
+
+  &__item {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    padding: 5px;
+    color: var(--white-text);
+    background-color: var(--white-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.is-ready {
+      background-color: var(--secondary);
+      color: var(--black);
+    }
+
+    &.is-waiting {
+      background-color: var(--green);
+      color: var(--black);
+    }
+
+    &.is-working {
+      background-color: var(--yellow);
+      color: var(--black);
+    }
+
+    &.is-request {
+      background-color: var(--orange);
+      color: var(--black);
+    }
+  }
+}

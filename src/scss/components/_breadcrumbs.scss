@@ -1,0 +1,43 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  padding: 10px 17px;
+  background-color: var(--white-bg);
+  border-radius: 30px;
+  gap: 5px;
+
+  &-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--primary);
+    
+    
+    a {
+      color: var(--primary);
+      max-width: 300px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &:first-of-type {
+      a {
+        display: block;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    &:last-of-type {
+      color: var(--white-text);
+
+      a {
+        color: var(--white-text);
+      }
+    }
+  }
+}

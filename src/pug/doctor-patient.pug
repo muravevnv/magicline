@@ -1,0 +1,201 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href="css/main.css" rel="stylesheet")
+    title Главная
+  body
+    include mixins/_mixins
+    include components/header
+    +topPanel(['Пациенты','Жданов Остап Арсеньевич'])
+    include components/navigation
+    main.main
+      .content(data-role="tab")
+        .container 
+          .wrapper
+            h1.title Жданов Остап Арсеньевич
+            .tabs 
+              .tabs-item.is-active(data-tab="treatment") Лечение
+              .tabs-item(data-tab="doc-materials") Документы врача
+              .tabs-item(data-tab="3d-setup") 3D Сетап
+              .tabs-item(data-tab="progress") Прогресс
+            .tabs-content.is-open(data-tab="treatment")
+              .section 
+                .section__title Каппы
+                .mouthguards
+                  .mouthguards-line 
+                    .mouthguards__symbol 
+                      +svgSprite(16, 16, 'plus')
+                    .mouthguards-list 
+                      .mouthguards__item.is-ready 1
+                      .mouthguards__item.is-ready 2
+                      .mouthguards__item.is-ready 3
+                      .mouthguards__item.is-ready 4
+                      .mouthguards__item.is-ready 5
+                      .mouthguards__item.is-ready  6
+                      .mouthguards__item.is-waiting 7
+                      .mouthguards__item.is-waiting 8
+                      .mouthguards__item 9
+                      .mouthguards__item 10
+                      .mouthguards__item 11
+                      .mouthguards__item 12
+                      .mouthguards__item 13
+                      .mouthguards__item 14
+                      .mouthguards__item 15
+                      .mouthguards__item 16
+                  .mouthguards-line 
+                    .mouthguards__symbol
+                      +svgSprite(16, 16, 'minus')
+                    .mouthguards-list 
+                      .mouthguards__item.is-ready 1
+                      .mouthguards__item.is-ready 2
+                      .mouthguards__item.is-ready 3
+                      .mouthguards__item.is-ready 4
+                      .mouthguards__item.is-ready 5
+                      .mouthguards__item.is-ready  6
+                      .mouthguards__item.is-waiting 7
+                      .mouthguards__item.is-waiting 8
+                      .mouthguards__item 9
+                      .mouthguards__item 10
+                      .mouthguards__item 11
+                      .mouthguards__item 12
+                      .mouthguards__item 13
+                      .mouthguards__item 14
+                      .mouthguards__item 15
+                      .mouthguards__item 16
+                      .mouthguards__item 17
+                      .mouthguards__item 18
+                      .mouthguards__item 19
+                      .mouthguards__item 20
+                      .mouthguards__item 21
+                      .mouthguards__item 22
+                      .mouthguards__item 23
+                      .mouthguards__item 24
+                      .mouthguards__item 25
+              .section 
+                .section__title План лечения
+                .plan 
+                  p коррекция прикуса до полного 1го класса по молярам и клыкам слева, справа Последовательная дистализация 1го сегмента (17,16,14,15,13), 2го сегиента (27, 26, 25, 24, 25), 4го сегмента (47, 46, 45) Изменить торк 11, 21 зубов на 3-5 градусов Расширение верхней челюсти за счет щечного наклона коронок 16, 14 зубоа, корпусного перемещения 17,27 зубов, корпусное перемещение+щечный наклон коронок 15 зуба, корень ин-, щечный наклон коронки 25, 24 зубов 26 зуб только дистализировать (планируется покрытие коронкой после ортодонтии) изменение ангуляции 16, 26 зуба (дистальный щечный бугор должен быть ниже мезиального щечного бугра и располагаться между первым и вторым молярами нижней челюсти. 
+                  p Не изменять форму арки улыбки (выстроить арку относительно центральных резцов верхней челюсти: 12, 22 на 1 мм выше 11,21 зубов, и на 0,5 мм выше 13, 23 зубов деротация 22 зуба убрать протрузию 12, 22 зубов Последовательная дистализация 47, 46, 45 зубов деротация против часовой стрелки 45 зуба расширение нижней челюсти за счет щечного наклона коронок 37, 36, 35, 34, 44, 46, 47 зубов корпусное перемещение с деротация 45 зуба Улучшение резцового перекрытия за счет изменения кривой Шпее (экструзия зубов нч в боковых участках, выравнивание зенитов 34,44 зубов) 37 зуб сильно не экструзировать, планируется коронка деротация 41, 42, 32 зубов. , выстраиваем зубы по десневым зенитам (ДАЛЕЕ БУДЕТ РЕСТАВРАЦИЯ) улучшение 1 класса с помощью эластической тяги по 2 классу (необходимы вырезы для кнопок (возможно с первых пар: 13, 23, 46, 36, после перемещения, далее 13, 23, 45, 35 после дистализации по классике разобщение прикуса на центральных резцах с первых капп
+              .section 
+                .section__title Фотографии пациента
+                .photos 
+                  .photos__item 
+                    img(src="images/photo/photo-3.png", alt="")
+                  .photos__item 
+                    img(src="images/photo/photo-3.png", alt="")
+                  .photos__item 
+                    img(src="images/photo/photo-3.png", alt="")
+                  .photos__item 
+                    img(src="images/photo/photo-3.png", alt="")
+                  .photos__item 
+                    img(src="images/photo/photo-3.png", alt="")
+                  .photos__item 
+                    img(src="images/photo/photo-3.png", alt="")
+                  .photos__item 
+                    img(src="images/photo/photo-3.png", alt="")
+                  .photos__item 
+                    img(src="images/photo/photo-3.png", alt="")
+                  .photos__item 
+                    img(src="images/photo/photo-3.png", alt="")
+                  .photos__item 
+                    img(src="images/photo/photo-3.png", alt="")
+                  .photos__item 
+                    img(src="images/photo/photo-3.png", alt="")
+                  .photos__item 
+                    img(src="images/photo/photo-3.png", alt="")
+                  .photos__item 
+                    img(src="images/photo/photo-3.png", alt="")
+                  .photos__item 
+                    img(src="images/photo/photo-3.png", alt="")
+              .section 
+                .section__title Отчет
+                .docs
+                  a(href="#").doc
+                    .doc__name otchet.zhdanov.pdf
+                    .doc__size 54.6 Кб
+            .tabs-content(data-tab="doc-materials")
+              .section 
+                .section__title КЛКТ челюсти
+                .docs
+                  .doc
+                    .doc__name Жданов.zip
+                    .doc__size 54.6 Кб
+              .section 
+                .section__title Сканы (.stl)
+                .docs
+                  .doc
+                    .doc__name 2023-09-02_100_063-LowerJaw.stl
+                    .doc__size 54.6 Кб
+                  .doc
+                    .doc__name 2023-09-02_100_063-LowerJaw.stl
+                    .doc__size 54.6 Кб
+                  .doc
+                    .doc__name 2023-09-02_100_063-LowerJaw.stl
+                    .doc__size 54.6 Кб
+                  .doc
+                    .doc__name 2023-09-02_100_063-LowerJaw.stl
+                    .doc__size 54.6 Кб
+              .section 
+                .section__title Фотографии пациента
+                .photos 
+                  .photos__item 
+                    img(src="images/photo/photo-1.png", alt="")
+                  .photos__item 
+                    img(src="images/photo/photo-1.png", alt="")
+                  .photos__item 
+                    img(src="images/photo/photo-2.png", alt="")
+                  .photos__item 
+                    img(src="images/photo/photo-2.png", alt="")
+                  .photos__item 
+                    img(src="images/photo/photo-2.png", alt="")
+                  .photos__item 
+                    img(src="images/photo/photo-2.png", alt="")
+                  .photos__item 
+                    img(src="images/photo/photo-2.png", alt="")
+                  .photos__item 
+                    img(src="images/photo/photo-2.png", alt="")
+                  .photos__item 
+                    img(src="images/photo/photo-2.png", alt="")
+                  .photos__item 
+                    img(src="images/photo/photo-2.png", alt="")
+                  .photos__item 
+                    img(src="images/photo/photo-2.png", alt="")
+                  .photos__item 
+                    img(src="images/photo/photo-2.png", alt="")
+              .section 
+                .section__title Комментарий от врача
+                .comment Хочет, чтобы все было ровненько
+            .tabs-content(data-tab="3d-setup")
+              .section
+                .setup 
+                  .setup__img 
+                    img(src="images/3d-setup.png", alt="")
+            .tabs-content(data-tab="progress")
+              .section 
+                .section__title Фотографии прогресса
+                .progress
+                  .progress-item 
+                    .progress-item__img 
+                      img(src="images/progress/progress-1.jpg", alt="")
+                    .progress-item__date 23.08.2023
+                    .progress-item__desc Выглядит лучше чем было))
+                  .progress-item 
+                    .progress-item__img 
+                      img(src="images/progress/progress-2.jpg", alt="")
+                    .progress-item__date 23.08.2023
+                    .progress-item__desc Он доволен!)
+                  .progress-item 
+                    .progress-item__img 
+                      img(src="images/progress/progress-3.jpg", alt="")
+                    .progress-item__date 23.08.2023
+                    .progress-item__desc 
+                  .progress-item 
+                    .progress-item__img 
+                      img(src="images/progress/progress-4.jpg", alt="")
+                    .progress-item__date 23.08.2023
+                    .progress-item__desc 
+    include components/footer
+    include includes/scripts

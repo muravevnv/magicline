@@ -1,0 +1,40 @@
+.progress {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px 20px;
+
+  @include media(sm) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  @include media(xs) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+.progress-item {
+
+  &__img {
+    margin-bottom: 8px;
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &__date {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 4px;
+    color: var(--white-text);
+  }
+
+  &__desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--white-text-darken);
+  }
+}

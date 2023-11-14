@@ -1,3 +1,20 @@
 mixin svgSprite(width, height, id)
   svg(width= width, height= height)
     use(xlink:href=`images/sprite.svg#${id}`)
+
+mixin topPanel(breadcrumbs)
+  .top
+    .container
+      ul.breadcrumbs 
+        li.breadcrumbs-item 
+          a(href="#") 
+            +svgSprite(24, 20, 'house')
+        each item in breadcrumbs
+          li.breadcrumbs-item
+            +svgSprite(10, 10, 'bc-arrow')
+            a(href="")= item
+      .theme-choices 
+        .theme-choices__thumb 
+          +svgSprite(18,18, 'night')
+      .logout
+        +svgSprite(20, 20, 'logout')

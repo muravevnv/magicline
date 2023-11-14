@@ -1,3 +1,21 @@
+.modal(data-modal="auth")
+  .modal-overlay 
+  .modal-wrapper 
+    .modal-content 
+      .modal-close 
+        +svgSprite(30, 30, 'close')
+      .modal__title Авторизация
+      form.modal-form
+        .form-group
+          label.form-label(for="") Логин
+            span *
+          input(type="text").form-control 
+        .form-group
+          label.form-label(for="") Пароль
+            span *
+          input(type="text").form-control 
+        .modal-action 
+          button(disabled).btn.btn--big Войти в Личный кабинет
 .modal(data-modal="1")
   .modal-overlay 
   .modal-wrapper 
@@ -51,17 +69,18 @@
       form.modal-form
         .modal-action 
           .btn.btn--primary Ок
-.modal(data-modal="4")
+.modal(data-modal="edit-payment")
   .modal-overlay 
   .modal-wrapper 
     .modal-content 
       .modal-close 
         +svgSprite(30, 30, 'close')
-      .modal__title Оплата успешно внесена!
+      .modal__title Редактировать сумму к оплате
       form.modal-form
         .form-group.form-group--sm
           label.form-label(for="") Сумма
             span *
           input(type="text").form-control 
         .modal-action 
+          .btn Отменить
           .btn.btn--primary Ок

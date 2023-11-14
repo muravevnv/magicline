@@ -6,61 +6,42 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(href="css/main.css" rel="stylesheet")
     title Главная
-  body
-    include mixins/_mixins
-    include components/header
-    include components/navigation
-    main.main
-      .content
-        .container 
-          h1.title Заявки
-          .tabs 
-            .tabs-item.is-active Новые
-               span 7
-            .tabs-item На пациентов (архив)
-              span 231
-            .tabs-item Печать (архив)
-              span 1233
-            .tabs-item Изменение лечения (архив)
-              span 43
-          .card 
-            .card-head 
-              h2.card-title Новые пациенты
-                span 3
-            .card-body 
-              .table-responsive
-                table.table
-                  thead 
-                    tr 
-                      th Номер
-                      th Дата
-                      th Клиника
-                      th Врач
-                      th
-                  tbody 
-                    tr
-                      td #32456
-                      td 23.09.2023
-                      td SmileClinic
-                      td Дорофеева Виолетта
-                      td
-                        .show-more
-                          +svgSprite(7, 14, 'arrow-right')
-                    tr
-                      td #32456
-                      td 23.09.2023
-                      td SmileClinic
-                      td Дорофеева Виолетта
-                      td
-                        .show-more
-                          +svgSprite(7, 14, 'arrow-right')
-                    tr
-                      td #32456
-                      td 23.09.2023
-                      td SmileClinic
-                      td Дорофеева Виолетта
-                      td
-                        .show-more
-                          +svgSprite(7, 14, 'arrow-right')
-    include components/footer
-    include includes/scripts
+  body 
+
+
+    ul 
+      li 
+        a(href="auth.html") Авторизация 
+      li 
+        a(href="main.html") Главная
+      li 
+        a(href="order.html") Заявка
+      li 
+        a(href="patients.html") Пациенты
+      li 
+        a(href="payments.html") Платежи
+      li 
+        a(href="depts.html") Долги
+    br
+    h2 Врач
+    ul 
+      li 
+        a(href="doctor-patients.html") Cписок пациентов
+      li 
+        a(href="doctor-patient.html") Пациент
+      li 
+        a(href="doctor-depts.html") Долги
+    br
+    h2 Бухгалтер
+    ul 
+      li 
+        a(href="depts.html") Долги
+      li 
+        a(href="depts-clinics.html") Долги клинки
+      li 
+        a(href="depts-doctor.html") Долги врача
+      li 
+        a(href="payment.html") Оплаты
+      li 
+        a(href="paymtn-patient.html") Оплаты пациент
+      

@@ -9,6 +9,7 @@ html(lang="en")
   body
     include mixins/_mixins
     include components/header
+    +topPanel(['Оплаты'])
     include components/navigation
     main.main
       .content
@@ -16,7 +17,7 @@ html(lang="en")
           h1.title Оплаты
           .row 
             .search 
-              input.form-control.search__input(type="text")
+              input.form-control.search__input(type="text" placeholder="Поиск по ФИО или дате (ДД.ММ.ГГГГ)")
             .btn.btn--big.btn--primary.js-open-modal(data-modal="1") Внести оплату
           .card 
             .card-body 

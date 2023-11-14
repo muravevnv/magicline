@@ -1,0 +1,74 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href="css/main.css" rel="stylesheet")
+    title Главная
+  body
+    include mixins/_mixins
+    include components/header
+    +topPanel(['Долги','Доктор Дент','Колобов Ипполит Вадимович'])
+    include components/navigation-accountant
+    main.main
+      .content(data-role="tab")
+        .container 
+          h1.title Колобов Ипполит Вадимович
+          .row 
+            .dept-price
+              .dept-price__title Долг
+              .dept-price__num 35 000 ₽
+                span 400 000 ₽
+            .btn.btn--icon.btn--big
+              span Внести оплату
+              +svgSprite(30, 30, 'plus-big')
+          .card 
+            .card-body 
+              .table-responsive
+                table.table
+                  thead 
+                    tr 
+                      th Пациент
+                      th Долг
+                      th Общая сумма
+                      th
+                  tbody 
+                    tr
+                      td Вишняков Лев Матвеевич
+                      td 125 000 ₽
+                      td 1 000 000 ₽
+                      td.t-button
+                        .show-more
+                          +svgSprite(7, 14, 'arrow-right')
+                    tr
+                      td Шаров Емельян Улебович
+                      td 125 000 ₽
+                      td 1 000 000 ₽
+                      td.t-button
+                        .show-more
+                          +svgSprite(7, 14, 'arrow-right')
+                    tr
+                      td Жданов Остап Арсеньевич
+                      td 125 000 ₽
+                      td 1 000 000 ₽
+                      td.t-button
+                        .show-more
+                          +svgSprite(7, 14, 'arrow-right')
+                    tr
+                      td Орехов Гордей Лукьевич
+                      td 125 000 ₽
+                      td 1 000 000 ₽
+                      td.t-button
+                        .show-more
+                          +svgSprite(7, 14, 'arrow-right')
+                    tr
+                      td Молчанов Мечислав Донатович
+                      td 125 000 ₽
+                      td 1 000 000 ₽
+                      td.t-button
+                        .show-more
+                          +svgSprite(7, 14, 'arrow-right')
+    include components/footer
+    include components/modal
+    include includes/scripts

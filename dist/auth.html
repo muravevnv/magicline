@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/main.css" rel="stylesheet">
+    <title>Авторизация</title>
+  </head>
+  <body> 
+    <main> 
+      <div class="auth"> 
+        <div class="auth-video"> 
+          <video src="images/video.mp4" playsinline muted autoplay loop> </video>
+        </div>
+        <div class="auth-btn btn btn--primary btn--big js-open-modal" data-modal="auth">Авторизоваться</div>
+      </div>
+    </main>
+    <div class="modal" data-modal="auth">
+      <div class="modal-overlay"> </div>
+      <div class="modal-wrapper"> 
+        <div class="modal-content"> 
+          <div class="modal-close"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#close"></use>
+                </svg>
+          </div>
+          <div class="modal__title">Авторизация</div>
+          <form class="modal-form">
+            <div class="form-group">
+              <label class="form-label" for="">Логин<span>*</span></label>
+              <input class="form-control" type="text">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="">Пароль<span>*</span></label>
+              <input class="form-control" type="text">
+            </div>
+            <div class="modal-action"> 
+              <button class="btn btn--big" disabled>Войти в Личный кабинет</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="1">
+      <div class="modal-overlay"> </div>
+      <div class="modal-wrapper"> 
+        <div class="modal-content"> 
+          <div class="modal-close"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#close"></use>
+                </svg>
+          </div>
+          <div class="modal__title">Внести оплату</div>
+          <form class="modal-form">
+            <div class="form-group">
+              <label class="form-label" for="">Клиника<span>*</span></label>
+              <input class="form-control" type="text">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="">Врач<span>*</span></label>
+              <input class="form-control" type="text">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="">Пациент<span>*</span></label>
+              <input class="form-control" type="text">
+            </div>
+            <div class="form-row"> 
+              <div class="form-group">
+                <label class="form-label" for="">Дата<span>*</span></label>
+                <input class="form-control" type="text">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="">Сумма<span>*</span></label>
+                <input class="form-control" type="text">
+              </div>
+            </div>
+            <div class="modal-action"> 
+              <div class="btn">Отменить</div>
+              <div class="btn btn--primary">Сохранить</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="2">
+      <div class="modal-overlay"> </div>
+      <div class="modal-wrapper"> 
+        <div class="modal-content"> 
+          <div class="modal-close"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#close"></use>
+                </svg>
+          </div>
+          <div class="modal__title">Удалить запись об оплате?</div>
+          <form class="modal-form">
+            <div class="modal-action"> 
+              <div class="btn">Да</div>
+              <div class="btn btn--primary">Нет</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="3">
+      <div class="modal-overlay"> </div>
+      <div class="modal-wrapper"> 
+        <div class="modal-content"> 
+          <div class="modal-close"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#close"></use>
+                </svg>
+          </div>
+          <div class="modal__title">Оплата успешно внесена!</div>
+          <form class="modal-form">
+            <div class="modal-action"> 
+              <div class="btn btn--primary">Ок</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="edit-payment">
+      <div class="modal-overlay"> </div>
+      <div class="modal-wrapper"> 
+        <div class="modal-content"> 
+          <div class="modal-close"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#close"></use>
+                </svg>
+          </div>
+          <div class="modal__title">Редактировать сумму к оплате</div>
+          <form class="modal-form">
+            <div class="form-group form-group--sm">
+              <label class="form-label" for="">Сумма<span>*</span></label>
+              <input class="form-control" type="text">
+            </div>
+            <div class="modal-action"> 
+              <div class="btn">Отменить</div>
+              <div class="btn btn--primary">Ок</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

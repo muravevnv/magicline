@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href="css/main.css" rel="stylesheet")
+    title Авторизация
+  body 
+    include mixins/_mixins
+    main 
+      .auth 
+        .auth-video 
+          video(src="images/video.mp4" playsinline muted autoplay loop) 
+        .auth-btn.btn.btn--primary.btn--big.js-open-modal(data-modal="auth") Авторизоваться
+    include components/modal
+    include includes/scripts

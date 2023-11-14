@@ -1,0 +1,9 @@
+.setup {
+  margin: 40px 0;
+
+  &__img {
+    padding: 16px 50px;
+    background-color: var(--white-bg);
+    border-radius: 8px;
+  }
+}

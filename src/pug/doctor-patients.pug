@@ -1,0 +1,65 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href="css/main.css" rel="stylesheet")
+    title Главная
+  body
+    include mixins/_mixins
+    include components/header
+    include components/navigation-doctor
+    main.main
+      .content
+        .container 
+          h1.title Пациенты
+          .row 
+            .search 
+              input.form-control.search__input(type="text")
+            .btn.btn--big.btn--icon.js-open-modal(data-modal="1") 
+              span Новый пациент
+              +svgSprite(30, 30, 'plus')
+          .card 
+            .card-body 
+              .table-responsive
+                table.table
+                  tbody 
+                    tr
+                      td 
+                        a(href="patient.html") Гончаров Андрей Владимирович
+                      td.t-button
+                        .show-more
+                          +svgSprite(7, 14, 'arrow-right')
+                    tr
+                      td 
+                        a(href="patient.html") Гончаров Андрей Владимирович
+                      td.t-button
+                        .show-more
+                          +svgSprite(7, 14, 'arrow-right')
+                    tr
+                      td 
+                        a(href="patient.html") Гончаров Андрей Владимирович
+                      td.t-button
+                        .show-more
+                          +svgSprite(7, 14, 'arrow-right')
+                    tr
+                      td 
+                        a(href="patient.html") Гончаров Андрей Владимирович
+                      td.t-button
+                        .show-more
+                          +svgSprite(7, 14, 'arrow-right')
+                    tr
+                      td 
+                        a(href="patient.html") Гончаров Андрей Владимирович
+                      td.t-button
+                        .show-more
+                          +svgSprite(7, 14, 'arrow-right')
+                    tr
+                      td 
+                        a(href="patient.html") Гончаров Андрей Владимирович
+                      td.t-button
+                        .show-more
+                          +svgSprite(7, 14, 'arrow-right')
+    include components/footer
+    include includes/scripts

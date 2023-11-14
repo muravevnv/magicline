@@ -1,0 +1,68 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href="css/main.css" rel="stylesheet")
+    title Главная
+  body
+    include mixins/_mixins
+    include components/header
+    +topPanel(['Оплаты'])
+    include components/navigation
+    main.main
+      .content
+        .container 
+          h1.title Жданов Остап Арсеньевич
+          .row 
+            .dept-price
+              .dept-price__title Долг
+              .dept-price__num 0 ₽
+                span 100 000 ₽
+              .dept-price__edit.js-open-modal(data-modal="edit-payment") 
+                +svgSprite(30, 30, 'edit')
+            .btn.btn--big.btn--primary.js-open-modal(data-modal="1") Внести оплату
+          .card 
+            .card-body 
+              .table-responsive
+                table.table
+                  thead 
+                    tr 
+                      th Номер
+                      th Дата
+                      th Сумма
+                      th Пациент
+                  tbody 
+                    tr
+                      td #3453
+                      td 23.09.2023
+                      td 45 000 ₽
+                      td Жданов Остап Арсеньевич
+                    tr
+                      td #3453
+                      td 23.09.2023
+                      td 45 000 ₽
+                      td Жданов Остап Арсеньевич
+                    tr
+                      td #3453
+                      td 23.09.2023
+                      td 45 000 ₽
+                      td Жданов Остап Арсеньевич
+                    tr
+                      td #3453
+                      td 23.09.2023
+                      td 45 000 ₽
+                      td Жданов Остап Арсеньевич
+          .more-btn 
+            .btn.btn--big.btn--icon 
+              span Загрузить
+          .pagination 
+            .pagination-item.is-active 1
+            .pagination-item 2
+            .pagination-item 3
+            .pagination-dots ...
+            .pagination-item 4
+    include components/footer
+    include components/modal
+    include includes/scripts
