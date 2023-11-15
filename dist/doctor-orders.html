@@ -41,36 +41,26 @@
     <div class="nav"> 
       <div class="nav-main"> <a class="nav__logo" href="#"><img src="images/logo.svg" alt=""></a>
         <ul class="nav-list"> 
-          <li class="nav-item is-active">
+          <li class="nav-item">
                 <svg width="30" height="30">
                   <use xlink:href="images/sprite.svg#chat"></use>
-                </svg><a class="nav-link" href="orders.html">Заявки</a>
+                </svg><a class="nav-link" href="doctor-orders.html">Заявки</a>
           </li>
-          <li class="nav-item"> 
-                <svg width="30" height="30">
-                  <use xlink:href="images/sprite.svg#play"></use>
-                </svg><a class="nav-link" href="print.html">Очередь на печать</a>
-          </li>
-          <li class="nav-item"> 
+          <li class="nav-item is-active">
                 <svg width="30" height="30">
                   <use xlink:href="images/sprite.svg#clients"></use>
-                </svg><a class="nav-link" href="patients.html">Пациенты</a>
-          </li>
-          <li class="nav-item"> 
-                <svg width="30" height="30">
-                  <use xlink:href="images/sprite.svg#payments"></use>
-                </svg><a class="nav-link" href="payments.html">Оплаты</a>
+                </svg><a class="nav-link" href="doctor-patients.html">Пациенты</a>
           </li>
           <li class="nav-item"> 
                 <svg width="30" height="30">
                   <use xlink:href="images/sprite.svg#debts"></use>
-                </svg><a class="nav-link" href="depts.html">Долги</a>
+                </svg><a class="nav-link" href="doctor-depts.html">Долги</a>
           </li>
         </ul>
       </div>
       <div class="nav-user"> 
         <div class="nav-user__name">Циванюк Ольга</div>
-        <div class="nav-user__post">Заведующий</div>
+        <div class="nav-user__post">Врач</div>
       </div>
       <div class="nav-bottom">«Настоящее украшение  — это здоровая и красивая улыбка»</div>
     </div>
@@ -79,13 +69,11 @@
         <div class="container"> 
           <h1 class="title">Заявки</h1>
           <div class="tabs"> 
-            <div class="tabs-item is-new is-active" data-tab="1">Новые<span>7</span></div>
-            <div class="tabs-item" data-tab="2">На пациентов (архив)<span>231</span></div>
-            <div class="tabs-item" data-tab="3">Печать (архив)<span>1233</span></div>
-            <div class="tabs-item" data-tab="4">Изменение лечения (архив)<span>43</span></div>
+            <div class="tabs-item is-active" data-tab="1">Новые<span>7</span></div>
+            <div class="tabs-item" data-tab="2">Обработанные<span>231</span></div>
           </div>
           <div class="tabs-content is-open" data-tab="1">
-            <div class="card is-new"> 
+            <div class="card">
               <div class="card-head"> 
                 <h2 class="card-title">Новые пациенты<span>3</span></h2>
               </div>
@@ -136,7 +124,7 @@
                 </div>
               </div>
             </div>
-            <div class="card is-new"> 
+            <div class="card">
               <div class="card-head"> 
                 <h2 class="card-title">Печать<span>2</span></h2>
               </div>
@@ -321,95 +309,6 @@
               <div class="pagination-item">3</div>
               <div class="pagination-dots">...</div>
               <div class="pagination-item">4</div>
-            </div>
-          </div>
-          <div class="tabs-content" data-tab="3">
-            <div class="card">
-              <div class="card-body"> 
-                <div class="table-responsive">
-                  <div class="table">
-                    <div class="table-head"> 
-                      <div class="table-cell">Номер</div>
-                      <div class="table-cell table-cell--center">Дата</div>
-                      <div class="table-cell">Клиника</div>
-                      <div class="table-cell">Врач</div>
-                      <div class="table-cell"> </div>
-                    </div><a class="table-row" href="order-print.html"> 
-                      <div class="table-cell">#32456</div>
-                      <div class="table-cell table-cell--light">23.09.2023</div>
-                      <div class="table-cell table-cell--light">SmileClinic</div>
-                      <div class="table-cell table-cell--light">Дорофеева Виолетта</div>
-                      <div class="table-cell">
-                        <div class="show-more">
-                              <svg width="7" height="14">
-                                <use xlink:href="images/sprite.svg#arrow-right"></use>
-                              </svg>
-                        </div>
-                      </div></a><a class="table-row" href="order-print.html"> 
-                      <div class="table-cell">#32456</div>
-                      <div class="table-cell table-cell--light">23.09.2023</div>
-                      <div class="table-cell table-cell--light">SmileClinic</div>
-                      <div class="table-cell table-cell--light">Дорофеева Виолетта</div>
-                      <div class="table-cell">
-                        <div class="show-more">
-                              <svg width="7" height="14">
-                                <use xlink:href="images/sprite.svg#arrow-right"></use>
-                              </svg>
-                        </div>
-                      </div></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="tabs-content" data-tab="4">
-            <div class="card">
-              <div class="card-body"> 
-                <div class="table-responsive">
-                  <div class="table">
-                    <div class="table-head"> 
-                      <div class="table-cell">Номер</div>
-                      <div class="table-cell table-cell--center">Дата</div>
-                      <div class="table-cell">Клиника</div>
-                      <div class="table-cell">Врач</div>
-                      <div class="table-cell"> </div>
-                    </div><a class="table-row" href="order-change.html"> 
-                      <div class="table-cell">#32456</div>
-                      <div class="table-cell table-cell--light">23.09.2023</div>
-                      <div class="table-cell table-cell--light">SmileClinic</div>
-                      <div class="table-cell table-cell--light">Дорофеева Виолетта</div>
-                      <div class="table-cell">
-                        <div class="show-more">
-                              <svg width="7" height="14">
-                                <use xlink:href="images/sprite.svg#arrow-right"></use>
-                              </svg>
-                        </div>
-                      </div></a><a class="table-row" href="order-change.html"> 
-                      <div class="table-cell">#32456</div>
-                      <div class="table-cell table-cell--light">23.09.2023</div>
-                      <div class="table-cell table-cell--light">SmileClinic</div>
-                      <div class="table-cell table-cell--light">Дорофеева Виолетта</div>
-                      <div class="table-cell">
-                        <div class="show-more">
-                              <svg width="7" height="14">
-                                <use xlink:href="images/sprite.svg#arrow-right"></use>
-                              </svg>
-                        </div>
-                      </div></a><a class="table-row" href="order-change.html"> 
-                      <div class="table-cell">#32456</div>
-                      <div class="table-cell table-cell--light">23.09.2023</div>
-                      <div class="table-cell table-cell--light">SmileClinic</div>
-                      <div class="table-cell table-cell--light">Дорофеева Виолетта</div>
-                      <div class="table-cell">
-                        <div class="show-more">
-                              <svg width="7" height="14">
-                                <use xlink:href="images/sprite.svg#arrow-right"></use>
-                              </svg>
-                        </div>
-                      </div></a>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

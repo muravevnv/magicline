@@ -9,6 +9,7 @@ html(lang="en")
   body
     include mixins/_mixins
     include components/header
+    +topPanel(['Заявка','Заявки на новых пациентов','Заявка №32432'])
     include components/navigation
     main.main
       .content
@@ -82,7 +83,7 @@ html(lang="en")
             .action
               .btn.btn--big.btn--primary.btn--icon
                 span Создать карточку
-                +svgSprite(30, 30, 'plus')
+                +svgSprite(30, 30, 'plus-big')
               .btn.btn--big Отклонить заявку
     include components/footer
     include includes/scripts

@@ -64,6 +64,11 @@
     justify-content: center;
   }
 
+  &-docs {
+    margin-top: 30px;
+    width: 100%;
+  }
+
   &-action {
     width: 100%;
     display: flex;
@@ -71,6 +76,11 @@
     justify-content: center;
     gap: 10px;
     margin-top: 30px;
+
+    &--column {
+      flex-direction: column;
+      gap: 30px;
+    }
 
     @include media(sm) {
       margin-top: 16px;
@@ -101,6 +111,7 @@
   &__desc {
     font-size: 16px;
     margin-bottom: 30px;
+    text-align: center;
   }
 
   &-mouthguards {

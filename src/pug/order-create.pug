@@ -1,0 +1,53 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href="css/main.css" rel="stylesheet")
+    title Главная
+  body
+    include mixins/_mixins
+    include components/header
+    +topPanel(['Пациенты','Создать заявку на нового пациента'])
+    include components/navigation-doctor
+    main.main
+      .content
+        .container 
+          .wrapper
+            h1.title Создать заявку на нового пациента
+            .section 
+              .form-group 
+                input.form-control(type="text")
+                label.form-label ФИО 
+                  span *
+            .section 
+              .section__title КЛКТ челюсти
+              .section__information Форматы файлов: .zip, .bmp, .gif, .jpeg, .jpg, .jpe, .pcx, .png, .tif, .tiff, .mp3, .mp4, .aac, .wav, .au, .wmv, .avi, .mov. Максимальный размер файла — 2 Мб. 
+              .section__btn.btn.btn--icon.btn--big.js-open-modal(data-modal="add-docs")
+                span Выбрать файлы
+                +svgSprite(30, 30, 'plus-big')
+            .section 
+              .section__title Сканы (.stl)
+              .section__information Форматы файлов: .stl. Максимальный размер файла — 2 Мб. 
+              .section__btn.btn.btn--icon.btn--big.js-open-modal(data-modal="add-docs")
+                span Выбрать файлы
+                +svgSprite(30, 30, 'plus-big')
+            .section 
+              .section__title Фотографии пациента
+              .section__information Форматы файлов: .stl. Максимальный размер файла — 2 Мб. 
+              .section__btn.btn.btn--icon.btn--big.js-open-modal(data-modal="add-photo")
+                span Выбрать файлы
+                +svgSprite(30, 30, 'plus-big')
+            .section 
+              .section__title Комментарий от врача
+              .section__information Форматы файлов: .bmp, .gif, .jpeg, .jpg, .jpe, .pcx, .png, .tif, .tiff. Максимальный размер файла — 2 Мб. 
+              .form-group 
+                input.form-control(type="text")
+                label.form-label Комментарий от врача
+            .action
+              button(disabled).btn.btn--big.btn--primary
+                span Создать заявку
+    include components/footer
+    include components/modal 
+    include includes/scripts 

@@ -1,4 +1,7 @@
 .mouthguards {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 
   &-row {
     display: flex;
@@ -11,7 +14,8 @@
   }
 
   &-line {
-    display: flex;
+    display: inline-flex;
+    width: auto;
     align-items: flex-start;
     gap: 15px;
     padding: 14px;

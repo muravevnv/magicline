@@ -57,24 +57,24 @@
       .modal__title Редактировать запись об оплате #3453
       form.modal-form
         .form-group
-          input(type="text").form-control 
+          input(type="text" value="Доктор Дент" disabled).form-control.is-filled
           label.form-label(for="") Клиника
             span *
         .form-group
-          input(type="text").form-control 
+          input(type="text" value="Колобов Ипполит Вадимович" disabled).form-control.is-filled 
           label.form-label(for="") Врач
             span *
         .form-group
-          input(type="text").form-control 
+          input(type="text" value="Жданов Остап Арсеньевич" disabled).form-control.is-filled
           label.form-label(for="") Пациент
             span *
         .form-row 
           .form-group
-            input(type="text").form-control 
+            input(type="text" value="15.09.2023").form-control.is-filled
             label.form-label(for="") Дата
               span *
           .form-group
-            input(type="text").form-control 
+            input(type="text" value="15.09.2023").form-control.is-filled
             label.form-label(for="") Сумма
               span *
         .modal-action 
@@ -116,6 +116,49 @@
         .modal-action 
           .btn Отменить
           .btn.btn--primary Ок
+.modal(data-modal="add-docs")
+  .modal-overlay 
+  .modal-wrapper 
+    .modal-content 
+      .modal-close 
+        +svgSprite(30, 30, 'close')
+      .modal__title Предложить изменения
+      .modal__desc Напишите, что нужно изменить в плане лечения
+      form.modal-form
+        .form-group
+          input(type="text").form-control
+          label.form-label Комментарий 
+        .modal-docs 
+          .docs 
+            a(href="#").doc
+              .doc__name Жданов.zip
+              .doc__size 54.6 Кб
+        .modal-action.modal-action--column 
+          .btn.btn--big.btn--icon
+            span Выбрать файлы
+            +svgSprite(30, 30, 'plus-big')
+          button(disabled ).btn.btn--big.btn--primary Предложить
+.modal(data-modal="add-photo")
+  .modal-overlay 
+  .modal-wrapper 
+    .modal-content 
+      .modal-close 
+        +svgSprite(30, 30, 'close')
+      .modal__title Добавить фото
+      .modal-action.modal-action--column 
+        .btn.btn--big.btn--icon
+          span Выбрать файлы
+          +svgSprite(30, 30, 'plus-big')
+      form.modal-form
+        .form-group
+          input(type="text").form-control
+          label.form-label Дата 
+            span *
+        .form-group
+          input(type="text").form-control
+          label.form-label Комментарий 
+        .modal-action.modal-action--column 
+          button(disabled).btn.btn--big.btn--primary Предложить
 .modal(data-modal="print-edit")
   .modal-overlay 
   .modal-wrapper 

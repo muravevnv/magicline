@@ -1,0 +1,57 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href="css/main.css" rel="stylesheet")
+    title Главная
+  body
+    include mixins/_mixins
+    include components/header
+    +topPanel(['Заявка','Заявки на печать','Заявка №32432'])
+    include components/navigation
+    main.main
+      .content
+        .container 
+          .wrapper
+            h1.title Заявка на печать #32432
+            .info 
+              .info__item 
+                span Дата создания заявки
+                | 23.09.2023
+              .info__item.info__item--light
+                span ФИО пациента
+                | Гончаров Андрей Владимирович
+              .info__item 
+                span Клиника
+                | SmileClinic
+              .info__item 
+                span Врач
+                | Дорофеева Виолетта
+            .section 
+              .mouthguards
+                .mouthguards-line 
+                  .mouthguards__symbol 
+                    +svgSprite(16, 16, 'plus')
+                  .mouthguards-list 
+                    .mouthguards__item.is-request 9
+                    .mouthguards__item.is-request 10
+                    .mouthguards__item.is-request 11
+                .mouthguards-line 
+                  .mouthguards__symbol 
+                    +svgSprite(16, 16, 'minus')
+                  .mouthguards-list 
+                    .mouthguards__item.is-request 9
+                    .mouthguards__item.is-request 10
+                    .mouthguards__item.is-request 11
+            .section 
+              .section__title Комментарий от врача
+              .comment -
+            .action
+              .btn.btn--big.btn--primary.btn--icon
+                span Добавить в очередь
+                +svgSprite(30, 30, 'plus-big')
+              .btn.btn--big Отклонить заявку
+    include components/footer
+    include includes/scripts

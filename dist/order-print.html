@@ -21,7 +21,17 @@
               <li class="breadcrumbs-item">
                     <svg width="10" height="10">
                       <use xlink:href="images/sprite.svg#bc-arrow"></use>
-                    </svg><a href="">Пациенты</a>
+                    </svg><a href="">Заявка</a>
+              </li>
+              <li class="breadcrumbs-item">
+                    <svg width="10" height="10">
+                      <use xlink:href="images/sprite.svg#bc-arrow"></use>
+                    </svg><a href="">Заявки на печать</a>
+              </li>
+              <li class="breadcrumbs-item">
+                    <svg width="10" height="10">
+                      <use xlink:href="images/sprite.svg#bc-arrow"></use>
+                    </svg><a href="">Заявка №32432</a>
               </li>
             </ul>
             <div class="theme-choices"> 
@@ -77,70 +87,53 @@
     <main class="main">
       <div class="content">
         <div class="container"> 
-          <h1 class="title">Пациенты</h1>
-          <div class="tabs"> 
-            <div class="tabs-item is-active">Группировка по клиникам</div>
-            <div class="tabs-item">Показать все<span>186</span></div>
-          </div>
-          <div class="row"> 
-            <div class="dept-price">
-              <div class="dept-price__title">Долг</div>
-              <div class="dept-price__num">1 000 000 ₽<span>8 000 000 ₽</span></div>
+          <div class="wrapper">
+            <h1 class="title">Заявка на печать #32432</h1>
+            <div class="info"> 
+              <div class="info__item"> <span>Дата создания заявки</span>23.09.2023</div>
+              <div class="info__item info__item--light"><span>ФИО пациента</span>Гончаров Андрей Владимирович</div>
+              <div class="info__item"> <span>Клиника</span>SmileClinic</div>
+              <div class="info__item"> <span>Врач</span>Дорофеева Виолетта</div>
             </div>
-            <div class="btn btn--icon btn--big"><span>Внести оплату</span>
-                  <svg width="30" height="30">
-                    <use xlink:href="images/sprite.svg#plus-big"></use>
-                  </svg>
-            </div>
-          </div>
-          <div class="card"> 
-            <div class="card-body"> 
-              <div class="table-responsive">
-                <table class="table">
-                  <thead> 
-                    <tr> 
-                      <th>Клиника</th>
-                      <th class="t-center t-patients">Пациентов</th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody> 
-                    <tr>
-                      <td>SmileClinic</td>
-                      <td class="t-center t-patients"> 143</td>
-                      <td class="t-button">
-                        <div class="show-more">
-                              <svg width="7" height="14">
-                                <use xlink:href="images/sprite.svg#arrow-right"></use>
-                              </svg>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>TeethClinic</td>
-                      <td class="t-center t-patients"> 143</td>
-                      <td class="t-button">
-                        <div class="show-more">
-                              <svg width="7" height="14">
-                                <use xlink:href="images/sprite.svg#arrow-right"></use>
-                              </svg>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Доктор Дент</td>
-                      <td class="t-center t-patients"> 143</td>
-                      <td class="t-button">
-                        <div class="show-more">
-                              <svg width="7" height="14">
-                                <use xlink:href="images/sprite.svg#arrow-right"></use>
-                              </svg>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+            <div class="section"> 
+              <div class="mouthguards">
+                <div class="mouthguards-line"> 
+                  <div class="mouthguards__symbol"> 
+                        <svg width="16" height="16">
+                          <use xlink:href="images/sprite.svg#plus"></use>
+                        </svg>
+                  </div>
+                  <div class="mouthguards-list"> 
+                    <div class="mouthguards__item is-request">9</div>
+                    <div class="mouthguards__item is-request">10</div>
+                    <div class="mouthguards__item is-request">11</div>
+                  </div>
+                </div>
+                <div class="mouthguards-line"> 
+                  <div class="mouthguards__symbol"> 
+                        <svg width="16" height="16">
+                          <use xlink:href="images/sprite.svg#minus"></use>
+                        </svg>
+                  </div>
+                  <div class="mouthguards-list"> 
+                    <div class="mouthguards__item is-request">9</div>
+                    <div class="mouthguards__item is-request">10</div>
+                    <div class="mouthguards__item is-request">11</div>
+                  </div>
+                </div>
               </div>
+            </div>
+            <div class="section"> 
+              <div class="section__title">Комментарий от врача</div>
+              <div class="comment">-</div>
+            </div>
+            <div class="action">
+              <div class="btn btn--big btn--primary btn--icon"><span>Добавить в очередь</span>
+                    <svg width="30" height="30">
+                      <use xlink:href="images/sprite.svg#plus-big"></use>
+                    </svg>
+              </div>
+              <div class="btn btn--big">Отклонить заявку</div>
             </div>
           </div>
         </div>

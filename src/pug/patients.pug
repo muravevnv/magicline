@@ -9,6 +9,7 @@ html(lang="en")
   body
     include mixins/_mixins
     include components/header
+    +topPanel(['Пациенты'])
     include components/navigation
     main.main
       .content
@@ -25,7 +26,7 @@ html(lang="en")
                 span 8 000 000 ₽
             .btn.btn--icon.btn--big
               span Внести оплату
-              +svgSprite(30, 30, 'plus')
+              +svgSprite(30, 30, 'plus-big')
           .card 
             .card-body 
               .table-responsive

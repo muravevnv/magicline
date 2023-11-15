@@ -53,3 +53,9 @@ $('.form-control').on('input', function(){
     $(this).removeClass('is-filled')
   }
 })
+
+$('.header-burger').on('click', function(){
+  $(this).toggleClass('is-active');
+  $('.header').toggleClass('is-active')
+  $('.nav').toggleClass('is-open');
+})

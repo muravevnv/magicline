@@ -1,0 +1,45 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href="css/main.css" rel="stylesheet")
+    title Главная
+  body
+    include mixins/_mixins
+    include components/header
+    +topPanel(['Заявки','Заявки на изменение плана лечения','Заявка #32432'])
+    include components/navigation
+    main.main
+      .content
+        .container 
+          .wrapper
+            h1.title Заявка на нового пациента #234
+            .info 
+              .info__item 
+                span Дата создания заявки
+                | 23.09.2023
+              .info__item.info__item--light 
+                span ФИО пациента
+                | Гончаров Андрей Владимирович
+              .info__item 
+                span Клиника
+                | SmileClinic
+              .info__item 
+                span Врач
+                | Дорофеева Виолетта
+            .section 
+              .section__title Комментарий от врача
+              .comment Я думаю, что нам нужно изменить план лечения - посмотрите прикрепленные файлы
+            .section 
+              .section__title Файлы
+              .docs
+                a(href="#").doc
+                  .doc__name Жданов.zip
+                  .doc__size 54.6 Кб
+            .action
+              .btn.btn--big.btn--primary.btn--icon
+                span Отметить как обработанную
+    include components/footer
+    include includes/scripts

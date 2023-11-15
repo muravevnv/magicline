@@ -1,10 +1,10 @@
 .form {
   &-group {
     width: 100%;
-    margin-top: 20px;
     position: relative;
     padding-top: 23px;
-      
+    margin-top: 20px;
+    
     @include media(sm) {
       margin-top: 16px;
     }
@@ -80,6 +80,11 @@
 
     &:focus::placeholder {
       display: none;
+    }
+
+    &:disabled {
+      border: 1px solid var(--ffffff-20, rgba(255, 255, 255, 0.20));
+      background: var(--ffffff-10, rgba(255, 255, 255, 0.10));
     }
   }
 

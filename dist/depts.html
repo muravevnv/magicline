@@ -297,24 +297,24 @@
           <div class="modal__title">Редактировать запись об оплате #3453</div>
           <form class="modal-form">
             <div class="form-group">
-              <input class="form-control" type="text">
+              <input class="form-control is-filled" type="text" value="Доктор Дент" disabled>
               <label class="form-label" for="">Клиника<span>*</span></label>
             </div>
             <div class="form-group">
-              <input class="form-control" type="text">
+              <input class="form-control is-filled" type="text" value="Колобов Ипполит Вадимович" disabled>
               <label class="form-label" for="">Врач<span>*</span></label>
             </div>
             <div class="form-group">
-              <input class="form-control" type="text">
+              <input class="form-control is-filled" type="text" value="Жданов Остап Арсеньевич" disabled>
               <label class="form-label" for="">Пациент<span>*</span></label>
             </div>
             <div class="form-row"> 
               <div class="form-group">
-                <input class="form-control" type="text">
+                <input class="form-control is-filled" type="text" value="15.09.2023">
                 <label class="form-label" for="">Дата<span>*</span></label>
               </div>
               <div class="form-group">
-                <input class="form-control" type="text">
+                <input class="form-control is-filled" type="text" value="15.09.2023">
                 <label class="form-label" for="">Сумма<span>*</span></label>
               </div>
             </div>
@@ -381,6 +381,72 @@
             <div class="modal-action"> 
               <div class="btn">Отменить</div>
               <div class="btn btn--primary">Ок</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="add-docs">
+      <div class="modal-overlay"> </div>
+      <div class="modal-wrapper"> 
+        <div class="modal-content"> 
+          <div class="modal-close"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#close"></use>
+                </svg>
+          </div>
+          <div class="modal__title">Предложить изменения</div>
+          <div class="modal__desc">Напишите, что нужно изменить в плане лечения</div>
+          <form class="modal-form">
+            <div class="form-group">
+              <input class="form-control" type="text">
+              <label class="form-label">Комментарий </label>
+            </div>
+            <div class="modal-docs"> 
+              <div class="docs"> <a class="doc" href="#">
+                  <div class="doc__name">Жданов.zip</div>
+                  <div class="doc__size">54.6 Кб</div></a></div>
+            </div>
+            <div class="modal-action modal-action--column"> 
+              <div class="btn btn--big btn--icon"><span>Выбрать файлы</span>
+                    <svg width="30" height="30">
+                      <use xlink:href="images/sprite.svg#plus-big"></use>
+                    </svg>
+              </div>
+              <button class="btn btn--big btn--primary" disabled>Предложить</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="add-photo">
+      <div class="modal-overlay"> </div>
+      <div class="modal-wrapper"> 
+        <div class="modal-content"> 
+          <div class="modal-close"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#close"></use>
+                </svg>
+          </div>
+          <div class="modal__title">Добавить фото</div>
+          <div class="modal-action modal-action--column"> 
+            <div class="btn btn--big btn--icon"><span>Выбрать файлы</span>
+                  <svg width="30" height="30">
+                    <use xlink:href="images/sprite.svg#plus-big"></use>
+                  </svg>
+            </div>
+          </div>
+          <form class="modal-form">
+            <div class="form-group">
+              <input class="form-control" type="text">
+              <label class="form-label">Дата <span>*</span></label>
+            </div>
+            <div class="form-group">
+              <input class="form-control" type="text">
+              <label class="form-label">Комментарий </label>
+            </div>
+            <div class="modal-action modal-action--column"> 
+              <button class="btn btn--big btn--primary" disabled>Предложить</button>
             </div>
           </form>
         </div>

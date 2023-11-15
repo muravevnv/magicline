@@ -7,6 +7,12 @@
     left: 0;
     right: 0;
     padding: 20px 15px;
+    z-index: 20;
+
+    &.is-active {
+      
+      background: linear-gradient(176deg, #01140E 14.74%, #0A2116 100.44%);
+    }
   }
 
   &-burger {
@@ -14,6 +20,53 @@
     height: 55px;
     border-radius: 15px;
     border: 1px solid var(--ffffff-10, rgba(255, 255, 255, 0.1));
+    position: relative;
+
+    span {
+      position: absolute;
+      width: 30px;
+      height: 1px;
+      background-color: var(--white);
+      transition: .25s;
+
+      &:nth-of-type(1) {
+        top: 17px;
+        left: 12px;
+      }
+      &:nth-of-type(2) {
+        top: 27px;
+        left: 12px;
+      }
+      &:nth-of-type(3) {
+        top: 37px;
+        left: 12px;
+      }
+    }
+
+    &.is-active {
+
+      span {
+        transition: .25s;
+
+        &:nth-of-type(1) {
+          top: 27px;
+          left: 12px;
+          transform: rotate(45deg);
+        }
+
+        &:nth-of-type(2) {
+          top: 17px;
+          left: 12px;
+          opacity: 0;
+        }
+
+        &:nth-of-type(3) {
+          top: 27px;
+          left: 12px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
   }
 }
 
@@ -25,6 +78,10 @@
   position: absolute;
   top: 0;
   right: 0;
+
+  @include media(lg) {
+    width: 100%;
+  }
 
   .theme-choices  {
     margin: 0 0 0 auto;
