@@ -1267,6 +1267,8 @@ table .t-button {
   font-size: 18px;
   line-height: 1.32;
   border-radius: 6px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
 }
 .doc__name {
   color: var(--white-text);
@@ -1276,6 +1278,20 @@ table .t-button {
 }
 .doc + .doc {
   margin-top: 8px;
+}
+.doc:hover {
+  border-radius: var(--sizes-border-radius, 6px);
+  border: 1px solid rgba(38, 215, 144, 0.1);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(38, 215, 144, 0.3)), to(rgba(38, 215, 144, 0)));
+  background: linear-gradient(90deg, rgba(38, 215, 144, 0.3) 0%, rgba(38, 215, 144, 0) 100%);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.doc:hover .doc__name {
+  color: var(--primary);
+}
+.doc:hover .doc__size {
+  color: var(--white-text);
 }
 
 .photos {
@@ -1743,6 +1759,37 @@ table .t-button {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
+
+.error {
+  position: relative;
+  height: calc(100vh - 110px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.error__title {
+  margin: 40px 0;
+  font-size: 74px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--white-text-darken);
+}
+.error__img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+.error__num {
+  margin: auto 0 0 0;
+}
 @media (max-width: 1200px){
   .content {
     padding: 20px;
@@ -1750,6 +1797,7 @@ table .t-button {
   .main {
     padding-top: 0px;
     padding-left: 0;
+    min-height: calc(100vh - 185px);
   }
   .header {
     display: -webkit-box;
@@ -1822,6 +1870,14 @@ table .t-button {
   .nav-bottom {
     padding: 30px 20px;
   }
+  .error {
+    height: calc(100vh - 185px);
+    padding-bottom: 40px;
+  }
+  .error__title {
+    font-size: 48px;
+    margin: 30px 0;
+  }
 }
 @media (max-width: 1023px){
   body {
@@ -1887,6 +1943,17 @@ table .t-button {
   .progress {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+  }
+  .error {
+    overflow: hidden;
+  }
+  .error__title {
+    font-size: 32px;
+    margin: 24px 0;
+  }
+  .error__img {
+    min-width: 700px;
+    left: -350px;
   }
 }
 @media (max-width: 560px){

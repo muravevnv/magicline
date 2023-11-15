@@ -8,16 +8,36 @@
   font-size: 18px;
   line-height: 1.32;
   border-radius: 6px;
+  transition: var(--transition);
 
   &__name {
     color: var(--white-text);
   }
 
   &__size {
-    color: var(--white-text-darken)
+    color: var(--white-text-darken);
   }
 
   + .doc {
     margin-top: 8px;
+  }
+
+  &:hover {
+    border-radius: var(--sizes-border-radius, 6px);
+    border: 1px solid rgba(38, 215, 144, 0.1);
+    background: linear-gradient(
+      90deg,
+      rgba(38, 215, 144, 0.3) 0%,
+      rgba(38, 215, 144, 0) 100%
+    );
+    transition: var(--transition);
+
+    .doc__name {
+      color: var(--primary);
+    }
+
+    .doc__size {
+      color: var(--white-text);
+    }
   }
 }

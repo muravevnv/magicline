@@ -1,0 +1,82 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href="css/main.css" rel="stylesheet")
+    title Главная
+  body
+    include mixins/_mixins
+    include components/header
+    +topPanel(['Долги','Доктор Дент','Колобов Ипполит Вадимович'])
+    .nav 
+      .nav-main 
+        a.nav__logo(href="#")
+          img(src="images/logo.svg", alt="")
+        ul.nav-list 
+          li.nav-item
+            +svgSprite(30, 30, 'chat')
+            a(href="doctor-orders.html").nav-link Заявки
+          li.nav-item
+            +svgSprite(30, 30, 'clients')
+            a(href="doctor-patients.html").nav-link Пациенты
+          li.nav-item.is-active 
+            +svgSprite(30, 30, 'debts')
+            a(href="doctor-depts.html").nav-link Долги
+      .nav-user 
+        .nav-user__name Циванюк Ольга
+        .nav-user__post Врач
+      .nav-bottom «Настоящее украшение  — это здоровая и красивая улыбка»
+    main.main
+      .content(data-role="tab")
+        .container 
+          h1.title Колобов Ипполит Вадимович
+          .row 
+            .dept-price
+              .dept-price__title Долг
+              .dept-price__num 35 000 ₽
+                span 400 000 ₽
+            .btn.btn--icon.btn--big.js-open-modal(data-modal="add-payment")
+              span Внести оплату
+              +svgSprite(30, 30, 'plus-big')
+          .card 
+            .card-body 
+              .table-responsive
+                .table.table-dept
+                  .table-head 
+                    .table-cell Пациент
+                    .table-cell.table-cell--center Долг
+                    .table-cell.table-cell--right Общая сумма
+                    .table-cell
+                  .table-row 
+                    .table-celll.table-cell--light Вишняков Лев Матвеевич
+                    .table-cell 125 000 ₽
+                    .table-cell.table-cell--right 1 000 000 ₽
+                    .table-cell
+                      .show-more
+                            +svgSprite(7, 14, 'arrow-right')
+                  .table-row 
+                    .table-celll.table-cell--light Шаров Емельян Улебович
+                    .table-cell 125 000 ₽
+                    .table-cell.table-cell--right 1 000 000 ₽
+                    .table-cell
+                      .show-more
+                            +svgSprite(7, 14, 'arrow-right')
+                  .table-row 
+                    .table-celll.table-cell--light Жданов Остап Арсеньевич
+                    .table-cell 125 000 ₽
+                    .table-cell.table-cell--right 1 000 000 ₽
+                    .table-cell
+                      .show-more
+                            +svgSprite(7, 14, 'arrow-right')
+                  .table-row 
+                    .table-celll.table-cell--light Орехов Гордей Лукьевич
+                    .table-cell 125 000 ₽
+                    .table-cell.table-cell--right 1 000 000 ₽
+                    .table-cell
+                      .show-more
+                            +svgSprite(7, 14, 'arrow-right')
+  include components/footer
+    include components/modal
+    include includes/scripts

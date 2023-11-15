@@ -1,0 +1,42 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href="css/choices.css" rel="stylesheet")
+    link(href="css/main.css" rel="stylesheet")
+    title Главная
+  body
+    include mixins/_mixins
+    include components/header
+    +topPanel(['Долги'])
+    .nav 
+      .nav-main 
+        a.nav__logo(href="#")
+          img(src="images/logo.svg", alt="")
+        ul.nav-list 
+          li.nav-item
+            +svgSprite(30, 30, 'clients')
+            a(href="payments.html").nav-link Оплаты
+          li.nav-item.is-active 
+            +svgSprite(30, 30, 'debts')
+            a(href="depts.html").nav-link Долги
+      .nav-user 
+        .nav-user__name Циванюк Ольга
+        .nav-user__post Бухгалтер
+      .nav-bottom «Настоящее украшение  — это здоровая и красивая улыбка»
+    main.main
+      .content.error 
+        h1.title Страница не найдена
+        .error__title Мы уже чиним это
+        .error__btn.btn.btn--big.btn--primary 
+          span Вернуться назад
+        .error__num
+          img(src="images/num.png", alt="")
+        .error__img 
+          img(src="images/vortex.png", alt="")
+
+    include components/footer
+    include components/modal
+    include includes/scripts
