@@ -1354,6 +1354,9 @@ table .t-button {
 .print-history__item:not(:last-of-type) {
   margin-bottom: 10px;
 }
+.print__edit, .print__remove {
+  cursor: pointer;
+}
 
 .is-focused .choices__inner, .is-open .choices__inner {
   border-color: var(--border);

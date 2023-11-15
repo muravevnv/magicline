@@ -11,7 +11,30 @@ html(lang="en")
     include mixins/_mixins
     include components/header
     +topPanel(['Очередь на печать'])
-    include components/navigation
+    .nav 
+      .nav-main 
+        a.nav__logo(href="#")
+          img(src="images/logo.svg", alt="")
+        ul.nav-list 
+          li.nav-item
+            +svgSprite(30, 30, 'chat')
+            a(href="orders.html").nav-link Заявки
+          li.nav-item.is-active 
+            +svgSprite(30, 30, 'play')
+            a(href="print.html").nav-link Очередь на печать
+          li.nav-item 
+            +svgSprite(30, 30, 'clients')
+            a(href="patients.html").nav-link Пациенты
+          li.nav-item 
+            +svgSprite(30, 30, 'payments')
+            a(href="payments.html").nav-link Оплаты
+          li.nav-item 
+            +svgSprite(30, 30, 'debts')
+            a(href="depts.html").nav-link Долги
+      .nav-user 
+        .nav-user__name Циванюк Ольга
+        .nav-user__post Заведующий
+      .nav-bottom «Настоящее украшение  — это здоровая и красивая улыбка»
     main.main
       .content(data-role="tab")
         .container 
@@ -91,13 +114,13 @@ html(lang="en")
                         .table-cell 23.09.2023
                         .table-cell
                           select.js-select(name="") 
-                            option(value="") 
+                            option(value="request") 
                               span.status.is-request Запрошен
-                            option(value="") 
+                            option(value="work") 
                               span.status.is-work В работе
-                            option(value="") 
+                            option(value="waiting") 
                               span.status.is-waiting Ждет отправки
-                            option(value="") 
+                            option(value="ready") 
                               span.status.is-ready Готово
                         .table-cell Николаев Мечислав Леонидович
                         .table-cell.table-button.acc-item 
@@ -142,13 +165,13 @@ html(lang="en")
                         .table-cell 23.09.2023
                         .table-cell
                           select.js-select(name="") 
-                            option(value="") 
+                            option(value="request") 
                               span.status.is-request Запрошен
-                            option(value="") 
+                            option(value="work") 
                               span.status.is-work В работе
-                            option(value="") 
+                            option(value="waiting") 
                               span.status.is-waiting Ждет отправки
-                            option(value="") 
+                            option(value="ready") 
                               span.status.is-ready Готово
                         .table-cell Николаев Мечислав Леонидович
                         .table-cell.table-button.acc-item 
@@ -193,13 +216,13 @@ html(lang="en")
                         .table-cell 23.09.2023
                         .table-cell
                           select.js-select(name="") 
-                            option(value="") 
+                            option(value="request") 
                               span.status.is-request Запрошен
-                            option(value="") 
+                            option(value="work") 
                               span.status.is-work В работе
-                            option(value="") 
+                            option(value="waiting") 
                               span.status.is-waiting Ждет отправки
-                            option(value="") 
+                            option(value="ready") 
                               span.status.is-ready Готово
                         .table-cell Николаев Мечислав Леонидович
                         .table-cell.table-button.acc-item 
@@ -237,7 +260,6 @@ html(lang="en")
                           .print-history__item
                             .print-history__item-text 09.10.2023 - Слепникова Елена Андреевна
                             .print-history__item-status Ждет отправки
-          
           .tabs-content(data-tab="print-archive")
             .card
               .card-body 
@@ -257,13 +279,13 @@ html(lang="en")
                         .table-cell 23.09.2023
                         .table-cell
                           select.js-select(name="") 
-                            option(value="") 
+                            option(value="request") 
                               span.status.is-request Запрошен
-                            option(value="") 
+                            option(value="work") 
                               span.status.is-work В работе
-                            option(value="") 
+                            option(value="waiting") 
                               span.status.is-waiting Ждет отправки
-                            option(value="") 
+                            option(value="ready") 
                               span.status.is-ready Готово
                         .table-cell Николаев Мечислав Леонидович
                         .table-cell.table-button.acc-item 
@@ -308,13 +330,13 @@ html(lang="en")
                         .table-cell 23.09.2023
                         .table-cell
                           select.js-select(name="") 
-                            option(value="") 
+                            option(value="request") 
                               span.status.is-request Запрошен
-                            option(value="") 
+                            option(value="work") 
                               span.status.is-work В работе
-                            option(value="") 
+                            option(value="waiting") 
                               span.status.is-waiting Ждет отправки
-                            option(value="") 
+                            option(value="ready") 
                               span.status.is-ready Готово
                         .table-cell Николаев Мечислав Леонидович
                         .table-cell.table-button.acc-item 
@@ -359,13 +381,13 @@ html(lang="en")
                         .table-cell 23.09.2023
                         .table-cell
                           select.js-select(name="") 
-                            option(value="") 
+                            option(value="request") 
                               span.status.is-request Запрошен
-                            option(value="") 
+                            option(value="work") 
                               span.status.is-work В работе
-                            option(value="") 
+                            option(value="waiting") 
                               span.status.is-waiting Ждет отправки
-                            option(value="") 
+                            option(value="ready") 
                               span.status.is-ready Готово
                         .table-cell Николаев Мечислав Леонидович
                         .table-cell.table-button.acc-item 
@@ -410,13 +432,13 @@ html(lang="en")
                         .table-cell 23.09.2023
                         .table-cell
                           select.js-select(name="") 
-                            option(value="") 
+                            option(value="request") 
                               span.status.is-request Запрошен
-                            option(value="") 
+                            option(value="work") 
                               span.status.is-work В работе
-                            option(value="") 
+                            option(value="waiting") 
                               span.status.is-waiting Ждет отправки
-                            option(value="") 
+                            option(value="ready") 
                               span.status.is-ready Готово
                         .table-cell Николаев Мечислав Леонидович
                         .table-cell.table-button.acc-item 
@@ -461,13 +483,13 @@ html(lang="en")
                         .table-cell 23.09.2023
                         .table-cell
                           select.js-select(name="") 
-                            option(value="") 
+                            option(value="request") 
                               span.status.is-request Запрошен
-                            option(value="") 
+                            option(value="work") 
                               span.status.is-work В работе
-                            option(value="") 
+                            option(value="waiting") 
                               span.status.is-waiting Ждет отправки
-                            option(value="") 
+                            option(value="ready") 
                               span.status.is-ready Готово
                         .table-cell Николаев Мечислав Леонидович
                         .table-cell.table-button.acc-item 
@@ -512,13 +534,13 @@ html(lang="en")
                         .table-cell 23.09.2023
                         .table-cell
                           select.js-select(name="") 
-                            option(value="") 
+                            option(value="request") 
                               span.status.is-request Запрошен
-                            option(value="") 
+                            option(value="work") 
                               span.status.is-work В работе
-                            option(value="") 
+                            option(value="waiting") 
                               span.status.is-waiting Ждет отправки
-                            option(value="") 
+                            option(value="ready") 
                               span.status.is-ready Готово
                         .table-cell Николаев Мечислав Леонидович
                         .table-cell.table-button.acc-item 
