@@ -872,6 +872,12 @@ table .t-button {
   opacity: 1;
 }
 
+.table-dept .table-head,
+.table-dept .table-row {
+  width: 100%;
+  grid-template-columns: 1fr 157px 148px 73px;
+}
+
 .table-section.is-open {
   background: var(--ffffff-10, rgba(255, 255, 255, 0.1));
 }

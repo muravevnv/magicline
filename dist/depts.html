@@ -74,7 +74,7 @@
                 <div class="dept-price__title">Долг</div>
                 <div class="dept-price__num">1 000 000 ₽<span>8 000 000 ₽</span></div>
               </div>
-              <div class="btn btn--icon btn--big"><span>Внести оплату</span>
+              <div class="btn btn--icon btn--big js-open-modal" data-modal="add-payment"><span>Внести оплату</span>
                     <svg width="30" height="30">
                       <use xlink:href="images/sprite.svg#plus-big"></use>
                     </svg>
@@ -83,78 +83,54 @@
             <div class="card"> 
               <div class="card-body"> 
                 <div class="table-responsive">
-                  <table class="table">
-                    <thead> 
-                      <tr> 
-                        <th>Клиника</th>
-                        <th>Долг</th>
-                        <th>Общая сумма</th>
-                        <th></th>
-                      </tr>
-                    </thead>
-                    <tbody> 
-                      <tr>
-                        <td> <a href="depts-clinics.html">SmileClinic</a></td>
-                        <td>125 000 ₽</td>
-                        <td>1 000 000 ₽</td>
-                        <td class="t-button">
-                          <div class="show-more">
-                                <svg width="7" height="14">
-                                  <use xlink:href="images/sprite.svg#arrow-right"></use>
-                                </svg>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td> <a href="depts-clinics.html">SmileClinic</a></td>
-                        <td>125 000 ₽</td>
-                        <td>1 000 000 ₽</td>
-                        <td class="t-button">
-                          <div class="show-more">
-                                <svg width="7" height="14">
-                                  <use xlink:href="images/sprite.svg#arrow-right"></use>
-                                </svg>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td> <a href="depts-clinics.html">SmileClinic</a></td>
-                        <td>125 000 ₽</td>
-                        <td>1 000 000 ₽</td>
-                        <td class="t-button">
-                          <div class="show-more">
-                                <svg width="7" height="14">
-                                  <use xlink:href="images/sprite.svg#arrow-right"></use>
-                                </svg>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>SmileClinic</td>
-                        <td>125 000 ₽</td>
-                        <td>1 000 000 ₽</td>
-                        <td class="t-button">
-                          <div class="show-more">
-                                <svg width="7" height="14">
-                                  <use xlink:href="images/sprite.svg#arrow-right"></use>
-                                </svg>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td> <a href="depts-clinics.html">SmileClinic</a></td>
-                        <td>125 000 ₽</td>
-                        <td>1 000 000 ₽</td>
-                        <td class="t-button">
-                          <div class="show-more">
-                                <svg width="7" height="14">
-                                  <use xlink:href="images/sprite.svg#arrow-right"></use>
-                                </svg>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <div class="table table-dept">
+                    <div class="table-head"> 
+                      <div class="table-cell">Клиника</div>
+                      <div class="table-cell table-cell--center">Долг</div>
+                      <div class="table-cell table-cell--right">Общая сумма</div>
+                      <div class="table-cell"></div>
+                    </div><a class="table-row" href="depts-clinics.html"> 
+                      <div class="table-celll table-cell--light">Доктор Дент</div>
+                      <div class="table-cell">125 000 ₽</div>
+                      <div class="table-cell table-cell--right">1 000 000 ₽</div>
+                      <div class="table-cell">
+                        <div class="show-more">
+                              <svg width="7" height="14">
+                                <use xlink:href="images/sprite.svg#arrow-right"></use>
+                              </svg>
+                        </div>
+                      </div></a><a class="table-row" href="depts-clinics.html"> 
+                      <div class="table-celll table-cell--light">TeethClinic</div>
+                      <div class="table-cell">125 000 ₽</div>
+                      <div class="table-cell table-cell--right">1 000 000 ₽</div>
+                      <div class="table-cell">
+                        <div class="show-more">
+                              <svg width="7" height="14">
+                                <use xlink:href="images/sprite.svg#arrow-right"></use>
+                              </svg>
+                        </div>
+                      </div></a><a class="table-row" href="depts-clinics.html"> 
+                      <div class="table-cell table-cell--light">SmileClinic</div>
+                      <div class="table-cell">125 000 ₽</div>
+                      <div class="table-cell table-cell--right">1 000 000 ₽</div>
+                      <div class="table-cell">
+                        <div class="show-more">
+                              <svg width="7" height="14">
+                                <use xlink:href="images/sprite.svg#arrow-right"></use>
+                              </svg>
+                        </div>
+                      </div></a><a class="table-row" href="depts-clinics.html"> 
+                      <div class="table-celll table-cell--light">Томсон</div>
+                      <div class="table-cell">125 000 ₽</div>
+                      <div class="table-cell table-cell--right">1 000 000 ₽</div>
+                      <div class="table-cell">
+                        <div class="show-more">
+                              <svg width="7" height="14">
+                                <use xlink:href="images/sprite.svg#arrow-right"></use>
+                              </svg>
+                        </div>
+                      </div></a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -173,78 +149,54 @@
             <div class="card"> 
               <div class="card-body"> 
                 <div class="table-responsive">
-                  <table class="table">
-                    <thead> 
-                      <tr> 
-                        <th>Клиника</th>
-                        <th>Долг</th>
-                        <th>Общая сумма</th>
-                        <th></th>
-                      </tr>
-                    </thead>
-                    <tbody> 
-                      <tr>
-                        <td> <a href="depts-clinics.html">SmileClinic</a></td>
-                        <td>125 000 ₽</td>
-                        <td>1 000 000 ₽</td>
-                        <td class="t-button">
-                          <div class="show-more">
-                                <svg width="7" height="14">
-                                  <use xlink:href="images/sprite.svg#arrow-right"></use>
-                                </svg>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td> <a href="depts-clinics.html">SmileClinic</a></td>
-                        <td>125 000 ₽</td>
-                        <td>1 000 000 ₽</td>
-                        <td class="t-button">
-                          <div class="show-more">
-                                <svg width="7" height="14">
-                                  <use xlink:href="images/sprite.svg#arrow-right"></use>
-                                </svg>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td> <a href="depts-clinics.html">SmileClinic</a></td>
-                        <td>125 000 ₽</td>
-                        <td>1 000 000 ₽</td>
-                        <td class="t-button">
-                          <div class="show-more">
-                                <svg width="7" height="14">
-                                  <use xlink:href="images/sprite.svg#arrow-right"></use>
-                                </svg>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td> <a href="depts-clinics.html">SmileClinic</a></td>
-                        <td>125 000 ₽</td>
-                        <td>1 000 000 ₽</td>
-                        <td class="t-button">
-                          <div class="show-more">
-                                <svg width="7" height="14">
-                                  <use xlink:href="images/sprite.svg#arrow-right"></use>
-                                </svg>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td> <a href="depts-clinics.html">SmileClinic</a></td>
-                        <td>125 000 ₽</td>
-                        <td>1 000 000 ₽</td>
-                        <td class="t-button">
-                          <div class="show-more">
-                                <svg width="7" height="14">
-                                  <use xlink:href="images/sprite.svg#arrow-right"></use>
-                                </svg>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <div class="table table-dept">
+                    <div class="table-head"> 
+                      <div class="table-cell">Клиника</div>
+                      <div class="table-cell table-cell--center">Долг</div>
+                      <div class="table-cell table-cell--right">Общая сумма</div>
+                      <div class="table-cell"></div>
+                    </div><a class="table-row" href="depts-clinics.html"> 
+                      <div class="table-cell">Доктор Дент</div>
+                      <div class="table-cell">125 000 ₽</div>
+                      <div class="table-cell table-cell--right">1 000 000 ₽</div>
+                      <div class="table-cell">
+                        <div class="show-more">
+                              <svg width="7" height="14">
+                                <use xlink:href="images/sprite.svg#arrow-right"></use>
+                              </svg>
+                        </div>
+                      </div></a><a class="table-row" href="depts-clinics.html"> 
+                      <div class="table-cell">TeethClinic</div>
+                      <div class="table-cell">125 000 ₽</div>
+                      <div class="table-cell table-cell--right">1 000 000 ₽</div>
+                      <div class="table-cell">
+                        <div class="show-more">
+                              <svg width="7" height="14">
+                                <use xlink:href="images/sprite.svg#arrow-right"></use>
+                              </svg>
+                        </div>
+                      </div></a><a class="table-row" href="depts-clinics.html"> 
+                      <div class="table-cell">SmileClinic</div>
+                      <div class="table-cell">125 000 ₽</div>
+                      <div class="table-cell table-cell--right">1 000 000 ₽</div>
+                      <div class="table-cell">
+                        <div class="show-more">
+                              <svg width="7" height="14">
+                                <use xlink:href="images/sprite.svg#arrow-right"></use>
+                              </svg>
+                        </div>
+                      </div></a><a class="table-row" href="depts-clinics.html"> 
+                      <div class="table-cell">Томсон</div>
+                      <div class="table-cell">125 000 ₽</div>
+                      <div class="table-cell table-cell--right">1 000 000 ₽</div>
+                      <div class="table-cell">
+                        <div class="show-more">
+                              <svg width="7" height="14">
+                                <use xlink:href="images/sprite.svg#arrow-right"></use>
+                              </svg>
+                        </div>
+                      </div></a>
+                  </div>
                 </div>
               </div>
             </div>

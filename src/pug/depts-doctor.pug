@@ -34,55 +34,46 @@ html(lang="en")
               .dept-price__title Долг
               .dept-price__num 35 000 ₽
                 span 400 000 ₽
-            .btn.btn--icon.btn--big
+            .btn.btn--icon.btn--big.js-open-modal(data-modal="add-payment")
               span Внести оплату
               +svgSprite(30, 30, 'plus-big')
           .card 
             .card-body 
               .table-responsive
-                table.table
-                  thead 
-                    tr 
-                      th Пациент
-                      th Долг
-                      th Общая сумма
-                      th
-                  tbody 
-                    tr
-                      td Вишняков Лев Матвеевич
-                      td 125 000 ₽
-                      td 1 000 000 ₽
-                      td.t-button
-                        .show-more
-                          +svgSprite(7, 14, 'arrow-right')
-                    tr
-                      td Шаров Емельян Улебович
-                      td 125 000 ₽
-                      td 1 000 000 ₽
-                      td.t-button
-                        .show-more
-                          +svgSprite(7, 14, 'arrow-right')
-                    tr
-                      td Жданов Остап Арсеньевич
-                      td 125 000 ₽
-                      td 1 000 000 ₽
-                      td.t-button
-                        .show-more
-                          +svgSprite(7, 14, 'arrow-right')
-                    tr
-                      td Орехов Гордей Лукьевич
-                      td 125 000 ₽
-                      td 1 000 000 ₽
-                      td.t-button
-                        .show-more
-                          +svgSprite(7, 14, 'arrow-right')
-                    tr
-                      td Молчанов Мечислав Донатович
-                      td 125 000 ₽
-                      td 1 000 000 ₽
-                      td.t-button
-                        .show-more
-                          +svgSprite(7, 14, 'arrow-right')
-    include components/footer
+                .table.table-dept
+                  .table-head 
+                    .table-cell Пациент
+                    .table-cell.table-cell--center Долг
+                    .table-cell.table-cell--right Общая сумма
+                    .table-cell
+                  .table-row 
+                    .table-celll.table-cell--light Вишняков Лев Матвеевич
+                    .table-cell 125 000 ₽
+                    .table-cell.table-cell--right 1 000 000 ₽
+                    .table-cell
+                      .show-more
+                            +svgSprite(7, 14, 'arrow-right')
+                  .table-row 
+                    .table-celll.table-cell--light Шаров Емельян Улебович
+                    .table-cell 125 000 ₽
+                    .table-cell.table-cell--right 1 000 000 ₽
+                    .table-cell
+                      .show-more
+                            +svgSprite(7, 14, 'arrow-right')
+                  .table-row 
+                    .table-celll.table-cell--light Жданов Остап Арсеньевич
+                    .table-cell 125 000 ₽
+                    .table-cell.table-cell--right 1 000 000 ₽
+                    .table-cell
+                      .show-more
+                            +svgSprite(7, 14, 'arrow-right')
+                  .table-row 
+                    .table-celll.table-cell--light Орехов Гордей Лукьевич
+                    .table-cell 125 000 ₽
+                    .table-cell.table-cell--right 1 000 000 ₽
+                    .table-cell
+                      .show-more
+                            +svgSprite(7, 14, 'arrow-right')
+  include components/footer
     include components/modal
     include includes/scripts

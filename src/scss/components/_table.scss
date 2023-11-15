@@ -197,6 +197,14 @@ table {
   }
 }
 
+.table-dept {
+  .table-head,
+  .table-row {
+    width: 100%;
+    grid-template-columns: 1fr 157px 148px 73px;
+  }
+}
+
 .table-section {
 
   &.is-open {
