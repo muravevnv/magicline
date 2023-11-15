@@ -392,7 +392,111 @@
         </div>
       </div>
     </div>
+    <div class="modal" data-modal="print-edit">
+      <div class="modal-overlay"> </div>
+      <div class="modal-wrapper"> 
+        <div class="modal-content"> 
+          <div class="modal-close"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#close"></use>
+                </svg>
+          </div>
+          <div class="modal__title">Редактировать запись в очереди</div>
+          <div class="modal__desc">Если какие-то каппы не нужно печатать — отметьте их серым</div>
+          <div class="modal-mouthguards">
+            <div class="mouthguards">
+              <div class="mouthguards-line"> 
+                <div class="mouthguards__symbol"> 
+                      <svg width="16" height="16">
+                        <use xlink:href="images/sprite.svg#plus"></use>
+                      </svg>
+                </div>
+                <div class="mouthguards-list"> 
+                  <div class="mouthguards__item is-request">1</div>
+                  <div class="mouthguards__item is-request">2</div>
+                  <div class="mouthguards__item is-request">3</div>
+                </div>
+              </div>
+              <div class="mouthguards-line"> 
+                <div class="mouthguards__symbol">
+                      <svg width="16" height="16">
+                        <use xlink:href="images/sprite.svg#minus"></use>
+                      </svg>
+                </div>
+                <div class="mouthguards-list"> 
+                  <div class="mouthguards__item is-request">1</div>
+                  <div class="mouthguards__item is-request">2</div>
+                  <div class="mouthguards__item is-request">3</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <form class="modal-form">
+            <div class="form-group">
+              <input class="form-control" type="text" placeholder="Комментарий">
+            </div>
+            <div class="modal-action"> 
+              <div class="btn">Отменить</div>
+              <div class="btn btn--primary">Ок</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="print-delete">
+      <div class="modal-overlay"> </div>
+      <div class="modal-wrapper"> 
+        <div class="modal-content"> 
+          <div class="modal-close"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#close"></use>
+                </svg>
+          </div>
+          <div class="modal__title">Удалить запись из очереди?
+            <div class="modal-action"> 
+              <div class="btn">Да</div>
+              <div class="btn btn--primary">Нет</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="print-deleted">
+      <div class="modal-overlay"> </div>
+      <div class="modal-wrapper"> 
+        <div class="modal-content"> 
+          <div class="modal-close"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#close"></use>
+                </svg>
+          </div>
+          <div class="modal__title">Запись успешно удалена!
+            <div class="modal-action"> 
+              <div class="btn btn--primary">Ок</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="print-changed">
+      <div class="modal-overlay"> </div>
+      <div class="modal-wrapper"> 
+        <div class="modal-content"> 
+          <div class="modal-close"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#close"></use>
+                </svg>
+          </div>
+          <div class="modal__title">Запись успешно изменена!
+            <div class="modal-action"> 
+              <div class="btn btn--primary">Ок</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/choices.min.js"></script>
     <script src="scripts/main.js"></script>
   </body>
 </html>

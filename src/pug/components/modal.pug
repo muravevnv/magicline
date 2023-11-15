@@ -84,3 +84,61 @@
         .modal-action 
           .btn Отменить
           .btn.btn--primary Ок
+.modal(data-modal="print-edit")
+  .modal-overlay 
+  .modal-wrapper 
+    .modal-content 
+      .modal-close 
+        +svgSprite(30, 30, 'close')
+      .modal__title Редактировать запись в очереди
+      .modal__desc Если какие-то каппы не нужно печатать — отметьте их серым
+      .modal-mouthguards
+        .mouthguards
+          .mouthguards-line 
+            .mouthguards__symbol 
+              +svgSprite(16, 16, 'plus')
+            .mouthguards-list 
+              .mouthguards__item.is-request 1
+              .mouthguards__item.is-request 2
+              .mouthguards__item.is-request 3
+          .mouthguards-line 
+            .mouthguards__symbol
+              +svgSprite(16, 16, 'minus')
+            .mouthguards-list 
+              .mouthguards__item.is-request 1
+              .mouthguards__item.is-request 2
+              .mouthguards__item.is-request 3
+      form.modal-form
+        .form-group
+          input(type="text" placeholder="Комментарий").form-control 
+        .modal-action 
+          .btn Отменить
+          .btn.btn--primary Ок
+.modal(data-modal="print-delete")
+  .modal-overlay 
+  .modal-wrapper 
+    .modal-content 
+      .modal-close 
+        +svgSprite(30, 30, 'close')
+      .modal__title Удалить запись из очереди?
+        .modal-action 
+          .btn Да
+          .btn.btn--primary Нет
+.modal(data-modal="print-deleted")
+  .modal-overlay 
+  .modal-wrapper 
+    .modal-content 
+      .modal-close 
+        +svgSprite(30, 30, 'close')
+      .modal__title Запись успешно удалена!
+        .modal-action 
+          .btn.btn--primary Ок
+.modal(data-modal="print-changed")
+  .modal-overlay 
+  .modal-wrapper 
+    .modal-content 
+      .modal-close 
+        +svgSprite(30, 30, 'close')
+      .modal__title Запись успешно изменена!
+        .modal-action 
+          .btn.btn--primary Ок

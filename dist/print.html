@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/choices.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <title>Главная</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-burger"> <span></span><span></span><span></span></div>
+    </header>
+        <div class="top">
+          <div class="container">
+            <ul class="breadcrumbs"> 
+              <li class="breadcrumbs-item"> <a href="#"> 
+                      <svg width="24" height="20">
+                        <use xlink:href="images/sprite.svg#house"></use>
+                      </svg></a></li>
+              <li class="breadcrumbs-item">
+                    <svg width="10" height="10">
+                      <use xlink:href="images/sprite.svg#bc-arrow"></use>
+                    </svg><a href="">Очередь на печать</a>
+              </li>
+            </ul>
+            <div class="theme-choices"> 
+              <div class="theme-choices__thumb"> 
+                    <svg width="18" height="18">
+                      <use xlink:href="images/sprite.svg#night"></use>
+                    </svg>
+              </div>
+            </div>
+            <div class="logout">
+                  <svg width="20" height="20">
+                    <use xlink:href="images/sprite.svg#logout"></use>
+                  </svg>
+            </div>
+          </div>
+        </div>
+    <div class="nav"> 
+      <div class="nav-main"> <a class="nav__logo" href="#"><img src="images/logo.svg" alt=""></a>
+        <ul class="nav-list"> 
+          <li class="nav-item is-active">
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#chat"></use>
+                </svg><a class="nav-link" href="">Заявки</a>
+          </li>
+          <li class="nav-item"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#play"></use>
+                </svg><a class="nav-link" href="">Очередь на печать</a>
+          </li>
+          <li class="nav-item"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#clients"></use>
+                </svg><a class="nav-link" href="">Пациенты</a>
+          </li>
+          <li class="nav-item"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#payments"></use>
+                </svg><a class="nav-link" href="">Оплаты</a>
+          </li>
+          <li class="nav-item"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#debts"></use>
+                </svg><a class="nav-link" href="">Долги</a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-user"> 
+        <div class="nav-user__name">Циванюк Ольга</div>
+        <div class="nav-user__post">Заведующий</div>
+      </div>
+      <div class="nav-bottom">«Настоящее украшение  — это здоровая и красивая улыбка»</div>
+    </div>
+    <main class="main">
+      <div class="content" data-role="tab">
+        <div class="container"> 
+          <h1 class="title">Очередь на печать</h1>
+          <div class="tabs"> 
+            <div class="tabs-item is-new is-active" data-tab="print-new">Новые<span>7</span></div>
+            <div class="tabs-item" data-tab="print-archive">На пациентов (архив)<span>231</span></div>
+          </div>
+          <div class="tabs-content is-open" data-tab="print-new">
+            <div class="card">
+              <div class="card-body"> 
+                <div class="table-responsive">
+                  <div class="table table-print"> 
+                    <div class="table-head"> 
+                      <div class="table-cell">Номер</div>
+                      <div class="table-cell">Заявка</div>
+                      <div class="table-cell">Поставлено</div>
+                      <div class="table-cell">Статус</div>
+                      <div class="table-cell">Пациент</div>
+                      <div class="table-cell"> </div>
+                    </div>
+                    <div class="table-section acc">
+                      <div class="table-row"> 
+                        <div class="table-cell">#3453</div>
+                        <div class="table-cell">23.09.2023</div>
+                        <div class="table-cell">23.09.2023</div>
+                        <div class="table-cell">
+                          <select class="js-select" name=""> 
+                            <option value="request"> <span class="status is-request">Запрошен</span></option>
+                            <option value="work"> <span class="status is-work">В работе</span></option>
+                            <option value="waiting"> <span class="status is-waiting">Ждет отправки</span></option>
+                            <option value="ready"> <span class="status is-ready">Готово</span></option>
+                          </select>
+                        </div>
+                        <div class="table-cell">Николаев Мечислав Леонидович</div>
+                        <div class="table-cell table-button acc-item"> 
+                          <div class="show-more">
+                                <svg width="7" height="14">
+                                  <use xlink:href="images/sprite.svg#arrow-right"></use>
+                                </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table-content print-content acc-body">
+                        <div class="print-head"> 
+                          <div class="print-mouthguards"> 
+                            <div class="mouthguards-row">
+                              <div class="mouthguards__symbol"> 
+                                    <svg width="16" height="16">
+                                      <use xlink:href="images/sprite.svg#plus"></use>
+                                    </svg>
+                              </div>
+                              <div class="mouthguards-list"> 
+                                <div class="mouthguards__item is-request">1</div>
+                                <div class="mouthguards__item is-request">2</div>
+                                <div class="mouthguards__item is-request">3</div>
+                              </div>
+                            </div>
+                            <div class="mouthguards-row"> 
+                              <div class="mouthguards__symbol"> 
+                                    <svg width="16" height="16">
+                                      <use xlink:href="images/sprite.svg#minus"></use>
+                                    </svg>
+                              </div>
+                              <div class="mouthguards-list"> 
+                                <div class="mouthguards__item is-request">1</div>
+                                <div class="mouthguards__item is-request">2</div>
+                                <div class="mouthguards__item is-request">3</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="print-action"> 
+                            <div class="print__edit js-open-modal" data-modal="print-edit"> 
+                                  <svg width="30" height="30">
+                                    <use xlink:href="images/sprite.svg#edit"></use>
+                                  </svg>
+                            </div>
+                            <div class="print__remove js-open-modal" data-modal="print-delete"> 
+                                  <svg width="30" height="30">
+                                    <use xlink:href="images/sprite.svg#remove"></use>
+                                  </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="print-inform"> 
+                              <svg width="30" height="30">
+                                <use xlink:href="images/sprite.svg#chat"></use>
+                              </svg>Обратите внимание на важную вещь: у пациента есть особенности в строении челюсти
+                        </div>
+                        <div class="print-history"> 
+                          <div class="print-history__item">
+                            <div class="print-history__item-text">09.10.2023 - Слепникова Елена Андреевна</div>
+                            <div class="print-history__item-status">Ждет отправки</div>
+                          </div>
+                          <div class="print-history__item">
+                            <div class="print-history__item-text">09.10.2023 - Слепникова Елена Андреевна</div>
+                            <div class="print-history__item-status">Ждет отправки</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table-section acc">
+                      <div class="table-row"> 
+                        <div class="table-cell">#3453</div>
+                        <div class="table-cell">23.09.2023</div>
+                        <div class="table-cell">23.09.2023</div>
+                        <div class="table-cell">
+                          <select class="js-select" name=""> 
+                            <option value=""> <span class="status is-request">Запрошен</span></option>
+                            <option value=""> <span class="status is-work">В работе</span></option>
+                            <option value=""> <span class="status is-waiting">Ждет отправки</span></option>
+                            <option value=""> <span class="status is-ready">Готово</span></option>
+                          </select>
+                        </div>
+                        <div class="table-cell">Николаев Мечислав Леонидович</div>
+                        <div class="table-cell table-button acc-item"> 
+                          <div class="show-more">
+                                <svg width="7" height="14">
+                                  <use xlink:href="images/sprite.svg#arrow-right"></use>
+                                </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table-content print-content acc-body">
+                        <div class="print-head"> 
+                          <div class="print-mouthguards"> 
+                            <div class="mouthguards-row">
+                              <div class="mouthguards__symbol"> 
+                                    <svg width="16" height="16">
+                                      <use xlink:href="images/sprite.svg#plus"></use>
+                                    </svg>
+                              </div>
+                              <div class="mouthguards-list"> 
+                                <div class="mouthguards__item is-request">1</div>
+                                <div class="mouthguards__item is-request">2</div>
+                                <div class="mouthguards__item is-request">3</div>
+                              </div>
+                            </div>
+                            <div class="mouthguards-row"> 
+                              <div class="mouthguards__symbol"> 
+                                    <svg width="16" height="16">
+                                      <use xlink:href="images/sprite.svg#minus"></use>
+                                    </svg>
+                              </div>
+                              <div class="mouthguards-list"> 
+                                <div class="mouthguards__item is-request">1</div>
+                                <div class="mouthguards__item is-request">2</div>
+                                <div class="mouthguards__item is-request">3</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="print-action"> 
+                            <div class="print__edit"> 
+                                  <svg width="30" height="30">
+                                    <use xlink:href="images/sprite.svg#edit"></use>
+                                  </svg>
+                            </div>
+                            <div class="print__remove"> 
+                                  <svg width="30" height="30">
+                                    <use xlink:href="images/sprite.svg#remove"></use>
+                                  </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="print-inform"> 
+                              <svg width="30" height="30">
+                                <use xlink:href="images/sprite.svg#chat"></use>
+                              </svg>Обратите внимание на важную вещь: у пациента есть особенности в строении челюсти
+                        </div>
+                        <div class="print-history"> 
+                          <div class="print-history__item">
+                            <div class="print-history__item-text">09.10.2023 - Слепникова Елена Андреевна</div>
+                            <div class="print-history__item-status">Ждет отправки</div>
+                          </div>
+                          <div class="print-history__item">
+                            <div class="print-history__item-text">09.10.2023 - Слепникова Елена Андреевна</div>
+                            <div class="print-history__item-status">Ждет отправки</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table-section acc">
+                      <div class="table-row"> 
+                        <div class="table-cell">#3453</div>
+                        <div class="table-cell">23.09.2023</div>
+                        <div class="table-cell">23.09.2023</div>
+                        <div class="table-cell">
+                          <select class="js-select" name=""> 
+                            <option value=""> <span class="status is-request">Запрошен</span></option>
+                            <option value=""> <span class="status is-work">В работе</span></option>
+                            <option value=""> <span class="status is-waiting">Ждет отправки</span></option>
+                            <option value=""> <span class="status is-ready">Готово</span></option>
+                          </select>
+                        </div>
+                        <div class="table-cell">Николаев Мечислав Леонидович</div>
+                        <div class="table-cell table-button acc-item"> 
+                          <div class="show-more">
+                                <svg width="7" height="14">
+                                  <use xlink:href="images/sprite.svg#arrow-right"></use>
+                                </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table-content print-content acc-body">
+                        <div class="print-head"> 
+                          <div class="print-mouthguards"> 
+                            <div class="mouthguards-row">
+                              <div class="mouthguards__symbol"> 
+                                    <svg width="16" height="16">
+                                      <use xlink:href="images/sprite.svg#plus"></use>
+                                    </svg>
+                              </div>
+                              <div class="mouthguards-list"> 
+                                <div class="mouthguards__item is-request">1</div>
+                                <div class="mouthguards__item is-request">2</div>
+                                <div class="mouthguards__item is-request">3</div>
+                              </div>
+                            </div>
+                            <div class="mouthguards-row"> 
+                              <div class="mouthguards__symbol"> 
+                                    <svg width="16" height="16">
+                                      <use xlink:href="images/sprite.svg#minus"></use>
+                                    </svg>
+                              </div>
+                              <div class="mouthguards-list"> 
+                                <div class="mouthguards__item is-request">1</div>
+                                <div class="mouthguards__item is-request">2</div>
+                                <div class="mouthguards__item is-request">3</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="print-action"> 
+                            <div class="print__edit"> 
+                                  <svg width="30" height="30">
+                                    <use xlink:href="images/sprite.svg#edit"></use>
+                                  </svg>
+                            </div>
+                            <div class="print__remove"> 
+                                  <svg width="30" height="30">
+                                    <use xlink:href="images/sprite.svg#remove"></use>
+                                  </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="print-inform"> 
+                              <svg width="30" height="30">
+                                <use xlink:href="images/sprite.svg#chat"></use>
+                              </svg>Обратите внимание на важную вещь: у пациента есть особенности в строении челюсти
+                        </div>
+                        <div class="print-history"> 
+                          <div class="print-history__item">
+                            <div class="print-history__item-text">09.10.2023 - Слепникова Елена Андреевна</div>
+                            <div class="print-history__item-status">Ждет отправки</div>
+                          </div>
+                          <div class="print-history__item">
+                            <div class="print-history__item-text">09.10.2023 - Слепникова Елена Андреевна</div>
+                            <div class="print-history__item-status">Ждет отправки</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table-section acc">
+                      <div class="table-row"> 
+                        <div class="table-cell">#3453</div>
+                        <div class="table-cell">23.09.2023</div>
+                        <div class="table-cell">23.09.2023</div>
+                        <div class="table-cell">
+                          <select class="js-select" name=""> 
+                            <option value=""> <span class="status is-request">Запрошен</span></option>
+                            <option value=""> <span class="status is-work">В работе</span></option>
+                            <option value=""> <span class="status is-waiting">Ждет отправки</span></option>
+                            <option value=""> <span class="status is-ready">Готово</span></option>
+                          </select>
+                        </div>
+                        <div class="table-cell">Николаев Мечислав Леонидович</div>
+                        <div class="table-cell table-button acc-item"> 
+                          <div class="show-more">
+                                <svg width="7" height="14">
+                                  <use xlink:href="images/sprite.svg#arrow-right"></use>
+                                </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table-content print-content acc-body">
+                        <div class="print-head"> 
+                          <div class="print-mouthguards"> 
+                            <div class="mouthguards-row">
+                              <div class="mouthguards__symbol"> 
+                                    <svg width="16" height="16">
+                                      <use xlink:href="images/sprite.svg#plus"></use>
+                                    </svg>
+                              </div>
+                              <div class="mouthguards-list"> 
+                                <div class="mouthguards__item is-request">1</div>
+                                <div class="mouthguards__item is-request">2</div>
+                                <div class="mouthguards__item is-request">3</div>
+                              </div>
+                            </div>
+                            <div class="mouthguards-row"> 
+                              <div class="mouthguards__symbol"> 
+                                    <svg width="16" height="16">
+                                      <use xlink:href="images/sprite.svg#minus"></use>
+                                    </svg>
+                              </div>
+                              <div class="mouthguards-list"> 
+                                <div class="mouthguards__item is-request">1</div>
+                                <div class="mouthguards__item is-request">2</div>
+                                <div class="mouthguards__item is-request">3</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="print-action"> 
+                            <div class="print__edit"> 
+                                  <svg width="30" height="30">
+                                    <use xlink:href="images/sprite.svg#edit"></use>
+                                  </svg>
+                            </div>
+                            <div class="print__remove"> 
+                                  <svg width="30" height="30">
+                                    <use xlink:href="images/sprite.svg#remove"></use>
+                                  </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="print-inform"> 
+                              <svg width="30" height="30">
+                                <use xlink:href="images/sprite.svg#chat"></use>
+                              </svg>Обратите внимание на важную вещь: у пациента есть особенности в строении челюсти
+                        </div>
+                        <div class="print-history"> 
+                          <div class="print-history__item">
+                            <div class="print-history__item-text">09.10.2023 - Слепникова Елена Андреевна</div>
+                            <div class="print-history__item-status">Ждет отправки</div>
+                          </div>
+                          <div class="print-history__item">
+                            <div class="print-history__item-text">09.10.2023 - Слепникова Елена Андреевна</div>
+                            <div class="print-history__item-status">Ждет отправки</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tabs-content" data-tab="print-archive">
+            <div class="card">
+              <div class="card-body"> 
+                <div class="table-responsive">
+                  <div class="table table-print"> 
+                    <div class="table-head"> 
+                      <div class="table-cell">Номер</div>
+                      <div class="table-cell">Заявка</div>
+                      <div class="table-cell">Поставлено</div>
+                      <div class="table-cell">Статус</div>
+                      <div class="table-cell">Пациент</div>
+                      <div class="table-cell"> </div>
+                    </div>
+                    <div class="table-section acc">
+                      <div class="table-row"> 
+                        <div class="table-cell">#3453</div>
+                        <div class="table-cell">23.09.2023</div>
+                        <div class="table-cell">23.09.2023</div>
+                        <div class="table-cell">
+                          <select class="js-select" name=""> 
+                            <option value=""> <span class="status is-request">Запрошен</span></option>
+                            <option value=""> <span class="status is-work">В работе</span></option>
+                            <option value=""> <span class="status is-waiting">Ждет отправки</span></option>
+                            <option value=""> <span class="status is-ready">Готово</span></option>
+                          </select>
+                        </div>
+                        <div class="table-cell">Николаев Мечислав Леонидович</div>
+                        <div class="table-cell table-button acc-item"> 
+                          <div class="show-more">
+                                <svg width="7" height="14">
+                                  <use xlink:href="images/sprite.svg#arrow-right"></use>
+                                </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table-content print-content acc-body">
+                        <div class="print-head"> 
+                          <div class="print-mouthguards"> 
+                            <div class="mouthguards-row">
+                              <div class="mouthguards__symbol"> 
+                                    <svg width="16" height="16">
+                                      <use xlink:href="images/sprite.svg#plus"></use>
+                                    </svg>
+                              </div>
+                              <div class="mouthguards-list"> 
+                                <div class="mouthguards__item is-request">1</div>
+                                <div class="mouthguards__item is-request">2</div>
+                                <div class="mouthguards__item is-request">3</div>
+                              </div>
+                            </div>
+                            <div class="mouthguards-row"> 
+                              <div class="mouthguards__symbol"> 
+                                    <svg width="16" height="16">
+                                      <use xlink:href="images/sprite.svg#minus"></use>
+                                    </svg>
+                              </div>
+                              <div class="mouthguards-list"> 
+                                <div class="mouthguards__item is-request">1</div>
+                                <div class="mouthguards__item is-request">2</div>
+                                <div class="mouthguards__item is-request">3</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="print-action"> 
+                            <div class="print__edit"> 
+                                  <svg width="30" height="30">
+                                    <use xlink:href="images/sprite.svg#edit"></use>
+                                  </svg>
+                            </div>
+                            <div class="print__remove"> 
+                                  <svg width="30" height="30">
+                                    <use xlink:href="images/sprite.svg#remove"></use>
+                                  </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="print-inform"> 
+                              <svg width="30" height="30">
+                                <use xlink:href="images/sprite.svg#chat"></use>
+                              </svg>Обратите внимание на важную вещь: у пациента есть особенности в строении челюсти
+                        </div>
+                        <div class="print-history"> 
+                          <div class="print-history__item">
+                            <div class="print-history__item-text">09.10.2023 - Слепникова Елена Андреевна</div>
+                            <div class="print-history__item-status">Ждет отправки</div>
+                          </div>
+                          <div class="print-history__item">
+                            <div class="print-history__item-text">09.10.2023 - Слепникова Елена Андреевна</div>
+                            <div class="print-history__item-status">Ждет отправки</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table-section acc">
+                      <div class="table-row"> 
+                        <div class="table-cell">#3453</div>
+                        <div class="table-cell">23.09.2023</div>
+                        <div class="table-cell">23.09.2023</div>
+                        <div class="table-cell">
+                          <select class="js-select" name=""> 
+                            <option value=""> <span class="status is-request">Запрошен</span></option>
+                            <option value=""> <span class="status is-work">В работе</span></option>
+                            <option value=""> <span class="status is-waiting">Ждет отправки</span></option>
+                            <option value=""> <span class="status is-ready">Готово</span></option>
+                          </select>
+                        </div>
+                        <div class="table-cell">Николаев Мечислав Леонидович</div>
+                        <div class="table-cell table-button acc-item"> 
+                          <div class="show-more">
+                                <svg width="7" height="14">
+                                  <use xlink:href="images/sprite.svg#arrow-right"></use>
+                                </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table-content print-content acc-body">
+                        <div class="print-head"> 
+                          <div class="print-mouthguards"> 
+                            <div class="mouthguards-row">
+                              <div class="mouthguards__symbol"> 
+                                    <svg width="16" height="16">
+                                      <use xlink:href="images/sprite.svg#plus"></use>
+                                    </svg>
+                              </div>
+                              <div class="mouthguards-list"> 
+                                <div class="mouthguards__item is-request">1</div>
+                                <div class="mouthguards__item is-request">2</div>
+                                <div class="mouthguards__item is-request">3</div>
+                              </div>
+                            </div>
+                            <div class="mouthguards-row"> 
+                              <div class="mouthguards__symbol"> 
+                                    <svg width="16" height="16">
+                                      <use xlink:href="images/sprite.svg#minus"></use>
+                                    </svg>
+                              </div>
+                              <div class="mouthguards-list"> 
+                                <div class="mouthguards__item is-request">1</div>
+                                <div class="mouthguards__item is-request">2</div>
+                                <div class="mouthguards__item is-request">3</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="print-action"> 
+                            <div class="print__edit"> 
+                                  <svg width="30" height="30">
+                                    <use xlink:href="images/sprite.svg#edit"></use>
+                                  </svg>
+                            </div>
+                            <div class="print__remove"> 
+                                  <svg width="30" height="30">
+                                    <use xlink:href="images/sprite.svg#remove"></use>
+                                  </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="print-inform"> 
+                              <svg width="30" height="30">
+                                <use xlink:href="images/sprite.svg#chat"></use>
+                              </svg>Обратите внимание на важную вещь: у пациента есть особенности в строении челюсти
+                        </div>
+                        <div class="print-history"> 
+                          <div class="print-history__item">
+                            <div class="print-history__item-text">09.10.2023 - Слепникова Елена Андреевна</div>
+                            <div class="print-history__item-status">Ждет отправки</div>
+                          </div>
+                          <div class="print-history__item">
+                            <div class="print-history__item-text">09.10.2023 - Слепникова Елена Андреевна</div>
+                            <div class="print-history__item-status">Ждет отправки</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table-section acc">
+                      <div class="table-row"> 
+                        <div class="table-cell">#3453</div>
+                        <div class="table-cell">23.09.2023</div>
+                        <div class="table-cell">23.09.2023</div>
+                        <div class="table-cell">
+                          <select class="js-select" name=""> 
+                            <option value=""> <span class="status is-request">Запрошен</span></option>
+                            <option value=""> <span class="status is-work">В работе</span></option>
+                            <option value=""> <span class="status is-waiting">Ждет отправки</span></option>
+                            <option value=""> <span class="status is-ready">Готово</span></option>
+                          </select>
+                        </div>
+                        <div class="table-cell">Николаев Мечислав Леонидович</div>
+                        <div class="table-cell table-button acc-item"> 
+                          <div class="show-more">
+                                <svg width="7" height="14">
+                                  <use xlink:href="images/sprite.svg#arrow-right"></use>
+                                </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table-content print-content acc-body">
+                        <div class="print-head"> 
+                          <div class="print-mouthguards"> 
+                            <div class="mouthguards-row">
+                              <div class="mouthguards__symbol"> 
+                                    <svg width="16" height="16">
+                                      <use xlink:href="images/sprite.svg#plus"></use>
+                                    </svg>
+                              </div>
+                              <div class="mouthguards-list"> 
+                                <div class="mouthguards__item is-request">1</div>
+                                <div class="mouthguards__item is-request">2</div>
+                                <div class="mouthguards__item is-request">3</div>
+                              </div>
+                            </div>
+                            <div class="mouthguards-row"> 
+                              <div class="mouthguards__symbol"> 
+                                    <svg width="16" height="16">
+                                      <use xlink:href="images/sprite.svg#minus"></use>
+                                    </svg>
+                              </div>
+                              <div class="mouthguards-list"> 
+                                <div class="mouthguards__item is-request">1</div>
+                                <div class="mouthguards__item is-request">2</div>
+                                <div class="mouthguards__item is-request">3</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="print-action"> 
+                            <div class="print__edit"> 
+                                  <svg width="30" height="30">
+                                    <use xlink:href="images/sprite.svg#edit"></use>
+                                  </svg>
+                            </div>
+                            <div class="print__remove"> 
+                                  <svg width="30" height="30">
+                                    <use xlink:href="images/sprite.svg#remove"></use>
+                                  </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="print-inform"> 
+                              <svg width="30" height="30">
+                                <use xlink:href="images/sprite.svg#chat"></use>
+                              </svg>Обратите внимание на важную вещь: у пациента есть особенности в строении челюсти
+                        </div>
+                        <div class="print-history"> 
+                          <div class="print-history__item">
+                            <div class="print-history__item-text">09.10.2023 - Слепникова Елена Андреевна</div>
+                            <div class="print-history__item-status">Ждет отправки</div>
+                          </div>
+                          <div class="print-history__item">
+                            <div class="print-history__item-text">09.10.2023 - Слепникова Елена Андреевна</div>
+                            <div class="print-history__item-status">Ждет отправки</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table-section acc">
+                      <div class="table-row"> 
+                        <div class="table-cell">#3453</div>
+                        <div class="table-cell">23.09.2023</div>
+                        <div class="table-cell">23.09.2023</div>
+                        <div class="table-cell">
+                          <select class="js-select" name=""> 
+                            <option value=""> <span class="status is-request">Запрошен</span></option>
+                            <option value=""> <span class="status is-work">В работе</span></option>
+                            <option value=""> <span class="status is-waiting">Ждет отправки</span></option>
+                            <option value=""> <span class="status is-ready">Готово</span></option>
+                          </select>
+                        </div>
+                        <div class="table-cell">Николаев Мечислав Леонидович</div>
+                        <div class="table-cell table-button acc-item"> 
+                          <div class="show-more">
+                                <svg width="7" height="14">
+                                  <use xlink:href="images/sprite.svg#arrow-right"></use>
+                                </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table-content print-content acc-body">
+                        <div class="print-head"> 
+                          <div class="print-mouthguards"> 
+                            <div class="mouthguards-row">
+                              <div class="mouthguards__symbol"> 
+                                    <svg width="16" height="16">
+                                      <use xlink:href="images/sprite.svg#plus"></use>
+                                    </svg>
+                              </div>
+                              <div class="mouthguards-list"> 
+                                <div class="mouthguards__item is-request">1</div>
+                                <div class="mouthguards__item is-request">2</div>
+                                <div class="mouthguards__item is-request">3</div>
+                              </div>
+                            </div>
+                            <div class="mouthguards-row"> 
+                              <div class="mouthguards__symbol"> 
+                                    <svg width="16" height="16">
+                                      <use xlink:href="images/sprite.svg#minus"></use>
+                                    </svg>
+                              </div>
+                              <div class="mouthguards-list"> 
+                                <div class="mouthguards__item is-request">1</div>
+                                <div class="mouthguards__item is-request">2</div>
+                                <div class="mouthguards__item is-request">3</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="print-action"> 
+                            <div class="print__edit"> 
+                                  <svg width="30" height="30">
+                                    <use xlink:href="images/sprite.svg#edit"></use>
+                                  </svg>
+                            </div>
+                            <div class="print__remove"> 
+                                  <svg width="30" height="30">
+                                    <use xlink:href="images/sprite.svg#remove"></use>
+                                  </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="print-inform"> 
+                              <svg width="30" height="30">
+                                <use xlink:href="images/sprite.svg#chat"></use>
+                              </svg>Обратите внимание на важную вещь: у пациента есть особенности в строении челюсти
+                        </div>
+                        <div class="print-history"> 
+                          <div class="print-history__item">
+                            <div class="print-history__item-text">09.10.2023 - Слепникова Елена Андреевна</div>
+                            <div class="print-history__item-status">Ждет отправки</div>
+                          </div>
+                          <div class="print-history__item">
+                            <div class="print-history__item-text">09.10.2023 - Слепникова Елена Андреевна</div>
+                            <div class="print-history__item-status">Ждет отправки</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table-section acc">
+                      <div class="table-row"> 
+                        <div class="table-cell">#3453</div>
+                        <div class="table-cell">23.09.2023</div>
+                        <div class="table-cell">23.09.2023</div>
+                        <div class="table-cell">
+                          <select class="js-select" name=""> 
+                            <option value=""> <span class="status is-request">Запрошен</span></option>
+                            <option value=""> <span class="status is-work">В работе</span></option>
+                            <option value=""> <span class="status is-waiting">Ждет отправки</span></option>
+                            <option value=""> <span class="status is-ready">Готово</span></option>
+                          </select>
+                        </div>
+                        <div class="table-cell">Николаев Мечислав Леонидович</div>
+                        <div class="table-cell table-button acc-item"> 
+                          <div class="show-more">
+                                <svg width="7" height="14">
+                                  <use xlink:href="images/sprite.svg#arrow-right"></use>
+                                </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table-content print-content acc-body">
+                        <div class="print-head"> 
+                          <div class="print-mouthguards"> 
+                            <div class="mouthguards-row">
+                              <div class="mouthguards__symbol"> 
+                                    <svg width="16" height="16">
+                                      <use xlink:href="images/sprite.svg#plus"></use>
+                                    </svg>
+                              </div>
+                              <div class="mouthguards-list"> 
+                                <div class="mouthguards__item is-request">1</div>
+                                <div class="mouthguards__item is-request">2</div>
+                                <div class="mouthguards__item is-request">3</div>
+                              </div>
+                            </div>
+                            <div class="mouthguards-row"> 
+                              <div class="mouthguards__symbol"> 
+                                    <svg width="16" height="16">
+                                      <use xlink:href="images/sprite.svg#minus"></use>
+                                    </svg>
+                              </div>
+                              <div class="mouthguards-list"> 
+                                <div class="mouthguards__item is-request">1</div>
+                                <div class="mouthguards__item is-request">2</div>
+                                <div class="mouthguards__item is-request">3</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="print-action"> 
+                            <div class="print__edit"> 
+                                  <svg width="30" height="30">
+                                    <use xlink:href="images/sprite.svg#edit"></use>
+                                  </svg>
+                            </div>
+                            <div class="print__remove"> 
+                                  <svg width="30" height="30">
+                                    <use xlink:href="images/sprite.svg#remove"></use>
+                                  </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="print-inform"> 
+                              <svg width="30" height="30">
+                                <use xlink:href="images/sprite.svg#chat"></use>
+                              </svg>Обратите внимание на важную вещь: у пациента есть особенности в строении челюсти
+                        </div>
+                        <div class="print-history"> 
+                          <div class="print-history__item">
+                            <div class="print-history__item-text">09.10.2023 - Слепникова Елена Андреевна</div>
+                            <div class="print-history__item-status">Ждет отправки</div>
+                          </div>
+                          <div class="print-history__item">
+                            <div class="print-history__item-text">09.10.2023 - Слепникова Елена Андреевна</div>
+                            <div class="print-history__item-status">Ждет отправки</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table-section acc">
+                      <div class="table-row"> 
+                        <div class="table-cell">#3453</div>
+                        <div class="table-cell">23.09.2023</div>
+                        <div class="table-cell">23.09.2023</div>
+                        <div class="table-cell">
+                          <select class="js-select" name=""> 
+                            <option value=""> <span class="status is-request">Запрошен</span></option>
+                            <option value=""> <span class="status is-work">В работе</span></option>
+                            <option value=""> <span class="status is-waiting">Ждет отправки</span></option>
+                            <option value=""> <span class="status is-ready">Готово</span></option>
+                          </select>
+                        </div>
+                        <div class="table-cell">Николаев Мечислав Леонидович</div>
+                        <div class="table-cell table-button acc-item"> 
+                          <div class="show-more">
+                                <svg width="7" height="14">
+                                  <use xlink:href="images/sprite.svg#arrow-right"></use>
+                                </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table-content print-content acc-body">
+                        <div class="print-head"> 
+                          <div class="print-mouthguards"> 
+                            <div class="mouthguards-row">
+                              <div class="mouthguards__symbol"> 
+                                    <svg width="16" height="16">
+                                      <use xlink:href="images/sprite.svg#plus"></use>
+                                    </svg>
+                              </div>
+                              <div class="mouthguards-list"> 
+                                <div class="mouthguards__item is-request">1</div>
+                                <div class="mouthguards__item is-request">2</div>
+                                <div class="mouthguards__item is-request">3</div>
+                              </div>
+                            </div>
+                            <div class="mouthguards-row"> 
+                              <div class="mouthguards__symbol"> 
+                                    <svg width="16" height="16">
+                                      <use xlink:href="images/sprite.svg#minus"></use>
+                                    </svg>
+                              </div>
+                              <div class="mouthguards-list"> 
+                                <div class="mouthguards__item is-request">1</div>
+                                <div class="mouthguards__item is-request">2</div>
+                                <div class="mouthguards__item is-request">3</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="print-action"> 
+                            <div class="print__edit"> 
+                                  <svg width="30" height="30">
+                                    <use xlink:href="images/sprite.svg#edit"></use>
+                                  </svg>
+                            </div>
+                            <div class="print__remove"> 
+                                  <svg width="30" height="30">
+                                    <use xlink:href="images/sprite.svg#remove"></use>
+                                  </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="print-inform"> 
+                              <svg width="30" height="30">
+                                <use xlink:href="images/sprite.svg#chat"></use>
+                              </svg>Обратите внимание на важную вещь: у пациента есть особенности в строении челюсти
+                        </div>
+                        <div class="print-history"> 
+                          <div class="print-history__item">
+                            <div class="print-history__item-text">09.10.2023 - Слепникова Елена Андреевна</div>
+                            <div class="print-history__item-status">Ждет отправки</div>
+                          </div>
+                          <div class="print-history__item">
+                            <div class="print-history__item-text">09.10.2023 - Слепникова Елена Андреевна</div>
+                            <div class="print-history__item-status">Ждет отправки</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table-section acc">
+                      <div class="table-row"> 
+                        <div class="table-cell">#3453</div>
+                        <div class="table-cell">23.09.2023</div>
+                        <div class="table-cell">23.09.2023</div>
+                        <div class="table-cell">
+                          <select class="js-select" name=""> 
+                            <option value="request"> <span class="status is-request">Запрошен</span></option>
+                            <option value="work"> <span class="status is-work">В работе</span></option>
+                            <option value="waiting"> <span class="status is-waiting">Ждет отправки</span></option>
+                            <option value="ready"> <span class="status is-ready">Готово</span></option>
+                          </select>
+                        </div>
+                        <div class="table-cell">Николаев Мечислав Леонидович</div>
+                        <div class="table-cell table-button acc-item"> 
+                          <div class="show-more">
+                                <svg width="7" height="14">
+                                  <use xlink:href="images/sprite.svg#arrow-right"></use>
+                                </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table-content print-content acc-body">
+                        <div class="print-head"> 
+                          <div class="print-mouthguards"> 
+                            <div class="mouthguards-row">
+                              <div class="mouthguards__symbol"> 
+                                    <svg width="16" height="16">
+                                      <use xlink:href="images/sprite.svg#plus"></use>
+                                    </svg>
+                              </div>
+                              <div class="mouthguards-list"> 
+                                <div class="mouthguards__item is-request">1</div>
+                                <div class="mouthguards__item is-request">2</div>
+                                <div class="mouthguards__item is-request">3</div>
+                              </div>
+                            </div>
+                            <div class="mouthguards-row"> 
+                              <div class="mouthguards__symbol"> 
+                                    <svg width="16" height="16">
+                                      <use xlink:href="images/sprite.svg#minus"></use>
+                                    </svg>
+                              </div>
+                              <div class="mouthguards-list"> 
+                                <div class="mouthguards__item is-request">1</div>
+                                <div class="mouthguards__item is-request">2</div>
+                                <div class="mouthguards__item is-request">3</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="print-action"> 
+                            <div class="print__edit"> 
+                                  <svg width="30" height="30">
+                                    <use xlink:href="images/sprite.svg#edit"></use>
+                                  </svg>
+                            </div>
+                            <div class="print__remove"> 
+                                  <svg width="30" height="30">
+                                    <use xlink:href="images/sprite.svg#remove"></use>
+                                  </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="print-inform"> 
+                              <svg width="30" height="30">
+                                <use xlink:href="images/sprite.svg#chat"></use>
+                              </svg>Обратите внимание на важную вещь: у пациента есть особенности в строении челюсти
+                        </div>
+                        <div class="print-history"> 
+                          <div class="print-history__item">
+                            <div class="print-history__item-text">09.10.2023 - Слепникова Елена Андреевна</div>
+                            <div class="print-history__item-status">Ждет отправки</div>
+                          </div>
+                          <div class="print-history__item">
+                            <div class="print-history__item-text">09.10.2023 - Слепникова Елена Андреевна</div>
+                            <div class="print-history__item-status">Ждет отправки</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="modal" data-modal="auth">
+      <div class="modal-overlay"> </div>
+      <div class="modal-wrapper"> 
+        <div class="modal-content"> 
+          <div class="modal-close"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#close"></use>
+                </svg>
+          </div>
+          <div class="modal__title">Авторизация</div>
+          <form class="modal-form">
+            <div class="form-group">
+              <label class="form-label" for="">Логин<span>*</span></label>
+              <input class="form-control" type="text">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="">Пароль<span>*</span></label>
+              <input class="form-control" type="text">
+            </div>
+            <div class="modal-action"> 
+              <button class="btn btn--big" disabled>Войти в Личный кабинет</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="1">
+      <div class="modal-overlay"> </div>
+      <div class="modal-wrapper"> 
+        <div class="modal-content"> 
+          <div class="modal-close"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#close"></use>
+                </svg>
+          </div>
+          <div class="modal__title">Внести оплату</div>
+          <form class="modal-form">
+            <div class="form-group">
+              <label class="form-label" for="">Клиника<span>*</span></label>
+              <input class="form-control" type="text">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="">Врач<span>*</span></label>
+              <input class="form-control" type="text">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="">Пациент<span>*</span></label>
+              <input class="form-control" type="text">
+            </div>
+            <div class="form-row"> 
+              <div class="form-group">
+                <label class="form-label" for="">Дата<span>*</span></label>
+                <input class="form-control" type="text">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="">Сумма<span>*</span></label>
+                <input class="form-control" type="text">
+              </div>
+            </div>
+            <div class="modal-action"> 
+              <div class="btn">Отменить</div>
+              <div class="btn btn--primary">Сохранить</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="2">
+      <div class="modal-overlay"> </div>
+      <div class="modal-wrapper"> 
+        <div class="modal-content"> 
+          <div class="modal-close"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#close"></use>
+                </svg>
+          </div>
+          <div class="modal__title">Удалить запись об оплате?</div>
+          <form class="modal-form">
+            <div class="modal-action"> 
+              <div class="btn">Да</div>
+              <div class="btn btn--primary">Нет</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="3">
+      <div class="modal-overlay"> </div>
+      <div class="modal-wrapper"> 
+        <div class="modal-content"> 
+          <div class="modal-close"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#close"></use>
+                </svg>
+          </div>
+          <div class="modal__title">Оплата успешно внесена!</div>
+          <form class="modal-form">
+            <div class="modal-action"> 
+              <div class="btn btn--primary">Ок</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="edit-payment">
+      <div class="modal-overlay"> </div>
+      <div class="modal-wrapper"> 
+        <div class="modal-content"> 
+          <div class="modal-close"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#close"></use>
+                </svg>
+          </div>
+          <div class="modal__title">Редактировать сумму к оплате</div>
+          <form class="modal-form">
+            <div class="form-group form-group--sm">
+              <label class="form-label" for="">Сумма<span>*</span></label>
+              <input class="form-control" type="text">
+            </div>
+            <div class="modal-action"> 
+              <div class="btn">Отменить</div>
+              <div class="btn btn--primary">Ок</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="print-edit">
+      <div class="modal-overlay"> </div>
+      <div class="modal-wrapper"> 
+        <div class="modal-content"> 
+          <div class="modal-close"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#close"></use>
+                </svg>
+          </div>
+          <div class="modal__title">Редактировать запись в очереди</div>
+          <div class="modal__desc">Если какие-то каппы не нужно печатать — отметьте их серым</div>
+          <div class="modal-mouthguards">
+            <div class="mouthguards">
+              <div class="mouthguards-line"> 
+                <div class="mouthguards__symbol"> 
+                      <svg width="16" height="16">
+                        <use xlink:href="images/sprite.svg#plus"></use>
+                      </svg>
+                </div>
+                <div class="mouthguards-list"> 
+                  <div class="mouthguards__item is-request">1</div>
+                  <div class="mouthguards__item is-request">2</div>
+                  <div class="mouthguards__item is-request">3</div>
+                </div>
+              </div>
+              <div class="mouthguards-line"> 
+                <div class="mouthguards__symbol">
+                      <svg width="16" height="16">
+                        <use xlink:href="images/sprite.svg#minus"></use>
+                      </svg>
+                </div>
+                <div class="mouthguards-list"> 
+                  <div class="mouthguards__item is-request">1</div>
+                  <div class="mouthguards__item is-request">2</div>
+                  <div class="mouthguards__item is-request">3</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <form class="modal-form">
+            <div class="form-group">
+              <input class="form-control" type="text" placeholder="Комментарий">
+            </div>
+            <div class="modal-action"> 
+              <div class="btn">Отменить</div>
+              <div class="btn btn--primary">Ок</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="print-delete">
+      <div class="modal-overlay"> </div>
+      <div class="modal-wrapper"> 
+        <div class="modal-content"> 
+          <div class="modal-close"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#close"></use>
+                </svg>
+          </div>
+          <div class="modal__title">Удалить запись из очереди?
+            <div class="modal-action"> 
+              <div class="btn">Да</div>
+              <div class="btn btn--primary">Нет</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="print-deleted">
+      <div class="modal-overlay"> </div>
+      <div class="modal-wrapper"> 
+        <div class="modal-content"> 
+          <div class="modal-close"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#close"></use>
+                </svg>
+          </div>
+          <div class="modal__title">Запись успешно удалена!
+            <div class="modal-action"> 
+              <div class="btn btn--primary">Ок</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="print-changed">
+      <div class="modal-overlay"> </div>
+      <div class="modal-wrapper"> 
+        <div class="modal-content"> 
+          <div class="modal-close"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#close"></use>
+                </svg>
+          </div>
+          <div class="modal__title">Запись успешно изменена!
+            <div class="modal-action"> 
+              <div class="btn btn--primary">Ок</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/choices.min.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

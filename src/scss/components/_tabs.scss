@@ -48,7 +48,9 @@
     &.is-active {
       background-color: var(--border-green);
       border-color: transparent;
+    }
 
+    &.is-new {
       span {
         background-color: var(--primary);
         color: var(--black); 

@@ -34,7 +34,7 @@
   }
 
   &-content {
-    max-width: 500px;
+    max-width: 600px;
     width: 100%;
     position: absolute;
     padding: 50px 60px;
@@ -96,5 +96,16 @@
     @include media(sm) {
       font-size: 18px;
     }
+  }
+
+  &__desc {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  &-mouthguards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }

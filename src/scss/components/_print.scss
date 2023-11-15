@@ -1,0 +1,46 @@
+.print {
+
+  &-content {
+    padding: 15px 25px 20px 30px;
+    display: none;
+  }
+
+  &-head {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &-action {
+    display: flex;
+    gap: 5px;
+  }
+
+  &-inform {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    padding: 10px 15px;
+    border-radius: 6px;
+    background: var(--ffffff-10, rgba(255, 255, 255, 0.10));  
+  }
+
+  &-history {
+    border-radius: 6px;
+    background: var(--ffffff-10, rgba(255, 255, 255, 0.10)); 
+    margin-top: 15px;
+    padding: 10px 15px;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      &:not(:last-of-type) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

@@ -1,5 +1,15 @@
 .mouthguards {
 
+  &-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+
+    + .mouthguards-row {
+      margin-top: 15px;
+    }
+  }
+
   &-line {
     display: flex;
     align-items: flex-start;

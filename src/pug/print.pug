@@ -1,0 +1,613 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href="css/choices.css" rel="stylesheet")
+    link(href="css/main.css" rel="stylesheet")
+    title Главная
+  body
+    include mixins/_mixins
+    include components/header
+    +topPanel(['Очередь на печать'])
+    include components/navigation
+    main.main
+      .content(data-role="tab")
+        .container 
+          h1.title Очередь на печать
+          .tabs 
+            .tabs-item.is-new.is-active(data-tab="print-new") Новые
+               span 7
+            .tabs-item(data-tab="print-archive") На пациентов (архив)
+              span 231
+          .tabs-content.is-open(data-tab="print-new")
+            .card
+              .card-body 
+                .table-responsive
+                  .table.table-print 
+                    .table-head 
+                      .table-cell Номер
+                      .table-cell Заявка
+                      .table-cell Поставлено
+                      .table-cell Статус
+                      .table-cell Пациент
+                      .table-cell 
+                    .table-section.acc
+                      .table-row 
+                        .table-cell #3453
+                        .table-cell 23.09.2023
+                        .table-cell 23.09.2023
+                        .table-cell
+                          select.js-select(name="") 
+                            option(value="request") 
+                              span.status.is-request Запрошен
+                            option(value="work") 
+                              span.status.is-work В работе
+                            option(value="waiting") 
+                              span.status.is-waiting Ждет отправки
+                            option(value="ready") 
+                              span.status.is-ready Готово
+                        .table-cell Николаев Мечислав Леонидович
+                        .table-cell.table-button.acc-item 
+                          .show-more
+                            +svgSprite(7, 14, 'arrow-right')
+                      .table-content.print-content.acc-body
+                        .print-head 
+                          .print-mouthguards 
+                            .mouthguards-row
+                              .mouthguards__symbol 
+                                +svgSprite(16, 16, 'plus')
+                              .mouthguards-list 
+                                .mouthguards__item.is-request 1
+                                .mouthguards__item.is-request 2
+                                .mouthguards__item.is-request 3
+                            .mouthguards-row 
+                              .mouthguards__symbol 
+                                +svgSprite(16, 16, 'minus')
+                              .mouthguards-list 
+                                .mouthguards__item.is-request 1
+                                .mouthguards__item.is-request 2
+                                .mouthguards__item.is-request 3
+                          .print-action 
+                            .print__edit.js-open-modal(data-modal="print-edit") 
+                              +svgSprite(30, 30, 'edit')
+                            .print__remove.js-open-modal(data-modal="print-delete") 
+                              +svgSprite(30, 30, 'remove')
+                        .print-inform 
+                          +svgSprite(30, 30, 'chat')
+                          | Обратите внимание на важную вещь: у пациента есть особенности в строении челюсти
+                        .print-history 
+                          .print-history__item
+                            .print-history__item-text 09.10.2023 - Слепникова Елена Андреевна
+                            .print-history__item-status Ждет отправки
+                          .print-history__item
+                            .print-history__item-text 09.10.2023 - Слепникова Елена Андреевна
+                            .print-history__item-status Ждет отправки
+                    .table-section.acc
+                      .table-row 
+                        .table-cell #3453
+                        .table-cell 23.09.2023
+                        .table-cell 23.09.2023
+                        .table-cell
+                          select.js-select(name="") 
+                            option(value="") 
+                              span.status.is-request Запрошен
+                            option(value="") 
+                              span.status.is-work В работе
+                            option(value="") 
+                              span.status.is-waiting Ждет отправки
+                            option(value="") 
+                              span.status.is-ready Готово
+                        .table-cell Николаев Мечислав Леонидович
+                        .table-cell.table-button.acc-item 
+                          .show-more
+                            +svgSprite(7, 14, 'arrow-right')
+                      .table-content.print-content.acc-body
+                        .print-head 
+                          .print-mouthguards 
+                            .mouthguards-row
+                              .mouthguards__symbol 
+                                +svgSprite(16, 16, 'plus')
+                              .mouthguards-list 
+                                .mouthguards__item.is-request 1
+                                .mouthguards__item.is-request 2
+                                .mouthguards__item.is-request 3
+                            .mouthguards-row 
+                              .mouthguards__symbol 
+                                +svgSprite(16, 16, 'minus')
+                              .mouthguards-list 
+                                .mouthguards__item.is-request 1
+                                .mouthguards__item.is-request 2
+                                .mouthguards__item.is-request 3
+                          .print-action 
+                            .print__edit 
+                              +svgSprite(30, 30, 'edit')
+                            .print__remove 
+                              +svgSprite(30, 30, 'remove')
+                        .print-inform 
+                          +svgSprite(30, 30, 'chat')
+                          | Обратите внимание на важную вещь: у пациента есть особенности в строении челюсти
+                        .print-history 
+                          .print-history__item
+                            .print-history__item-text 09.10.2023 - Слепникова Елена Андреевна
+                            .print-history__item-status Ждет отправки
+                          .print-history__item
+                            .print-history__item-text 09.10.2023 - Слепникова Елена Андреевна
+                            .print-history__item-status Ждет отправки
+                    .table-section.acc
+                      .table-row 
+                        .table-cell #3453
+                        .table-cell 23.09.2023
+                        .table-cell 23.09.2023
+                        .table-cell
+                          select.js-select(name="") 
+                            option(value="") 
+                              span.status.is-request Запрошен
+                            option(value="") 
+                              span.status.is-work В работе
+                            option(value="") 
+                              span.status.is-waiting Ждет отправки
+                            option(value="") 
+                              span.status.is-ready Готово
+                        .table-cell Николаев Мечислав Леонидович
+                        .table-cell.table-button.acc-item 
+                          .show-more
+                            +svgSprite(7, 14, 'arrow-right')
+                      .table-content.print-content.acc-body
+                        .print-head 
+                          .print-mouthguards 
+                            .mouthguards-row
+                              .mouthguards__symbol 
+                                +svgSprite(16, 16, 'plus')
+                              .mouthguards-list 
+                                .mouthguards__item.is-request 1
+                                .mouthguards__item.is-request 2
+                                .mouthguards__item.is-request 3
+                            .mouthguards-row 
+                              .mouthguards__symbol 
+                                +svgSprite(16, 16, 'minus')
+                              .mouthguards-list 
+                                .mouthguards__item.is-request 1
+                                .mouthguards__item.is-request 2
+                                .mouthguards__item.is-request 3
+                          .print-action 
+                            .print__edit 
+                              +svgSprite(30, 30, 'edit')
+                            .print__remove 
+                              +svgSprite(30, 30, 'remove')
+                        .print-inform 
+                          +svgSprite(30, 30, 'chat')
+                          | Обратите внимание на важную вещь: у пациента есть особенности в строении челюсти
+                        .print-history 
+                          .print-history__item
+                            .print-history__item-text 09.10.2023 - Слепникова Елена Андреевна
+                            .print-history__item-status Ждет отправки
+                          .print-history__item
+                            .print-history__item-text 09.10.2023 - Слепникова Елена Андреевна
+                            .print-history__item-status Ждет отправки
+                    .table-section.acc
+                      .table-row 
+                        .table-cell #3453
+                        .table-cell 23.09.2023
+                        .table-cell 23.09.2023
+                        .table-cell
+                          select.js-select(name="") 
+                            option(value="") 
+                              span.status.is-request Запрошен
+                            option(value="") 
+                              span.status.is-work В работе
+                            option(value="") 
+                              span.status.is-waiting Ждет отправки
+                            option(value="") 
+                              span.status.is-ready Готово
+                        .table-cell Николаев Мечислав Леонидович
+                        .table-cell.table-button.acc-item 
+                          .show-more
+                            +svgSprite(7, 14, 'arrow-right')
+                      .table-content.print-content.acc-body
+                        .print-head 
+                          .print-mouthguards 
+                            .mouthguards-row
+                              .mouthguards__symbol 
+                                +svgSprite(16, 16, 'plus')
+                              .mouthguards-list 
+                                .mouthguards__item.is-request 1
+                                .mouthguards__item.is-request 2
+                                .mouthguards__item.is-request 3
+                            .mouthguards-row 
+                              .mouthguards__symbol 
+                                +svgSprite(16, 16, 'minus')
+                              .mouthguards-list 
+                                .mouthguards__item.is-request 1
+                                .mouthguards__item.is-request 2
+                                .mouthguards__item.is-request 3
+                          .print-action 
+                            .print__edit 
+                              +svgSprite(30, 30, 'edit')
+                            .print__remove 
+                              +svgSprite(30, 30, 'remove')
+                        .print-inform 
+                          +svgSprite(30, 30, 'chat')
+                          | Обратите внимание на важную вещь: у пациента есть особенности в строении челюсти
+                        .print-history 
+                          .print-history__item
+                            .print-history__item-text 09.10.2023 - Слепникова Елена Андреевна
+                            .print-history__item-status Ждет отправки
+                          .print-history__item
+                            .print-history__item-text 09.10.2023 - Слепникова Елена Андреевна
+                            .print-history__item-status Ждет отправки
+          
+          .tabs-content(data-tab="print-archive")
+            .card
+              .card-body 
+                .table-responsive
+                  .table.table-print 
+                    .table-head 
+                      .table-cell Номер
+                      .table-cell Заявка
+                      .table-cell Поставлено
+                      .table-cell Статус
+                      .table-cell Пациент
+                      .table-cell 
+                    .table-section.acc
+                      .table-row 
+                        .table-cell #3453
+                        .table-cell 23.09.2023
+                        .table-cell 23.09.2023
+                        .table-cell
+                          select.js-select(name="") 
+                            option(value="") 
+                              span.status.is-request Запрошен
+                            option(value="") 
+                              span.status.is-work В работе
+                            option(value="") 
+                              span.status.is-waiting Ждет отправки
+                            option(value="") 
+                              span.status.is-ready Готово
+                        .table-cell Николаев Мечислав Леонидович
+                        .table-cell.table-button.acc-item 
+                          .show-more
+                            +svgSprite(7, 14, 'arrow-right')
+                      .table-content.print-content.acc-body
+                        .print-head 
+                          .print-mouthguards 
+                            .mouthguards-row
+                              .mouthguards__symbol 
+                                +svgSprite(16, 16, 'plus')
+                              .mouthguards-list 
+                                .mouthguards__item.is-request 1
+                                .mouthguards__item.is-request 2
+                                .mouthguards__item.is-request 3
+                            .mouthguards-row 
+                              .mouthguards__symbol 
+                                +svgSprite(16, 16, 'minus')
+                              .mouthguards-list 
+                                .mouthguards__item.is-request 1
+                                .mouthguards__item.is-request 2
+                                .mouthguards__item.is-request 3
+                          .print-action 
+                            .print__edit 
+                              +svgSprite(30, 30, 'edit')
+                            .print__remove 
+                              +svgSprite(30, 30, 'remove')
+                        .print-inform 
+                          +svgSprite(30, 30, 'chat')
+                          | Обратите внимание на важную вещь: у пациента есть особенности в строении челюсти
+                        .print-history 
+                          .print-history__item
+                            .print-history__item-text 09.10.2023 - Слепникова Елена Андреевна
+                            .print-history__item-status Ждет отправки
+                          .print-history__item
+                            .print-history__item-text 09.10.2023 - Слепникова Елена Андреевна
+                            .print-history__item-status Ждет отправки
+                    .table-section.acc
+                      .table-row 
+                        .table-cell #3453
+                        .table-cell 23.09.2023
+                        .table-cell 23.09.2023
+                        .table-cell
+                          select.js-select(name="") 
+                            option(value="") 
+                              span.status.is-request Запрошен
+                            option(value="") 
+                              span.status.is-work В работе
+                            option(value="") 
+                              span.status.is-waiting Ждет отправки
+                            option(value="") 
+                              span.status.is-ready Готово
+                        .table-cell Николаев Мечислав Леонидович
+                        .table-cell.table-button.acc-item 
+                          .show-more
+                            +svgSprite(7, 14, 'arrow-right')
+                      .table-content.print-content.acc-body
+                        .print-head 
+                          .print-mouthguards 
+                            .mouthguards-row
+                              .mouthguards__symbol 
+                                +svgSprite(16, 16, 'plus')
+                              .mouthguards-list 
+                                .mouthguards__item.is-request 1
+                                .mouthguards__item.is-request 2
+                                .mouthguards__item.is-request 3
+                            .mouthguards-row 
+                              .mouthguards__symbol 
+                                +svgSprite(16, 16, 'minus')
+                              .mouthguards-list 
+                                .mouthguards__item.is-request 1
+                                .mouthguards__item.is-request 2
+                                .mouthguards__item.is-request 3
+                          .print-action 
+                            .print__edit 
+                              +svgSprite(30, 30, 'edit')
+                            .print__remove 
+                              +svgSprite(30, 30, 'remove')
+                        .print-inform 
+                          +svgSprite(30, 30, 'chat')
+                          | Обратите внимание на важную вещь: у пациента есть особенности в строении челюсти
+                        .print-history 
+                          .print-history__item
+                            .print-history__item-text 09.10.2023 - Слепникова Елена Андреевна
+                            .print-history__item-status Ждет отправки
+                          .print-history__item
+                            .print-history__item-text 09.10.2023 - Слепникова Елена Андреевна
+                            .print-history__item-status Ждет отправки
+                    .table-section.acc
+                      .table-row 
+                        .table-cell #3453
+                        .table-cell 23.09.2023
+                        .table-cell 23.09.2023
+                        .table-cell
+                          select.js-select(name="") 
+                            option(value="") 
+                              span.status.is-request Запрошен
+                            option(value="") 
+                              span.status.is-work В работе
+                            option(value="") 
+                              span.status.is-waiting Ждет отправки
+                            option(value="") 
+                              span.status.is-ready Готово
+                        .table-cell Николаев Мечислав Леонидович
+                        .table-cell.table-button.acc-item 
+                          .show-more
+                            +svgSprite(7, 14, 'arrow-right')
+                      .table-content.print-content.acc-body
+                        .print-head 
+                          .print-mouthguards 
+                            .mouthguards-row
+                              .mouthguards__symbol 
+                                +svgSprite(16, 16, 'plus')
+                              .mouthguards-list 
+                                .mouthguards__item.is-request 1
+                                .mouthguards__item.is-request 2
+                                .mouthguards__item.is-request 3
+                            .mouthguards-row 
+                              .mouthguards__symbol 
+                                +svgSprite(16, 16, 'minus')
+                              .mouthguards-list 
+                                .mouthguards__item.is-request 1
+                                .mouthguards__item.is-request 2
+                                .mouthguards__item.is-request 3
+                          .print-action 
+                            .print__edit 
+                              +svgSprite(30, 30, 'edit')
+                            .print__remove 
+                              +svgSprite(30, 30, 'remove')
+                        .print-inform 
+                          +svgSprite(30, 30, 'chat')
+                          | Обратите внимание на важную вещь: у пациента есть особенности в строении челюсти
+                        .print-history 
+                          .print-history__item
+                            .print-history__item-text 09.10.2023 - Слепникова Елена Андреевна
+                            .print-history__item-status Ждет отправки
+                          .print-history__item
+                            .print-history__item-text 09.10.2023 - Слепникова Елена Андреевна
+                            .print-history__item-status Ждет отправки
+                    .table-section.acc
+                      .table-row 
+                        .table-cell #3453
+                        .table-cell 23.09.2023
+                        .table-cell 23.09.2023
+                        .table-cell
+                          select.js-select(name="") 
+                            option(value="") 
+                              span.status.is-request Запрошен
+                            option(value="") 
+                              span.status.is-work В работе
+                            option(value="") 
+                              span.status.is-waiting Ждет отправки
+                            option(value="") 
+                              span.status.is-ready Готово
+                        .table-cell Николаев Мечислав Леонидович
+                        .table-cell.table-button.acc-item 
+                          .show-more
+                            +svgSprite(7, 14, 'arrow-right')
+                      .table-content.print-content.acc-body
+                        .print-head 
+                          .print-mouthguards 
+                            .mouthguards-row
+                              .mouthguards__symbol 
+                                +svgSprite(16, 16, 'plus')
+                              .mouthguards-list 
+                                .mouthguards__item.is-request 1
+                                .mouthguards__item.is-request 2
+                                .mouthguards__item.is-request 3
+                            .mouthguards-row 
+                              .mouthguards__symbol 
+                                +svgSprite(16, 16, 'minus')
+                              .mouthguards-list 
+                                .mouthguards__item.is-request 1
+                                .mouthguards__item.is-request 2
+                                .mouthguards__item.is-request 3
+                          .print-action 
+                            .print__edit 
+                              +svgSprite(30, 30, 'edit')
+                            .print__remove 
+                              +svgSprite(30, 30, 'remove')
+                        .print-inform 
+                          +svgSprite(30, 30, 'chat')
+                          | Обратите внимание на важную вещь: у пациента есть особенности в строении челюсти
+                        .print-history 
+                          .print-history__item
+                            .print-history__item-text 09.10.2023 - Слепникова Елена Андреевна
+                            .print-history__item-status Ждет отправки
+                          .print-history__item
+                            .print-history__item-text 09.10.2023 - Слепникова Елена Андреевна
+                            .print-history__item-status Ждет отправки
+                    .table-section.acc
+                      .table-row 
+                        .table-cell #3453
+                        .table-cell 23.09.2023
+                        .table-cell 23.09.2023
+                        .table-cell
+                          select.js-select(name="") 
+                            option(value="") 
+                              span.status.is-request Запрошен
+                            option(value="") 
+                              span.status.is-work В работе
+                            option(value="") 
+                              span.status.is-waiting Ждет отправки
+                            option(value="") 
+                              span.status.is-ready Готово
+                        .table-cell Николаев Мечислав Леонидович
+                        .table-cell.table-button.acc-item 
+                          .show-more
+                            +svgSprite(7, 14, 'arrow-right')
+                      .table-content.print-content.acc-body
+                        .print-head 
+                          .print-mouthguards 
+                            .mouthguards-row
+                              .mouthguards__symbol 
+                                +svgSprite(16, 16, 'plus')
+                              .mouthguards-list 
+                                .mouthguards__item.is-request 1
+                                .mouthguards__item.is-request 2
+                                .mouthguards__item.is-request 3
+                            .mouthguards-row 
+                              .mouthguards__symbol 
+                                +svgSprite(16, 16, 'minus')
+                              .mouthguards-list 
+                                .mouthguards__item.is-request 1
+                                .mouthguards__item.is-request 2
+                                .mouthguards__item.is-request 3
+                          .print-action 
+                            .print__edit 
+                              +svgSprite(30, 30, 'edit')
+                            .print__remove 
+                              +svgSprite(30, 30, 'remove')
+                        .print-inform 
+                          +svgSprite(30, 30, 'chat')
+                          | Обратите внимание на важную вещь: у пациента есть особенности в строении челюсти
+                        .print-history 
+                          .print-history__item
+                            .print-history__item-text 09.10.2023 - Слепникова Елена Андреевна
+                            .print-history__item-status Ждет отправки
+                          .print-history__item
+                            .print-history__item-text 09.10.2023 - Слепникова Елена Андреевна
+                            .print-history__item-status Ждет отправки
+                    .table-section.acc
+                      .table-row 
+                        .table-cell #3453
+                        .table-cell 23.09.2023
+                        .table-cell 23.09.2023
+                        .table-cell
+                          select.js-select(name="") 
+                            option(value="") 
+                              span.status.is-request Запрошен
+                            option(value="") 
+                              span.status.is-work В работе
+                            option(value="") 
+                              span.status.is-waiting Ждет отправки
+                            option(value="") 
+                              span.status.is-ready Готово
+                        .table-cell Николаев Мечислав Леонидович
+                        .table-cell.table-button.acc-item 
+                          .show-more
+                            +svgSprite(7, 14, 'arrow-right')
+                      .table-content.print-content.acc-body
+                        .print-head 
+                          .print-mouthguards 
+                            .mouthguards-row
+                              .mouthguards__symbol 
+                                +svgSprite(16, 16, 'plus')
+                              .mouthguards-list 
+                                .mouthguards__item.is-request 1
+                                .mouthguards__item.is-request 2
+                                .mouthguards__item.is-request 3
+                            .mouthguards-row 
+                              .mouthguards__symbol 
+                                +svgSprite(16, 16, 'minus')
+                              .mouthguards-list 
+                                .mouthguards__item.is-request 1
+                                .mouthguards__item.is-request 2
+                                .mouthguards__item.is-request 3
+                          .print-action 
+                            .print__edit 
+                              +svgSprite(30, 30, 'edit')
+                            .print__remove 
+                              +svgSprite(30, 30, 'remove')
+                        .print-inform 
+                          +svgSprite(30, 30, 'chat')
+                          | Обратите внимание на важную вещь: у пациента есть особенности в строении челюсти
+                        .print-history 
+                          .print-history__item
+                            .print-history__item-text 09.10.2023 - Слепникова Елена Андреевна
+                            .print-history__item-status Ждет отправки
+                          .print-history__item
+                            .print-history__item-text 09.10.2023 - Слепникова Елена Андреевна
+                            .print-history__item-status Ждет отправки
+                    .table-section.acc
+                      .table-row 
+                        .table-cell #3453
+                        .table-cell 23.09.2023
+                        .table-cell 23.09.2023
+                        .table-cell
+                          select.js-select(name="") 
+                            option(value="request") 
+                              span.status.is-request Запрошен
+                            option(value="work") 
+                              span.status.is-work В работе
+                            option(value="waiting") 
+                              span.status.is-waiting Ждет отправки
+                            option(value="ready") 
+                              span.status.is-ready Готово
+                        .table-cell Николаев Мечислав Леонидович
+                        .table-cell.table-button.acc-item 
+                          .show-more
+                            +svgSprite(7, 14, 'arrow-right')
+                      .table-content.print-content.acc-body
+                        .print-head 
+                          .print-mouthguards 
+                            .mouthguards-row
+                              .mouthguards__symbol 
+                                +svgSprite(16, 16, 'plus')
+                              .mouthguards-list 
+                                .mouthguards__item.is-request 1
+                                .mouthguards__item.is-request 2
+                                .mouthguards__item.is-request 3
+                            .mouthguards-row 
+                              .mouthguards__symbol 
+                                +svgSprite(16, 16, 'minus')
+                              .mouthguards-list 
+                                .mouthguards__item.is-request 1
+                                .mouthguards__item.is-request 2
+                                .mouthguards__item.is-request 3
+                          .print-action 
+                            .print__edit 
+                              +svgSprite(30, 30, 'edit')
+                            .print__remove 
+                              +svgSprite(30, 30, 'remove')
+                        .print-inform 
+                          +svgSprite(30, 30, 'chat')
+                          | Обратите внимание на важную вещь: у пациента есть особенности в строении челюсти
+                        .print-history 
+                          .print-history__item
+                            .print-history__item-text 09.10.2023 - Слепникова Елена Андреевна
+                            .print-history__item-status Ждет отправки
+                          .print-history__item
+                            .print-history__item-text 09.10.2023 - Слепникова Елена Андреевна
+                            .print-history__item-status Ждет отправки
+          
+    include components/footer
+    include components/modal
+    include includes/scripts

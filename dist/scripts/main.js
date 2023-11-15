@@ -30,3 +30,17 @@ $('[data-role="tab"]').each(function(){
     $(`.tabs-content[data-tab="${dataTab}"]`).addClass('is-open');
   })
 })
+
+$('.acc-item').on('click', function(){
+  $parent = $(this).closest('.acc');
+  $body = $parent.find('.acc-body');
+
+  $parent.toggleClass('is-open');
+  $body.slideToggle();
+})
+
+let selectList = document.querySelectorAll('.js-select');
+
+selectList.forEach(function(item) {
+  let choices = new Choices(item);
+})
