@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/choices.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <title>Главная</title>
   </head>
@@ -43,22 +44,7 @@
         <ul class="nav-list"> 
           <li class="nav-item is-active">
                 <svg width="30" height="30">
-                  <use xlink:href="images/sprite.svg#chat"></use>
-                </svg><a class="nav-link" href="orders.html">Заявки</a>
-          </li>
-          <li class="nav-item"> 
-                <svg width="30" height="30">
-                  <use xlink:href="images/sprite.svg#play"></use>
-                </svg><a class="nav-link" href="print.html">Очередь на печать</a>
-          </li>
-          <li class="nav-item"> 
-                <svg width="30" height="30">
                   <use xlink:href="images/sprite.svg#clients"></use>
-                </svg><a class="nav-link" href="patients.html">Пациенты</a>
-          </li>
-          <li class="nav-item"> 
-                <svg width="30" height="30">
-                  <use xlink:href="images/sprite.svg#payments"></use>
                 </svg><a class="nav-link" href="payments.html">Оплаты</a>
           </li>
           <li class="nav-item"> 
@@ -70,7 +56,7 @@
       </div>
       <div class="nav-user"> 
         <div class="nav-user__name">Циванюк Ольга</div>
-        <div class="nav-user__post">Заведующий</div>
+        <div class="nav-user__post">Бухгалтер</div>
       </div>
       <div class="nav-bottom">«Настоящее украшение  — это здоровая и красивая улыбка»</div>
     </div>
@@ -82,65 +68,82 @@
             <div class="dept-price">
               <div class="dept-price__title">Долг</div>
               <div class="dept-price__num">0 ₽<span>100 000 ₽</span></div>
-              <div class="dept-price__edit js-open-modal" data-modal="edit-payment"> 
+              <div class="dept-price__edit js-open-modal" data-modal="edit-summ"> 
                     <svg width="30" height="30">
                       <use xlink:href="images/sprite.svg#edit"></use>
                     </svg>
               </div>
             </div>
-            <div class="btn btn--big btn--primary js-open-modal" data-modal="1">Внести оплату</div>
+            <div class="btn btn--big btn--primary js-open-modal" data-modal="add-payment">Внести оплату</div>
           </div>
           <div class="card"> 
             <div class="card-body"> 
               <div class="table-responsive">
-                <table class="table">
-                  <thead> 
-                    <tr> 
-                      <th>Номер</th>
-                      <th>Дата</th>
-                      <th>Сумма</th>
-                      <th>Пациент</th>
-                    </tr>
-                  </thead>
-                  <tbody> 
-                    <tr>
-                      <td>#3453</td>
-                      <td>23.09.2023</td>
-                      <td>45 000 ₽</td>
-                      <td>Жданов Остап Арсеньевич</td>
-                    </tr>
-                    <tr>
-                      <td>#3453</td>
-                      <td>23.09.2023</td>
-                      <td>45 000 ₽</td>
-                      <td>Жданов Остап Арсеньевич</td>
-                    </tr>
-                    <tr>
-                      <td>#3453</td>
-                      <td>23.09.2023</td>
-                      <td>45 000 ₽</td>
-                      <td>Жданов Остап Арсеньевич</td>
-                    </tr>
-                    <tr>
-                      <td>#3453</td>
-                      <td>23.09.2023</td>
-                      <td>45 000 ₽</td>
-                      <td>Жданов Остап Арсеньевич</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="table table-payment">
+                  <div class="table-head"> 
+                    <div class="table-cell">Номер</div>
+                    <div class="table-cell table-cell--center">Дата</div>
+                    <div class="table-cell table-cell--right">Сумма</div>
+                    <div class="table-cell">Пациент</div>
+                    <div class="table-cell"></div>
+                  </div><a class="table-row" href="payments-patient.html"> 
+                    <div class="table-cell">#3453</div>
+                    <div class="table-cell">23.09.2023</div>
+                    <div class="table-cell table-cell--right">45 000 ₽</div>
+                    <div class="table-cell table-cell--light">Николаев Мечислав Леонидович</div>
+                    <div class="table-cell">
+                      <div class="table-cell__action">
+                        <div class="edit js-open-modal" data-modal="edit-payment"> 
+                              <svg width="30" height="30">
+                                <use xlink:href="images/sprite.svg#edit"></use>
+                              </svg>
+                        </div>
+                        <div class="remove js-open-modal" data-modal="remove-payment"> 
+                              <svg width="30" height="30">
+                                <use xlink:href="images/sprite.svg#remove"></use>
+                              </svg>
+                        </div>
+                      </div>
+                    </div></a><a class="table-row" href="payments-patient.html"> 
+                    <div class="table-cell">#3453</div>
+                    <div class="table-cell">23.09.2023</div>
+                    <div class="table-cell table-cell--right">45 000 ₽</div>
+                    <div class="table-cell table-cell--light">Николаев Мечислав Леонидович</div>
+                    <div class="table-cell">
+                      <div class="table-cell__action">
+                        <div class="edit js-open-modal" data-modal="edit-payment"> 
+                              <svg width="30" height="30">
+                                <use xlink:href="images/sprite.svg#edit"></use>
+                              </svg>
+                        </div>
+                        <div class="remove js-open-modal" data-modal="remove-payment"> 
+                              <svg width="30" height="30">
+                                <use xlink:href="images/sprite.svg#remove"></use>
+                              </svg>
+                        </div>
+                      </div>
+                    </div></a><a class="table-row" href="payments-patient.html"> 
+                    <div class="table-cell">#3453</div>
+                    <div class="table-cell">23.09.2023</div>
+                    <div class="table-cell table-cell--right">45 000 ₽</div>
+                    <div class="table-cell table-cell--light">Николаев Мечислав Леонидович</div>
+                    <div class="table-cell">
+                      <div class="table-cell__action">
+                        <div class="edit js-open-modal" data-modal="edit-payment"> 
+                              <svg width="30" height="30">
+                                <use xlink:href="images/sprite.svg#edit"></use>
+                              </svg>
+                        </div>
+                        <div class="remove js-open-modal" data-modal="remove-payment"> 
+                              <svg width="30" height="30">
+                                <use xlink:href="images/sprite.svg#remove"></use>
+                              </svg>
+                        </div>
+                      </div>
+                    </div></a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="more-btn"> 
-            <div class="btn btn--big btn--icon"> <span>Загрузить</span></div>
-          </div>
-          <div class="pagination"> 
-            <div class="pagination-item is-active">1</div>
-            <div class="pagination-item">2</div>
-            <div class="pagination-item">3</div>
-            <div class="pagination-dots">...</div>
-            <div class="pagination-item">4</div>
           </div>
         </div>
       </div>
@@ -157,12 +160,12 @@
           <div class="modal__title">Авторизация</div>
           <form class="modal-form">
             <div class="form-group">
-              <label class="form-label" for="">Логин<span>*</span></label>
               <input class="form-control" type="text">
+              <label class="form-label" for="">Логин<span>*</span></label>
             </div>
             <div class="form-group">
-              <label class="form-label" for="">Пароль<span>*</span></label>
               <input class="form-control" type="text">
+              <label class="form-label" for="">Пароль<span>*</span></label>
             </div>
             <div class="modal-action"> 
               <button class="btn btn--big" disabled>Войти в Личный кабинет</button>
@@ -171,7 +174,7 @@
         </div>
       </div>
     </div>
-    <div class="modal" data-modal="1">
+    <div class="modal" data-modal="add-payment">
       <div class="modal-overlay"> </div>
       <div class="modal-wrapper"> 
         <div class="modal-content"> 
@@ -183,25 +186,25 @@
           <div class="modal__title">Внести оплату</div>
           <form class="modal-form">
             <div class="form-group">
+              <input class="form-control" type="text">
               <label class="form-label" for="">Клиника<span>*</span></label>
-              <input class="form-control" type="text">
             </div>
             <div class="form-group">
+              <input class="form-control" type="text">
               <label class="form-label" for="">Врач<span>*</span></label>
-              <input class="form-control" type="text">
             </div>
             <div class="form-group">
-              <label class="form-label" for="">Пациент<span>*</span></label>
               <input class="form-control" type="text">
+              <label class="form-label" for="">Пациент<span>*</span></label>
             </div>
             <div class="form-row"> 
               <div class="form-group">
-                <label class="form-label" for="">Дата<span>*</span></label>
                 <input class="form-control" type="text">
+                <label class="form-label" for="">Дата<span>*</span></label>
               </div>
               <div class="form-group">
-                <label class="form-label" for="">Сумма<span>*</span></label>
                 <input class="form-control" type="text">
+                <label class="form-label" for="">Сумма<span>*</span></label>
               </div>
             </div>
             <div class="modal-action"> 
@@ -212,7 +215,48 @@
         </div>
       </div>
     </div>
-    <div class="modal" data-modal="2">
+    <div class="modal" data-modal="edit-payment">
+      <div class="modal-overlay"> </div>
+      <div class="modal-wrapper"> 
+        <div class="modal-content"> 
+          <div class="modal-close"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#close"></use>
+                </svg>
+          </div>
+          <div class="modal__title">Редактировать запись об оплате #3453</div>
+          <form class="modal-form">
+            <div class="form-group">
+              <input class="form-control" type="text">
+              <label class="form-label" for="">Клиника<span>*</span></label>
+            </div>
+            <div class="form-group">
+              <input class="form-control" type="text">
+              <label class="form-label" for="">Врач<span>*</span></label>
+            </div>
+            <div class="form-group">
+              <input class="form-control" type="text">
+              <label class="form-label" for="">Пациент<span>*</span></label>
+            </div>
+            <div class="form-row"> 
+              <div class="form-group">
+                <input class="form-control" type="text">
+                <label class="form-label" for="">Дата<span>*</span></label>
+              </div>
+              <div class="form-group">
+                <input class="form-control" type="text">
+                <label class="form-label" for="">Сумма<span>*</span></label>
+              </div>
+            </div>
+            <div class="modal-action"> 
+              <div class="btn">Отменить</div>
+              <div class="btn btn--primary">Сохранить</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="remove-payment">
       <div class="modal-overlay"> </div>
       <div class="modal-wrapper"> 
         <div class="modal-content"> 
@@ -249,7 +293,7 @@
         </div>
       </div>
     </div>
-    <div class="modal" data-modal="edit-payment">
+    <div class="modal" data-modal="edit-summ">
       <div class="modal-overlay"> </div>
       <div class="modal-wrapper"> 
         <div class="modal-content"> 
@@ -261,8 +305,8 @@
           <div class="modal__title">Редактировать сумму к оплате</div>
           <form class="modal-form">
             <div class="form-group form-group--sm">
-              <label class="form-label" for="">Сумма<span>*</span></label>
               <input class="form-control" type="text">
+              <label class="form-label" for="">Сумма<span>*</span></label>
             </div>
             <div class="modal-action"> 
               <div class="btn">Отменить</div>

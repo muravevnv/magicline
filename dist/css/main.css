@@ -301,6 +301,9 @@ select {
   left: 0;
   top: 0;
 }
+.dept-price__edit {
+  cursor: pointer;
+}
 
 .search {
   width: 100%;
@@ -344,6 +347,8 @@ h2 {
 .form-group {
   width: 100%;
   margin-top: 20px;
+  position: relative;
+  padding-top: 23px;
 }
 .form-group--sm {
   max-width: 235px;
@@ -352,9 +357,15 @@ h2 {
 .form-label {
   display: block;
   color: var(--white-text-darken);
-  font-size: 14px;
+  font-size: 18px;
   line-height: 160%;
   margin-bottom: 5px;
+  position: absolute;
+  top: 38px;
+  left: 17px;
+  pointer-events: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 .form-label span {
   color: var(--red);
@@ -374,6 +385,20 @@ h2 {
   outline: none;
   border-radius: 15px;
   border: 1px solid var(--ffffff-20, rgba(255, 255, 255, 0.2));
+}
+.form-control.is-filled + .form-label {
+  top: 0;
+  left: 0;
+  font-size: 14px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.form-control:focus + .form-label {
+  top: 0;
+  left: 0;
+  font-size: 14px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 .form-control::-webkit-input-placeholder {
   font-size: 18px;
@@ -783,16 +808,44 @@ table .t-button {
   align-items: center;
   padding: 15px 30px;
   border-top: 1px solid rgba(38, 215, 144, 0.1);
+  min-height: 60px;
+}
+.table-row:hover {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(38, 215, 144, 0.3)), to(rgba(38, 215, 144, 0)));
+  background: linear-gradient(90deg, rgba(38, 215, 144, 0.3) 0%, rgba(38, 215, 144, 0) 100%);
+}
+.table-row:hover .table-cell {
+  color: var(--white);
+}
+.table-row:hover .table-cell--light {
+  color: var(--primary);
 }
 .table-cell {
   padding: 2.5px 15px;
   font-size: 18px;
+  color: var(--white-text-darken);
 }
 .table-cell:first-of-type {
   padding-left: 0;
 }
 .table-cell:last-of-type {
   padding-right: 0;
+}
+.table-cell--light {
+  color: var(--white-text);
+}
+.table-cell--right {
+  text-align: right;
+}
+.table-cell--center {
+  text-align: center;
+}
+.table-cell__action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+  opacity: 0;
 }
 .table-button {
   padding: 2.5px 0;
@@ -808,6 +861,15 @@ table .t-button {
 .table-print .show-more svg {
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
+}
+
+.table-payment .table-head,
+.table-payment .table-row {
+  width: 100%;
+  grid-template-columns: 115px 115px 132px 1fr 73px;
+}
+.table-payment .table-row:hover .table-cell__action {
+  opacity: 1;
 }
 
 .table-section.is-open {
@@ -1645,6 +1707,9 @@ table .t-button {
   }
   .card {
     margin: 30px 0;
+  }
+  .table-cell__action {
+    opacity: 1;
   }
   .tabs {
     margin: 30px 0;

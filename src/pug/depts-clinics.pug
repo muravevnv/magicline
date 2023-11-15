@@ -10,7 +10,21 @@ html(lang="en")
     include mixins/_mixins
     include components/header
     +topPanel(['Долги','Доктор Дент'])
-    include components/navigation-accountant
+    .nav 
+      .nav-main 
+        a.nav__logo(href="#")
+          img(src="images/logo.svg", alt="")
+        ul.nav-list 
+          li.nav-item
+            +svgSprite(30, 30, 'clients')
+            a(href="payments.html").nav-link Оплаты
+          li.nav-item.is-active 
+            +svgSprite(30, 30, 'debts')
+            a(href="depts.html").nav-link Долги
+      .nav-user 
+        .nav-user__name Циванюк Ольга
+        .nav-user__post Бухгалтер
+      .nav-bottom «Настоящее украшение  — это здоровая и красивая улыбка»
     main.main
       .content(data-role="tab")
         .container 

@@ -178,6 +178,10 @@ select {
       }
     }
   }
+
+  &__edit {
+    cursor: pointer;
+  }
 }
 
 

@@ -51,12 +51,12 @@
     <div class="nav"> 
       <div class="nav-main"> <a class="nav__logo" href="#"><img src="images/logo.svg" alt=""></a>
         <ul class="nav-list"> 
-          <li class="nav-item is-active">
+          <li class="nav-item">
                 <svg width="30" height="30">
                   <use xlink:href="images/sprite.svg#clients"></use>
                 </svg><a class="nav-link" href="payments.html">Оплаты</a>
           </li>
-          <li class="nav-item"> 
+          <li class="nav-item is-active"> 
                 <svg width="30" height="30">
                   <use xlink:href="images/sprite.svg#debts"></use>
                 </svg><a class="nav-link" href="depts.html">Долги</a>
@@ -65,7 +65,7 @@
       </div>
       <div class="nav-user"> 
         <div class="nav-user__name">Циванюк Ольга</div>
-        <div class="nav-user__post">Заведующий</div>
+        <div class="nav-user__post">Бухгалтер</div>
       </div>
       <div class="nav-bottom">«Настоящее украшение  — это здоровая и красивая улыбка»</div>
     </div>
@@ -177,12 +177,12 @@
           <div class="modal__title">Авторизация</div>
           <form class="modal-form">
             <div class="form-group">
-              <label class="form-label" for="">Логин<span>*</span></label>
               <input class="form-control" type="text">
+              <label class="form-label" for="">Логин<span>*</span></label>
             </div>
             <div class="form-group">
-              <label class="form-label" for="">Пароль<span>*</span></label>
               <input class="form-control" type="text">
+              <label class="form-label" for="">Пароль<span>*</span></label>
             </div>
             <div class="modal-action"> 
               <button class="btn btn--big" disabled>Войти в Личный кабинет</button>
@@ -191,7 +191,7 @@
         </div>
       </div>
     </div>
-    <div class="modal" data-modal="1">
+    <div class="modal" data-modal="add-payment">
       <div class="modal-overlay"> </div>
       <div class="modal-wrapper"> 
         <div class="modal-content"> 
@@ -203,25 +203,25 @@
           <div class="modal__title">Внести оплату</div>
           <form class="modal-form">
             <div class="form-group">
+              <input class="form-control" type="text">
               <label class="form-label" for="">Клиника<span>*</span></label>
-              <input class="form-control" type="text">
             </div>
             <div class="form-group">
+              <input class="form-control" type="text">
               <label class="form-label" for="">Врач<span>*</span></label>
-              <input class="form-control" type="text">
             </div>
             <div class="form-group">
-              <label class="form-label" for="">Пациент<span>*</span></label>
               <input class="form-control" type="text">
+              <label class="form-label" for="">Пациент<span>*</span></label>
             </div>
             <div class="form-row"> 
               <div class="form-group">
-                <label class="form-label" for="">Дата<span>*</span></label>
                 <input class="form-control" type="text">
+                <label class="form-label" for="">Дата<span>*</span></label>
               </div>
               <div class="form-group">
-                <label class="form-label" for="">Сумма<span>*</span></label>
                 <input class="form-control" type="text">
+                <label class="form-label" for="">Сумма<span>*</span></label>
               </div>
             </div>
             <div class="modal-action"> 
@@ -232,7 +232,48 @@
         </div>
       </div>
     </div>
-    <div class="modal" data-modal="2">
+    <div class="modal" data-modal="edit-payment">
+      <div class="modal-overlay"> </div>
+      <div class="modal-wrapper"> 
+        <div class="modal-content"> 
+          <div class="modal-close"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#close"></use>
+                </svg>
+          </div>
+          <div class="modal__title">Редактировать запись об оплате #3453</div>
+          <form class="modal-form">
+            <div class="form-group">
+              <input class="form-control" type="text">
+              <label class="form-label" for="">Клиника<span>*</span></label>
+            </div>
+            <div class="form-group">
+              <input class="form-control" type="text">
+              <label class="form-label" for="">Врач<span>*</span></label>
+            </div>
+            <div class="form-group">
+              <input class="form-control" type="text">
+              <label class="form-label" for="">Пациент<span>*</span></label>
+            </div>
+            <div class="form-row"> 
+              <div class="form-group">
+                <input class="form-control" type="text">
+                <label class="form-label" for="">Дата<span>*</span></label>
+              </div>
+              <div class="form-group">
+                <input class="form-control" type="text">
+                <label class="form-label" for="">Сумма<span>*</span></label>
+              </div>
+            </div>
+            <div class="modal-action"> 
+              <div class="btn">Отменить</div>
+              <div class="btn btn--primary">Сохранить</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="remove-payment">
       <div class="modal-overlay"> </div>
       <div class="modal-wrapper"> 
         <div class="modal-content"> 
@@ -269,7 +310,7 @@
         </div>
       </div>
     </div>
-    <div class="modal" data-modal="edit-payment">
+    <div class="modal" data-modal="edit-summ">
       <div class="modal-overlay"> </div>
       <div class="modal-wrapper"> 
         <div class="modal-content"> 
@@ -281,8 +322,8 @@
           <div class="modal__title">Редактировать сумму к оплате</div>
           <form class="modal-form">
             <div class="form-group form-group--sm">
-              <label class="form-label" for="">Сумма<span>*</span></label>
               <input class="form-control" type="text">
+              <label class="form-label" for="">Сумма<span>*</span></label>
             </div>
             <div class="modal-action"> 
               <div class="btn">Отменить</div>

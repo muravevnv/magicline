@@ -1,6 +1,7 @@
 
 
-function openModal() {
+function openModal(e) {
+  e.preventDefault();
   let modalId = $(this).data('modal');
   $(`.modal[data-modal=${modalId}]`).addClass('is-open');
   console.log(modalId)
@@ -43,4 +44,12 @@ let selectList = document.querySelectorAll('.js-select');
 
 selectList.forEach(function(item) {
   let choices = new Choices(item);
+})
+
+$('.form-control').on('input', function(){
+  if ($(this).val() != '' ) {
+    $(this).addClass('is-filled')
+  } else {
+    $(this).removeClass('is-filled')
+  }
 })

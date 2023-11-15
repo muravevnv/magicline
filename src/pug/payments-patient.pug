@@ -4,13 +4,28 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href="css/choices.css" rel="stylesheet")
     link(href="css/main.css" rel="stylesheet")
     title Главная
   body
     include mixins/_mixins
     include components/header
     +topPanel(['Оплаты'])
-    include components/navigation
+    .nav 
+      .nav-main 
+        a.nav__logo(href="#")
+          img(src="images/logo.svg", alt="")
+        ul.nav-list 
+          li.nav-item.is-active
+            +svgSprite(30, 30, 'clients')
+            a(href="payments.html").nav-link Оплаты
+          li.nav-item 
+            +svgSprite(30, 30, 'debts')
+            a(href="depts.html").nav-link Долги
+      .nav-user 
+        .nav-user__name Циванюк Ольга
+        .nav-user__post Бухгалтер
+      .nav-bottom «Настоящее украшение  — это здоровая и красивая улыбка»
     main.main
       .content
         .container 
@@ -20,49 +35,52 @@ html(lang="en")
               .dept-price__title Долг
               .dept-price__num 0 ₽
                 span 100 000 ₽
-              .dept-price__edit.js-open-modal(data-modal="edit-payment") 
+              .dept-price__edit.js-open-modal(data-modal="edit-summ") 
                 +svgSprite(30, 30, 'edit')
-            .btn.btn--big.btn--primary.js-open-modal(data-modal="1") Внести оплату
+            .btn.btn--big.btn--primary.js-open-modal(data-modal="add-payment") Внести оплату
           .card 
             .card-body 
               .table-responsive
-                table.table
-                  thead 
-                    tr 
-                      th Номер
-                      th Дата
-                      th Сумма
-                      th Пациент
-                  tbody 
-                    tr
-                      td #3453
-                      td 23.09.2023
-                      td 45 000 ₽
-                      td Жданов Остап Арсеньевич
-                    tr
-                      td #3453
-                      td 23.09.2023
-                      td 45 000 ₽
-                      td Жданов Остап Арсеньевич
-                    tr
-                      td #3453
-                      td 23.09.2023
-                      td 45 000 ₽
-                      td Жданов Остап Арсеньевич
-                    tr
-                      td #3453
-                      td 23.09.2023
-                      td 45 000 ₽
-                      td Жданов Остап Арсеньевич
-          .more-btn 
-            .btn.btn--big.btn--icon 
-              span Загрузить
-          .pagination 
-            .pagination-item.is-active 1
-            .pagination-item 2
-            .pagination-item 3
-            .pagination-dots ...
-            .pagination-item 4
+                .table.table-payment
+                  .table-head 
+                    .table-cell Номер
+                    .table-cell.table-cell--center Дата
+                    .table-cell.table-cell--right Сумма
+                    .table-cell Пациент
+                    .table-cell
+                  a(href="payments-patient.html").table-row 
+                    .table-cell #3453
+                    .table-cell 23.09.2023
+                    .table-cell.table-cell--right 45 000 ₽
+                    .table-cell.table-cell--light Николаев Мечислав Леонидович
+                    .table-cell
+                      .table-cell__action
+                        .edit.js-open-modal(data-modal="edit-payment") 
+                          +svgSprite(30, 30, 'edit')
+                        .remove.js-open-modal(data-modal="remove-payment") 
+                          +svgSprite(30, 30, 'remove')
+                  a(href="payments-patient.html").table-row 
+                    .table-cell #3453
+                    .table-cell 23.09.2023
+                    .table-cell.table-cell--right 45 000 ₽
+                    .table-cell.table-cell--light Николаев Мечислав Леонидович
+                    .table-cell
+                      .table-cell__action
+                        .edit.js-open-modal(data-modal="edit-payment") 
+                          +svgSprite(30, 30, 'edit')
+                        .remove.js-open-modal(data-modal="remove-payment") 
+                          +svgSprite(30, 30, 'remove')
+                  a(href="payments-patient.html").table-row 
+                    .table-cell #3453
+                    .table-cell 23.09.2023
+                    .table-cell.table-cell--right 45 000 ₽
+                    .table-cell.table-cell--light Николаев Мечислав Леонидович
+                    .table-cell
+                      .table-cell__action
+                        .edit.js-open-modal(data-modal="edit-payment") 
+                          +svgSprite(30, 30, 'edit')
+                        .remove.js-open-modal(data-modal="remove-payment") 
+                          +svgSprite(30, 30, 'remove')
     include components/footer
     include components/modal
     include includes/scripts

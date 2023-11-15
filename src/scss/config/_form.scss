@@ -2,6 +2,8 @@
   &-group {
     width: 100%;
     margin-top: 20px;
+    position: relative;
+    padding-top: 23px;
       
     @include media(sm) {
       margin-top: 16px;
@@ -16,9 +18,14 @@
   &-label {
     display: block;
     color: var(--white-text-darken);
-    font-size: 14px;
+    font-size: 18px;
     line-height: 160%; 
     margin-bottom: 5px;
+    position: absolute;
+    top: 38px;
+    left: 17px;
+    pointer-events: none;
+    transition: .3s;
 
     span {
       color: var(--red);
@@ -39,6 +46,20 @@
     outline: none;
     border-radius: 15px;
     border: 1px solid var(--ffffff-20, rgba(255, 255, 255, 0.20));
+
+    &.is-filled + .form-label {
+      top: 0;
+      left: 0;
+      font-size: 14px;
+      transition: .3s;
+    }
+
+    &:focus + .form-label {
+      top: 0;
+      left: 0;
+      font-size: 14px;
+      transition: .3s;
+    }
 
     @include media(sm) {
       font-size: 16px;

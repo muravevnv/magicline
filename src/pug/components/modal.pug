@@ -7,16 +7,16 @@
       .modal__title Авторизация
       form.modal-form
         .form-group
+          input(type="text").form-control 
           label.form-label(for="") Логин
             span *
-          input(type="text").form-control 
         .form-group
+          input(type="text").form-control 
           label.form-label(for="") Пароль
             span *
-          input(type="text").form-control 
         .modal-action 
           button(disabled).btn.btn--big Войти в Личный кабинет
-.modal(data-modal="1")
+.modal(data-modal="add-payment")
   .modal-overlay 
   .modal-wrapper 
     .modal-content 
@@ -25,30 +25,62 @@
       .modal__title Внести оплату
       form.modal-form
         .form-group
+          input(type="text").form-control 
           label.form-label(for="") Клиника
             span *
-          input(type="text").form-control 
         .form-group
+          input(type="text").form-control 
           label.form-label(for="") Врач
             span *
-          input(type="text").form-control 
         .form-group
+          input(type="text").form-control 
           label.form-label(for="") Пациент
             span *
-          input(type="text").form-control 
         .form-row 
           .form-group
+            input(type="text").form-control 
             label.form-label(for="") Дата
               span *
-            input(type="text").form-control 
           .form-group
+            input(type="text").form-control 
             label.form-label(for="") Сумма
               span *
-            input(type="text").form-control 
         .modal-action 
           .btn Отменить
           .btn.btn--primary Сохранить
-.modal(data-modal="2")
+.modal(data-modal="edit-payment")
+  .modal-overlay 
+  .modal-wrapper 
+    .modal-content 
+      .modal-close 
+        +svgSprite(30, 30, 'close')
+      .modal__title Редактировать запись об оплате #3453
+      form.modal-form
+        .form-group
+          input(type="text").form-control 
+          label.form-label(for="") Клиника
+            span *
+        .form-group
+          input(type="text").form-control 
+          label.form-label(for="") Врач
+            span *
+        .form-group
+          input(type="text").form-control 
+          label.form-label(for="") Пациент
+            span *
+        .form-row 
+          .form-group
+            input(type="text").form-control 
+            label.form-label(for="") Дата
+              span *
+          .form-group
+            input(type="text").form-control 
+            label.form-label(for="") Сумма
+              span *
+        .modal-action 
+          .btn Отменить
+          .btn.btn--primary Сохранить
+.modal(data-modal="remove-payment")
   .modal-overlay 
   .modal-wrapper 
     .modal-content 
@@ -69,7 +101,7 @@
       form.modal-form
         .modal-action 
           .btn.btn--primary Ок
-.modal(data-modal="edit-payment")
+.modal(data-modal="edit-summ")
   .modal-overlay 
   .modal-wrapper 
     .modal-content 
@@ -78,9 +110,9 @@
       .modal__title Редактировать сумму к оплате
       form.modal-form
         .form-group.form-group--sm
+          input(type="text").form-control 
           label.form-label(for="") Сумма
             span *
-          input(type="text").form-control 
         .modal-action 
           .btn Отменить
           .btn.btn--primary Ок
