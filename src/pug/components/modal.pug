@@ -5,7 +5,7 @@
       .modal-close 
         +svgSprite(30, 30, 'close')
       .modal__title Авторизация
-      form.modal-form
+      form.modal-form.modal-form--top
         .form-group
           input(type="text").form-control 
           label.form-label(for="") Логин
@@ -87,8 +87,7 @@
       .modal-close 
         +svgSprite(30, 30, 'close')
       .modal__title Удалить запись об оплате?
-      form.modal-form
-        .modal-action 
+      .modal-action 
           .btn Да
           .btn.btn--primary Нет
 .modal(data-modal="3")
@@ -98,8 +97,7 @@
       .modal-close 
         +svgSprite(30, 30, 'close')
       .modal__title Оплата успешно внесена!
-      form.modal-form
-        .modal-action 
+      .modal-action 
           .btn.btn--primary Ок
 .modal(data-modal="edit-summ")
   .modal-overlay 

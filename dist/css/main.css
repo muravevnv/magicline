@@ -347,8 +347,10 @@ h2 {
 .form-group {
   width: 100%;
   position: relative;
-  padding-top: 23px;
-  margin-top: 20px;
+  margin-bottom: 47px;
+}
+.form-group:last-of-type {
+  margin-bottom: 0;
 }
 .form-group--sm {
   max-width: 235px;
@@ -361,7 +363,7 @@ h2 {
   line-height: 160%;
   margin-bottom: 5px;
   position: absolute;
-  top: 38px;
+  top: 18px;
   left: 17px;
   pointer-events: none;
   -webkit-transition: 0.3s;
@@ -387,14 +389,14 @@ h2 {
   border: 1px solid var(--ffffff-20, rgba(255, 255, 255, 0.2));
 }
 .form-control.is-filled + .form-label {
-  top: 0;
+  top: -20px;
   left: 0;
   font-size: 14px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .form-control:focus + .form-label {
-  top: 0;
+  top: -20px;
   left: 0;
   font-size: 14px;
   -webkit-transition: 0.3s;
@@ -463,6 +465,9 @@ h2 {
   align-items: center;
   gap: 10px;
   width: 100%;
+}
+.form-row .form-group {
+  margin-bottom: 0;
 }
 .form-btn {
   margin-top: 44px;
@@ -691,8 +696,15 @@ h2 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
   color: var(--primary);
+}
+.breadcrumbs-item:not(:first-of-type) {
+  padding-left: 6px;
+}
+.breadcrumbs-item:not(:first-of-type) svg {
+  width: 12px;
+  height: 12px;
 }
 .breadcrumbs-item a {
   color: var(--primary);
@@ -844,7 +856,7 @@ table .t-button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 15px 30px;
+  padding: 14.5px 30px;
 }
 .table-row {
   display: grid;
@@ -852,7 +864,7 @@ table .t-button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 15px 30px;
+  padding: 12px 30px;
   border-top: 1px solid rgba(38, 215, 144, 0.1);
   min-height: 60px;
 }
@@ -921,7 +933,7 @@ table .t-button {
 .table-dept .table-head,
 .table-dept .table-row {
   width: 100%;
-  grid-template-columns: 1fr 157px 148px 73px;
+  grid-template-columns: 1fr 127px 148px 73px;
 }
 
 .table-section.is-open {
@@ -970,7 +982,7 @@ table .t-button {
   cursor: pointer;
 }
 .nav-item:not(:last-of-type) {
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 }
 .nav-item.is-active {
   background-color: var(--white-bg);
@@ -993,6 +1005,7 @@ table .t-button {
   color: var(--white-text);
 }
 .nav__logo {
+  display: block;
   padding: 0 20px;
   margin-bottom: 30px;
 }
@@ -1193,6 +1206,9 @@ table .t-button {
   -ms-flex-pack: center;
   justify-content: center;
 }
+.modal-form--top {
+  margin-top: 37px;
+}
 .modal-docs {
   margin-top: 30px;
   width: 100%;
@@ -1230,7 +1246,7 @@ table .t-button {
   font-weight: 500;
   line-height: 150%; /* 39px */
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   color: var(--white);
 }
 .modal__desc {
@@ -1729,6 +1745,9 @@ table .t-button {
   flex-wrap: wrap;
 }
 
+.plan {
+  margin-top: 25px;
+}
 .plan p {
   line-height: 1.7;
 }
@@ -1905,7 +1924,7 @@ table .t-button {
     flex-wrap: wrap;
   }
   .form-group {
-    margin-top: 16px;
+    margin-bottom: 32px;
   }
   .form-control {
     font-size: 16px;
@@ -1926,6 +1945,9 @@ table .t-button {
   .form-control::placeholder {
     font-size: 16px;
   }
+  .form-row .form-group {
+    margin-bottom: 32px;
+  }
   .form-row {
     gap: 0;
     display: block;
@@ -1934,11 +1956,15 @@ table .t-button {
     padding: 32px 24px;
     width: calc(100% - 32px);
   }
+  .modal-form--top {
+    padding-top: 0;
+  }
   .modal-action {
     margin-top: 16px;
   }
   .modal__title {
     font-size: 18px;
+    margin-bottom: 32px;
   }
   .progress {
     grid-template-columns: repeat(3, 1fr);

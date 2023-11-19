@@ -1,0 +1,63 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href="css/main.css" rel="stylesheet")
+    title Главная
+  body
+    include mixins/_mixins
+    include components/header
+    +topPanel(['Заявки'])
+    include components/navigation
+    main.main
+      .content(data-role="tab")
+        .container 
+          h1.title Заявки
+          .tabs 
+            a(href="orders.html").tabs-item.is-new Новые
+               span 7
+            a(href="orders-for-patients.html").tabs-item На пациентов (архив)
+              span 231
+            a(href="orders-for-prints.html").tabs-item Печать (архив)
+              span 1233
+            a(href="orders-for-change.html").tabs-item.is-active Изменение лечения (архив)
+              span 43
+          .card
+              .card-body 
+                .table-responsive
+                  .table
+                    .table-head 
+                      .table-cell Номер
+                      .table-cell.table-cell--center Дата
+                      .table-cell Клиника
+                      .table-cell Врач
+                      .table-cell 
+                    a(href="order-change.html").table-row 
+                      .table-cell #32456
+                      .table-cell.table-cell--light 23.09.2023
+                      .table-cell.table-cell--light SmileClinic
+                      .table-cell.table-cell--light Дорофеева Виолетта
+                      .table-cell
+                        .show-more
+                              +svgSprite(7, 14, 'arrow-right')
+                    a(href="order-change.html").table-row 
+                      .table-cell #32456
+                      .table-cell.table-cell--light 23.09.2023
+                      .table-cell.table-cell--light SmileClinic
+                      .table-cell.table-cell--light Дорофеева Виолетта
+                      .table-cell
+                        .show-more
+                              +svgSprite(7, 14, 'arrow-right')
+                    a(href="order-change.html").table-row 
+                      .table-cell #32456
+                      .table-cell.table-cell--light 23.09.2023
+                      .table-cell.table-cell--light SmileClinic
+                      .table-cell.table-cell--light Дорофеева Виолетта
+                      .table-cell
+                        .show-more
+                              +svgSprite(7, 14, 'arrow-right')
+
+    include components/footer
+    include includes/scripts

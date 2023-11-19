@@ -2,11 +2,14 @@
   &-group {
     width: 100%;
     position: relative;
-    padding-top: 23px;
-    margin-top: 20px;
+    margin-bottom: 47px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
     
     @include media(sm) {
-      margin-top: 16px;
+      margin-bottom: 32px;
     }
 
     &--sm {
@@ -22,7 +25,7 @@
     line-height: 160%; 
     margin-bottom: 5px;
     position: absolute;
-    top: 38px;
+    top: 18px;
     left: 17px;
     pointer-events: none;
     transition: .3s;
@@ -48,14 +51,14 @@
     border: 1px solid var(--ffffff-20, rgba(255, 255, 255, 0.20));
 
     &.is-filled + .form-label {
-      top: 0;
+      top: -20px;
       left: 0;
       font-size: 14px;
       transition: .3s;
     }
 
     &:focus + .form-label {
-      top: 0;
+      top: -20px;
       left: 0;
       font-size: 14px;
       transition: .3s;
@@ -93,6 +96,14 @@
     align-items: center;
     gap: 10px;
     width: 100%;
+
+    .form-group {
+      margin-bottom: 0;
+      
+      @include media(sm)  {
+        margin-bottom: 32px;
+      }
+    }
 
     @include media(sm) {
       gap: 0;

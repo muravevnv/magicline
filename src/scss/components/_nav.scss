@@ -46,7 +46,7 @@
     cursor: pointer;
 
     &:not(:last-of-type) {
-      margin-bottom: 8px;
+      margin-bottom: 5px;
     }
 
     &.is-active {
@@ -74,6 +74,7 @@
   }
 
   &__logo {
+    display: block;
     padding: 0 20px;
     margin-bottom: 30px;
   }

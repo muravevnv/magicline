@@ -11,9 +11,16 @@
   &-item {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 6px;
     color: var(--primary);
     
+    &:not(:first-of-type) {
+      padding-left: 6px;
+      svg {
+        width: 12px;
+        height: 12px;
+      }
+    }
     
     a {
       color: var(--primary);
