@@ -16,21 +16,12 @@ html(lang="en")
         a.nav__logo(href="#")
           img(src="images/logo.svg", alt="")
         ul.nav-list 
-          li.nav-item
-            +svgSprite(30, 30, 'chat')
-            a(href="orders.html").nav-link Заявки
           li.nav-item.is-active 
             +svgSprite(30, 30, 'play')
             a(href="print.html").nav-link Очередь на печать
           li.nav-item 
             +svgSprite(30, 30, 'clients')
             a(href="patients.html").nav-link Пациенты
-          li.nav-item 
-            +svgSprite(30, 30, 'payments')
-            a(href="payments.html").nav-link Оплаты
-          li.nav-item 
-            +svgSprite(30, 30, 'debts')
-            a(href="depts.html").nav-link Долги
       .nav-user 
         .nav-user__name Циванюк Ольга
         .nav-user__post Заведующий
@@ -40,10 +31,10 @@ html(lang="en")
         .container 
           h1.title Очередь на печать
           .tabs 
-            .tabs-item.is-active(data-tab="print-new") Неготовые
-               span 5
-            .tabs-item(data-tab="print-archive") Готовые
-              span 154
+            .tabs-item.is-new.is-active(data-tab="print-new") Новые
+               span 7
+            .tabs-item(data-tab="print-archive") На пациентов (архив)
+              span 231
           .tabs-content.is-open(data-tab="print-new")
             .card
               .card-body 
@@ -92,11 +83,6 @@ html(lang="en")
                                 .mouthguards__item.is-request 1
                                 .mouthguards__item.is-request 2
                                 .mouthguards__item.is-request 3
-                          .print-action 
-                            .edit.js-open-modal(data-modal="print-edit") 
-                              +svgSprite(30, 30, 'edit')
-                            .remove.js-open-modal(data-modal="print-delete") 
-                              +svgSprite(30, 30, 'remove')
                         .print-inform 
                           +svgSprite(30, 30, 'chat')
                           | Обратите внимание на важную вещь: у пациента есть особенности в строении челюсти
@@ -143,11 +129,6 @@ html(lang="en")
                                 .mouthguards__item.is-request 1
                                 .mouthguards__item.is-request 2
                                 .mouthguards__item.is-request 3
-                          .print-action 
-                            .print__edit 
-                              +svgSprite(30, 30, 'edit')
-                            .print__remove 
-                              +svgSprite(30, 30, 'remove')
                         .print-inform 
                           +svgSprite(30, 30, 'chat')
                           | Обратите внимание на важную вещь: у пациента есть особенности в строении челюсти
@@ -194,11 +175,6 @@ html(lang="en")
                                 .mouthguards__item.is-request 1
                                 .mouthguards__item.is-request 2
                                 .mouthguards__item.is-request 3
-                          .print-action 
-                            .print__edit 
-                              +svgSprite(30, 30, 'edit')
-                            .print__remove 
-                              +svgSprite(30, 30, 'remove')
                         .print-inform 
                           +svgSprite(30, 30, 'chat')
                           | Обратите внимание на важную вещь: у пациента есть особенности в строении челюсти
@@ -245,11 +221,6 @@ html(lang="en")
                                 .mouthguards__item.is-request 1
                                 .mouthguards__item.is-request 2
                                 .mouthguards__item.is-request 3
-                          .print-action 
-                            .print__edit 
-                              +svgSprite(30, 30, 'edit')
-                            .print__remove 
-                              +svgSprite(30, 30, 'remove')
                         .print-inform 
                           +svgSprite(30, 30, 'chat')
                           | Обратите внимание на важную вещь: у пациента есть особенности в строении челюсти
@@ -308,11 +279,6 @@ html(lang="en")
                                 .mouthguards__item.is-request 1
                                 .mouthguards__item.is-request 2
                                 .mouthguards__item.is-request 3
-                          .print-action 
-                            .print__edit 
-                              +svgSprite(30, 30, 'edit')
-                            .print__remove 
-                              +svgSprite(30, 30, 'remove')
                         .print-inform 
                           +svgSprite(30, 30, 'chat')
                           | Обратите внимание на важную вещь: у пациента есть особенности в строении челюсти
@@ -359,11 +325,6 @@ html(lang="en")
                                 .mouthguards__item.is-request 1
                                 .mouthguards__item.is-request 2
                                 .mouthguards__item.is-request 3
-                          .print-action 
-                            .print__edit 
-                              +svgSprite(30, 30, 'edit')
-                            .print__remove 
-                              +svgSprite(30, 30, 'remove')
                         .print-inform 
                           +svgSprite(30, 30, 'chat')
                           | Обратите внимание на важную вещь: у пациента есть особенности в строении челюсти
@@ -410,11 +371,6 @@ html(lang="en")
                                 .mouthguards__item.is-request 1
                                 .mouthguards__item.is-request 2
                                 .mouthguards__item.is-request 3
-                          .print-action 
-                            .print__edit 
-                              +svgSprite(30, 30, 'edit')
-                            .print__remove 
-                              +svgSprite(30, 30, 'remove')
                         .print-inform 
                           +svgSprite(30, 30, 'chat')
                           | Обратите внимание на важную вещь: у пациента есть особенности в строении челюсти
@@ -461,11 +417,6 @@ html(lang="en")
                                 .mouthguards__item.is-request 1
                                 .mouthguards__item.is-request 2
                                 .mouthguards__item.is-request 3
-                          .print-action 
-                            .print__edit 
-                              +svgSprite(30, 30, 'edit')
-                            .print__remove 
-                              +svgSprite(30, 30, 'remove')
                         .print-inform 
                           +svgSprite(30, 30, 'chat')
                           | Обратите внимание на важную вещь: у пациента есть особенности в строении челюсти
@@ -512,11 +463,6 @@ html(lang="en")
                                 .mouthguards__item.is-request 1
                                 .mouthguards__item.is-request 2
                                 .mouthguards__item.is-request 3
-                          .print-action 
-                            .print__edit 
-                              +svgSprite(30, 30, 'edit')
-                            .print__remove 
-                              +svgSprite(30, 30, 'remove')
                         .print-inform 
                           +svgSprite(30, 30, 'chat')
                           | Обратите внимание на важную вещь: у пациента есть особенности в строении челюсти
@@ -563,11 +509,6 @@ html(lang="en")
                                 .mouthguards__item.is-request 1
                                 .mouthguards__item.is-request 2
                                 .mouthguards__item.is-request 3
-                          .print-action 
-                            .print__edit 
-                              +svgSprite(30, 30, 'edit')
-                            .print__remove 
-                              +svgSprite(30, 30, 'remove')
                         .print-inform 
                           +svgSprite(30, 30, 'chat')
                           | Обратите внимание на важную вещь: у пациента есть особенности в строении челюсти
@@ -614,11 +555,6 @@ html(lang="en")
                                 .mouthguards__item.is-request 1
                                 .mouthguards__item.is-request 2
                                 .mouthguards__item.is-request 3
-                          .print-action 
-                            .print__edit 
-                              +svgSprite(30, 30, 'edit')
-                            .print__remove 
-                              +svgSprite(30, 30, 'remove')
                         .print-inform 
                           +svgSprite(30, 30, 'chat')
                           | Обратите внимание на важную вещь: у пациента есть особенности в строении челюсти
