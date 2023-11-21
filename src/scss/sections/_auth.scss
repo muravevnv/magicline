@@ -19,5 +19,9 @@
     bottom: 30%;
     left: 50%;
     transform: translateX(-50%);
+
+    @include media(sm) {
+      bottom: 50px;
+    }
   }
 }

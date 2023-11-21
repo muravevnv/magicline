@@ -12,6 +12,7 @@
 
   @include media(sm) {
     overflow: hidden;
+    padding-bottom: 120px;
   }
 
   &__title {

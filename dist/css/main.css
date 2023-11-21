@@ -1810,6 +1810,9 @@ table .t-button {
   margin: auto 0 0 0;
 }
 @media (max-width: 1200px){
+  body::before {
+    height: 100%;
+  }
   .content {
     padding: 20px;
   }
@@ -1970,8 +1973,16 @@ table .t-button {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
+  .info {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .auth-btn {
+    bottom: 50px;
+  }
   .error {
     overflow: hidden;
+    padding-bottom: 120px;
   }
   .error__title {
     font-size: 32px;
