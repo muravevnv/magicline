@@ -8,7 +8,7 @@
   background-color: transparent;
   border-radius: 5px;
   border: 1px solid var(--ffffff-20, rgba(255, 255, 255, 0.20));
-  background: var(--ffffff-5, rgba(255, 255, 255, 0.05));
+  background: #283731;
 }
 
 .is-open .choices__inner {
@@ -43,7 +43,7 @@
 .choices__list--dropdown, .choices__list[aria-expanded] {
   border-radius: 0 0 5px 5px;
   border: 1px solid var(--ffffff-20, rgba(255, 255, 255, 0.20));
-  background: var(--ffffff-5, rgba(255, 255, 255, 0.05));
+  background: #283731;
 }
 
 .is-open .choices__list--dropdown, .is-open .choices__list[aria-expanded] {

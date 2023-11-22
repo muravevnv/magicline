@@ -33,7 +33,9 @@ html(lang="en")
           .row 
             .search 
               input.form-control.search__input(type="text" placeholder="Поиск по ФИО или дате (ДД.ММ.ГГГГ)")
-            .btn.btn--big.btn--primary.js-open-modal(data-modal="add-payment") Внести оплату
+            .btn.btn--big.btn--primary.btn--icon.js-open-modal(data-modal="add-payment") 
+              span Внести оплату
+              +svgSprite(30,30, 'plus-big')
           .card 
             .card-body 
               .table-responsive
