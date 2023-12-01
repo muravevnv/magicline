@@ -42,9 +42,6 @@ html(lang="en")
               span Новый пациент
               +svgSprite(30,30,'plus-big')
           .card
-            .card-head 
-              h2.card-title Новые пациенты
-                span 3
             .card-body 
               .table-responsive
                 .table
@@ -78,20 +75,7 @@ html(lang="en")
                     .table-cell
                       .show-more
                             +svgSprite(7, 14, 'arrow-right')
-          .card
-            .card-head 
-              h2.card-title Печать
-                span 2
-            .card-body 
-              .table-responsive
-                .table
-                  .table-head 
-                    .table-cell Номер
-                    .table-cell.table-cell--center Дата
-                    .table-cell Клиника
-                    .table-cell Врач
-                    .table-cell 
-                  a(href="order-print.html").table-row 
+                  a(href="order.html").table-row 
                     .table-cell #32456
                     .table-cell.table-cell--light 23.09.2023
                     .table-cell.table-cell--light SmileClinic
@@ -99,7 +83,7 @@ html(lang="en")
                     .table-cell
                       .show-more
                             +svgSprite(7, 14, 'arrow-right')
-                  a(href="order-print.html").table-row 
+                  a(href="order.html").table-row 
                     .table-cell #32456
                     .table-cell.table-cell--light 23.09.2023
                     .table-cell.table-cell--light SmileClinic
@@ -107,20 +91,7 @@ html(lang="en")
                     .table-cell
                       .show-more
                             +svgSprite(7, 14, 'arrow-right')
-          .card
-            .card-head 
-              h2.card-title Изменение плана лечения
-                span 2
-            .card-body 
-              .table-responsive
-                .table
-                  .table-head 
-                    .table-cell Номер
-                    .table-cell.table-cell--center Дата
-                    .table-cell Клиника
-                    .table-cell Врач
-                    .table-cell 
-                  a(href="order-change.html").table-row 
+                  a(href="order.html").table-row 
                     .table-cell #32456
                     .table-cell.table-cell--light 23.09.2023
                     .table-cell.table-cell--light SmileClinic
@@ -128,7 +99,7 @@ html(lang="en")
                     .table-cell
                       .show-more
                             +svgSprite(7, 14, 'arrow-right')
-                  a(href="order-change.html").table-row 
+                  a(href="order.html").table-row 
                     .table-cell #32456
                     .table-cell.table-cell--light 23.09.2023
                     .table-cell.table-cell--light SmileClinic
@@ -136,5 +107,15 @@ html(lang="en")
                     .table-cell
                       .show-more
                             +svgSprite(7, 14, 'arrow-right')
+          .btn.btn--big.btn--icon 
+            span Загрузить
+            +svgSprite(30, 30, 'refresh')
+          .pagination 
+            .pagination-item.is-active 1
+            .pagination-item 2
+            .pagination-item 3
+            .pagination-dots ...
+            .pagination-item 4
+
     include components/footer
     include includes/scripts

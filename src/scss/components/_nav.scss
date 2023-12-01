@@ -51,7 +51,7 @@
 
     &.is-active {
       background-color: var(--white-bg);
-      transition: .25s;
+      transition: .3s;
 
       a {
         color: var(--white);
@@ -60,7 +60,12 @@
 
     &:hover {
       background-color: rgba(255, 255, 255, 0.20);
-      transition: .25s;
+      transition: .3s;
+    }
+    
+    &:active {
+      background-color: rgba(255, 255, 255, 0.10);
+      transition: .3s;
     }
 
     svg {

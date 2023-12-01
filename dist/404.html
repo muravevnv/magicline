@@ -41,18 +41,13 @@
         </div>
     <div class="nav"> 
       <div class="nav-main"> <a class="nav__logo" href="#"><img src="images/logo.svg" alt=""></a>
-        <ul class="nav-list"> 
-          <li class="nav-item">
+        <div class="nav-list"> <a class="nav-item" href="payments.html">
                 <svg width="30" height="30">
                   <use xlink:href="images/sprite.svg#clients"></use>
-                </svg><a class="nav-link" href="payments.html">Оплаты</a>
-          </li>
-          <li class="nav-item is-active"> 
+                </svg><span class="nav-link">Оплаты</span></a><a class="nav-item is-active" href="depts.html"> 
                 <svg width="30" height="30">
                   <use xlink:href="images/sprite.svg#debts"></use>
-                </svg><a class="nav-link" href="depts.html">Долги</a>
-          </li>
-        </ul>
+                </svg><span class="nav-link">Долги</span></a></div>
       </div>
       <div class="nav-user"> 
         <div class="nav-user__name">Циванюк Ольга</div>
@@ -65,7 +60,7 @@
         <h1 class="title">Страница не найдена</h1>
         <div class="error__title">Мы уже чиним это</div>
         <div class="error__btn btn btn--big btn--primary"> <span>Вернуться назад</span></div>
-        <div class="error__num"><img src="images/num.png" alt=""></div>
+        <div class="error__num"><img src="images/num.svg" alt=""></div>
         <div class="error__img"> <img src="images/vortex.png" alt=""></div>
       </div>
     </main>
@@ -107,29 +102,29 @@
           <div class="modal__title">Внести оплату</div>
           <form class="modal-form">
             <div class="form-group">
-              <input class="form-control" type="text">
+              <input class="form-control is-filled" type="text" value="Доктор Дент">
               <label class="form-label" for="">Клиника<span>*</span></label>
             </div>
             <div class="form-group">
-              <input class="form-control" type="text">
+              <input class="form-control is-filled" type="text" value="Колобов Ипполит Вадимович">
               <label class="form-label" for="">Врач<span>*</span></label>
             </div>
             <div class="form-group">
-              <input class="form-control" type="text">
+              <input class="form-control is-filled" type="text" value="Жданов Остап Арсеньевич">
               <label class="form-label" for="">Пациент<span>*</span></label>
             </div>
             <div class="form-row"> 
               <div class="form-group">
-                <input class="form-control" type="text">
+                <input class="form-control js-date-mask" type="text">
                 <label class="form-label" for="">Дата<span>*</span></label>
               </div>
-              <div class="form-group">
-                <input class="form-control" type="text">
+              <div class="form-group form-group-ruble">
+                <input class="form-control js-price-input" type="text">
                 <label class="form-label" for="">Сумма<span>*</span></label>
               </div>
             </div>
             <div class="modal-action"> 
-              <div class="btn">Отменить</div>
+              <div class="btn js-modal-close">Отменить</div>
               <div class="btn btn--primary">Сохранить</div>
             </div>
           </form>
@@ -164,14 +159,14 @@
                 <input class="form-control is-filled" type="text" value="15.09.2023">
                 <label class="form-label" for="">Дата<span>*</span></label>
               </div>
-              <div class="form-group">
-                <input class="form-control is-filled" type="text" value="15.09.2023">
+              <div class="form-group form-group-ruble">
+                <input class="form-control is-filled js-price-input" type="text" value="2 345">
                 <label class="form-label" for="">Сумма<span>*</span></label>
               </div>
             </div>
             <div class="modal-action"> 
-              <div class="btn">Отменить</div>
-              <div class="btn btn--primary">Сохранить</div>
+              <div class="btn js-modal-close">Отменить</div>
+              <div class="btn btn--primary js-modal-close">Сохранить</div>
             </div>
           </form>
         </div>
@@ -188,8 +183,8 @@
           </div>
           <div class="modal__title">Удалить запись об оплате?</div>
           <div class="modal-action"> 
-            <div class="btn">Да</div>
-            <div class="btn btn--primary">Нет</div>
+            <div class="btn js-modal-close">Да</div>
+            <div class="btn btn--primary js-modal-close">Нет</div>
           </div>
         </div>
       </div>
@@ -205,7 +200,7 @@
           </div>
           <div class="modal__title">Оплата успешно внесена!</div>
           <div class="modal-action"> 
-            <div class="btn btn--primary">Ок</div>
+            <div class="btn btn--primary js-popup-close">Ок</div>
           </div>
         </div>
       </div>
@@ -226,8 +221,8 @@
               <label class="form-label" for="">Сумма<span>*</span></label>
             </div>
             <div class="modal-action"> 
-              <div class="btn">Отменить</div>
-              <div class="btn btn--primary">Ок</div>
+              <div class="btn js-modal-close">Отменить</div>
+              <div class="btn btn--primary js-modal-close">Ок</div>
             </div>
           </form>
         </div>
@@ -403,6 +398,7 @@
       </div>
     </div>
     <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/imask.min.js"></script>
     <script src="scripts/choices.min.js"></script>
     <script src="scripts/main.js"></script>
   </body>

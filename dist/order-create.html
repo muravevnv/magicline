@@ -45,23 +45,16 @@
         </div>
     <div class="nav"> 
       <div class="nav-main"> <a class="nav__logo" href="#"><img src="images/logo.svg" alt=""></a>
-        <ul class="nav-list"> 
-          <li class="nav-item">
+        <div class="nav-list"> <a class="nav-item" href="doctor-orders.html">
                 <svg width="30" height="30">
                   <use xlink:href="images/sprite.svg#chat"></use>
-                </svg><a class="nav-link" href="doctor-orders.html">Заявки</a>
-          </li>
-          <li class="nav-item is-active">
+                </svg><span class="nav-link">Заявки</span></a><a class="nav-item is-active" href="doctor-patients.html">
                 <svg width="30" height="30">
                   <use xlink:href="images/sprite.svg#clients"></use>
-                </svg><a class="nav-link" href="doctor-patients.html">Пациенты</a>
-          </li>
-          <li class="nav-item"> 
+                </svg><span class="nav-link">Пациенты</span></a><a class="nav-item" href="doctor-depts.html"> 
                 <svg width="30" height="30">
                   <use xlink:href="images/sprite.svg#debts"></use>
-                </svg><a class="nav-link" href="doctor-depts.html">Долги</a>
-          </li>
-        </ul>
+                </svg><span class="nav-link">Долги</span></a></div>
       </div>
       <div class="nav-user"> 
         <div class="nav-user__name">Циванюк Ольга</div>
@@ -83,16 +76,17 @@
             <div class="section"> 
               <div class="section__title">КЛКТ челюсти</div>
               <div class="section__information">Форматы файлов: .zip, .bmp, .gif, .jpeg, .jpg, .jpe, .pcx, .png, .tif, .tiff, .mp3, .mp4, .aac, .wav, .au, .wmv, .avi, .mov. Максимальный размер файла — 2 Мб. </div>
-              <div class="section__btn btn btn--icon btn--big js-open-modal" data-modal="add-docs"><span>Выбрать файлы</span>
+              <label class="section__btn btn btn--icon btn--big" for="file-1">
+                <input type="file" id="file-1" name=""><span>Выбрать файлы</span>
                     <svg width="30" height="30">
                       <use xlink:href="images/sprite.svg#plus-big"></use>
                     </svg>
-              </div>
+              </label>
             </div>
             <div class="section"> 
               <div class="section__title">Сканы (.stl)</div>
               <div class="section__information">Форматы файлов: .stl. Максимальный размер файла — 2 Мб. </div>
-              <div class="section__btn btn btn--icon btn--big js-open-modal" data-modal="add-docs"><span>Выбрать файлы</span>
+              <div class="section__btn btn btn--icon btn--big"><span>Выбрать файлы</span>
                     <svg width="30" height="30">
                       <use xlink:href="images/sprite.svg#plus-big"></use>
                     </svg>
@@ -101,19 +95,22 @@
             <div class="section"> 
               <div class="section__title">Фотографии пациента</div>
               <div class="section__information">Форматы файлов: .stl. Максимальный размер файла — 2 Мб. </div>
-              <div class="section__btn btn btn--icon btn--big js-open-modal" data-modal="add-photo"><span>Выбрать файлы</span>
+              <label class="section__btn btn btn--icon btn--big" for="file-2">
+                <input type="file" id="file-2" name=""><span>Выбрать файлы</span>
                     <svg width="30" height="30">
                       <use xlink:href="images/sprite.svg#plus-big"></use>
                     </svg>
-              </div>
+              </label>
             </div>
             <div class="section"> 
               <div class="section__title">Комментарий от врача</div>
-              <div class="section__information">Форматы файлов: .bmp, .gif, .jpeg, .jpg, .jpe, .pcx, .png, .tif, .tiff. Максимальный размер файла — 2 Мб. </div>
-              <div class="form-group"> 
-                <input class="form-control" type="text">
-                <label class="form-label">Комментарий от врача</label>
-              </div>
+              <label class="section-control" for="file-3">
+                <input type="file" id="file-3" name="">
+                <div class="form-group"> 
+                  <input class="form-control" type="text">
+                  <label class="form-label">Комментарий от врача</label>
+                </div>
+              </label>
             </div>
             <div class="action">
               <button class="btn btn--big btn--primary" disabled><span>Создать заявку</span></button>
@@ -160,29 +157,29 @@
           <div class="modal__title">Внести оплату</div>
           <form class="modal-form">
             <div class="form-group">
-              <input class="form-control" type="text">
+              <input class="form-control is-filled" type="text" value="Доктор Дент">
               <label class="form-label" for="">Клиника<span>*</span></label>
             </div>
             <div class="form-group">
-              <input class="form-control" type="text">
+              <input class="form-control is-filled" type="text" value="Колобов Ипполит Вадимович">
               <label class="form-label" for="">Врач<span>*</span></label>
             </div>
             <div class="form-group">
-              <input class="form-control" type="text">
+              <input class="form-control is-filled" type="text" value="Жданов Остап Арсеньевич">
               <label class="form-label" for="">Пациент<span>*</span></label>
             </div>
             <div class="form-row"> 
               <div class="form-group">
-                <input class="form-control" type="text">
+                <input class="form-control js-date-mask" type="text">
                 <label class="form-label" for="">Дата<span>*</span></label>
               </div>
-              <div class="form-group">
-                <input class="form-control" type="text">
+              <div class="form-group form-group-ruble">
+                <input class="form-control js-price-input" type="text">
                 <label class="form-label" for="">Сумма<span>*</span></label>
               </div>
             </div>
             <div class="modal-action"> 
-              <div class="btn">Отменить</div>
+              <div class="btn js-modal-close">Отменить</div>
               <div class="btn btn--primary">Сохранить</div>
             </div>
           </form>
@@ -217,14 +214,14 @@
                 <input class="form-control is-filled" type="text" value="15.09.2023">
                 <label class="form-label" for="">Дата<span>*</span></label>
               </div>
-              <div class="form-group">
-                <input class="form-control is-filled" type="text" value="15.09.2023">
+              <div class="form-group form-group-ruble">
+                <input class="form-control is-filled js-price-input" type="text" value="2 345">
                 <label class="form-label" for="">Сумма<span>*</span></label>
               </div>
             </div>
             <div class="modal-action"> 
-              <div class="btn">Отменить</div>
-              <div class="btn btn--primary">Сохранить</div>
+              <div class="btn js-modal-close">Отменить</div>
+              <div class="btn btn--primary js-modal-close">Сохранить</div>
             </div>
           </form>
         </div>
@@ -241,8 +238,8 @@
           </div>
           <div class="modal__title">Удалить запись об оплате?</div>
           <div class="modal-action"> 
-            <div class="btn">Да</div>
-            <div class="btn btn--primary">Нет</div>
+            <div class="btn js-modal-close">Да</div>
+            <div class="btn btn--primary js-modal-close">Нет</div>
           </div>
         </div>
       </div>
@@ -258,7 +255,7 @@
           </div>
           <div class="modal__title">Оплата успешно внесена!</div>
           <div class="modal-action"> 
-            <div class="btn btn--primary">Ок</div>
+            <div class="btn btn--primary js-popup-close">Ок</div>
           </div>
         </div>
       </div>
@@ -279,8 +276,8 @@
               <label class="form-label" for="">Сумма<span>*</span></label>
             </div>
             <div class="modal-action"> 
-              <div class="btn">Отменить</div>
-              <div class="btn btn--primary">Ок</div>
+              <div class="btn js-modal-close">Отменить</div>
+              <div class="btn btn--primary js-modal-close">Ок</div>
             </div>
           </form>
         </div>
@@ -456,6 +453,7 @@
       </div>
     </div>
     <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/imask.min.js"></script>
     <script src="scripts/choices.min.js"></script>
     <script src="scripts/main.js"></script>
   </body>

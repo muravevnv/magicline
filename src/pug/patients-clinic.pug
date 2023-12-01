@@ -14,45 +14,39 @@ html(lang="en")
     main.main
       .content
         .container 
-          h1.title Пациенты
+          h1.title Доктор Дент
           .tabs 
             a(href="patients.html").tabs-item.is-active Группировка по клиникам
-            a(href="patients-all.html").tabs-item Показать все
+            .tabs-item Показать все
               span 186
           .card 
             .card-body 
               .table-responsive
                 .table.table-patient
                   .table-head 
-                    .table-cell Клиника
-                    .table-cell.table-cell--center Пациентов
+                    .table-cell Врач
+                    .table-cell.table-cell--center Пациенты
                     .table-cell
-                  a(href="patients-clinic.html").table-row 
-                    .table-celll.table-cell--light SmileClinic
+                  a(href="doctor-patients.html").table-row 
+                    .table-celll.table-cell--light Дорофеева Виолетта
                     .table-cell.table-cell--center 143
                     .table-cell
                       .show-more
                             +svgSprite(7, 14, 'arrow-right')
-                  a(href="patients-clinic.html").table-row 
-                    .table-celll.table-cell--light Улыбка
+                  a(href="doctor-patients.html").table-row 
+                    .table-celll.table-cell--light Комиссарова Илзе Вениаминовна
                     .table-cell.table-cell--center 143
                     .table-cell
                       .show-more
                             +svgSprite(7, 14, 'arrow-right')
-                  a(href="patients-clinic.html").table-row 
-                    .table-celll.table-cell--light TeethClinic
+                  a(href="doctor-patients.html").table-row 
+                    .table-celll.table-cell--light Фомина Николь Пантелеймоновна
                     .table-cell.table-cell--center 143
                     .table-cell
                       .show-more
                             +svgSprite(7, 14, 'arrow-right')
-                  a(href="patients-clinic.html").table-row 
-                    .table-celll.table-cell--light Доктор Дент
-                    .table-cell.table-cell--center 143
-                    .table-cell
-                      .show-more
-                            +svgSprite(7, 14, 'arrow-right')
-                  a(href="patients-clinic.html").table-row 
-                    .table-celll.table-cell--light Ваш Стоматолог 
+                  a(href="doctor-patients.html").table-row 
+                    .table-celll.table-cell--light Русакова Симона Ивановна
                     .table-cell.table-cell--center 143
                     .table-cell
                       .show-more

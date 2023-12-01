@@ -40,33 +40,22 @@
         </div>
     <div class="nav"> 
       <div class="nav-main"> <a class="nav__logo" href="#"><img src="images/logo.svg" alt=""></a>
-        <ul class="nav-list"> 
-          <li class="nav-item is-active">
+        <ul class="nav-list"> <a class="nav-item is-active" href="orders.html">
                 <svg width="30" height="30">
                   <use xlink:href="images/sprite.svg#chat"></use>
-                </svg><a class="nav-link" href="orders.html">Заявки</a>
-          </li>
-          <li class="nav-item"> 
+                </svg><span class="nav-link">Заявки</span></a><a class="nav-item" href="print.html"> 
                 <svg width="30" height="30">
                   <use xlink:href="images/sprite.svg#play"></use>
-                </svg><a class="nav-link" href="print.html">Очередь на печать</a>
-          </li>
-          <li class="nav-item"> 
+                </svg><span class="nav-link">Очередь на печать</span></a><a class="nav-item" href="patients.html"> 
                 <svg width="30" height="30">
                   <use xlink:href="images/sprite.svg#clients"></use>
-                </svg><a class="nav-link" href="patients.html">Пациенты</a>
-          </li>
-          <li class="nav-item"> 
+                </svg><span class="nav-link">Пациенты</span></a><a class="nav-item" href="payments.html"> 
                 <svg width="30" height="30">
                   <use xlink:href="images/sprite.svg#payments"></use>
-                </svg><a class="nav-link" href="payments.html">Оплаты</a>
-          </li>
-          <li class="nav-item"> 
+                </svg><span class="nav-link">Оплаты</span></a><a class="nav-item" href="depts.html"> 
                 <svg width="30" height="30">
                   <use xlink:href="images/sprite.svg#debts"></use>
-                </svg><a class="nav-link" href="depts.html">Долги</a>
-          </li>
-        </ul>
+                </svg><span class="nav-link">Долги</span></a></ul>
       </div>
       <div class="nav-user"> 
         <div class="nav-user__name">Циванюк Ольга</div>
@@ -140,8 +129,8 @@
                   <div class="table-head"> 
                     <div class="table-cell">Номер</div>
                     <div class="table-cell table-cell--center">Дата</div>
-                    <div class="table-cell">Клиника</div>
                     <div class="table-cell">Врач</div>
+                    <div class="table-cell">Пациент</div>
                     <div class="table-cell"> </div>
                   </div><a class="table-row" href="order-print.html"> 
                     <div class="table-cell">#32456</div>
@@ -180,8 +169,8 @@
                   <div class="table-head"> 
                     <div class="table-cell">Номер</div>
                     <div class="table-cell table-cell--center">Дата</div>
-                    <div class="table-cell">Клиника</div>
                     <div class="table-cell">Врач</div>
+                    <div class="table-cell">Пациент</div>
                     <div class="table-cell"> </div>
                   </div><a class="table-row" href="order-change.html"> 
                     <div class="table-cell">#32456</div>
@@ -214,6 +203,7 @@
       </div>
     </main>
     <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/imask.min.js"></script>
     <script src="scripts/choices.min.js"></script>
     <script src="scripts/main.js"></script>
   </body>

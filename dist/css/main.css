@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
   --font-main: "Inter Tight", sans-serif;
@@ -7,6 +8,7 @@
   --white-text-darken: rgba(255, 255, 255, 0.40);
   --black: #1A1B1E;
   --primary: #21D28B;
+  --primary-active: #179362;
   --secondary: #26B265;
   --green: #6FED34;
   --yellow: #FCEF00;
@@ -356,6 +358,16 @@ h2 {
   max-width: 235px;
   width: 100%;
 }
+.form-group-ruble {
+  position: relative;
+}
+.form-group-ruble::before {
+  position: absolute;
+  content: "₽";
+  bottom: 20px;
+  right: 20px;
+  color: var(--white-text-darken);
+}
 .form-label {
   display: block;
   color: var(--white-text-darken);
@@ -389,18 +401,30 @@ h2 {
   border: 1px solid var(--ffffff-20, rgba(255, 255, 255, 0.2));
 }
 .form-control.is-filled + .form-label {
-  top: -20px;
+  top: -25px;
   left: 0;
   font-size: 14px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .form-control:focus + .form-label {
-  top: -20px;
+  top: -25px;
   left: 0;
   font-size: 14px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+.form-control:hover {
+  border-color: var(--white-text-darken);
+}
+.form-control:hover + .form-label {
+  color: var(--white-text-darken);
+}
+.form-control:focus {
+  border-color: var(--white-text);
+}
+.form-control:focus + .form-label {
+  color: var(--white-text);
 }
 .form-control::-webkit-input-placeholder {
   font-size: 18px;
@@ -741,6 +765,10 @@ h2 {
   margin: 40px 0;
   overflow: hidden;
 }
+.card.is-new .card-title span {
+  background-color: var(--primary);
+  color: var(--black);
+}
 .card-head {
   width: 100%;
   padding: 20px 30px 10px;
@@ -761,8 +789,8 @@ h2 {
   line-height: 140%; /* 25.2px */
   min-width: 25px;
   height: 25px;
-  background-color: var(--primary);
-  color: var(--black);
+  background-color: var(--border);
+  color: var(--white);
   border-radius: 20px;
   text-align: center;
   line-height: 25px;
@@ -798,7 +826,8 @@ table tr:hover {
 }
 table tr:hover .show-more {
   background-color: var(--primary);
-  color: var(--black);
+  stroke-width: 2px;
+  color: #051710;
 }
 table thead tr {
   pointer-events: none;
@@ -876,7 +905,26 @@ table .t-button {
   color: var(--white);
 }
 .table-row:hover .table-cell--light {
-  color: var(--primary);
+  color: var(--white);
+}
+.table-row:hover .show-more {
+  background-color: var(--primary);
+  color: var(--black);
+}
+.table-row:active {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(38, 215, 144, 0.3)), to(rgba(38, 215, 144, 0)));
+  background: linear-gradient(90deg, rgba(38, 215, 144, 0.3) 0%, rgba(38, 215, 144, 0) 100%);
+}
+.table-row:active .table-cell {
+  color: var(--white);
+}
+.table-row:active .table-cell--light {
+  color: var(--white);
+}
+.table-row:active .show-more {
+  background-color: var(--primary-active);
+  color: var(--black);
+  position: relative;
 }
 .table-cell {
   padding: 2.5px 15px;
@@ -936,12 +984,43 @@ table .t-button {
   grid-template-columns: 1fr 127px 148px 73px;
 }
 
+.table-patient .table-head,
+.table-patient .table-row {
+  width: 100%;
+  grid-template-columns: 1fr 130px 73px;
+}
+
+.table-patient-single .table-head,
+.table-patient-single .table-row {
+  width: 100%;
+  grid-template-columns: 1fr 73px;
+}
+
 .table-section.is-open {
   background: var(--ffffff-10, rgba(255, 255, 255, 0.1));
 }
 .table-section.is-open .show-more {
   background-color: var(--primary);
   color: var(--black);
+}
+
+.edit,
+.remove {
+  color: var(--white-text-darken);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.edit:hover,
+.remove:hover {
+  color: var(--primary);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.edit:active,
+.remove:active {
+  color: var(--primary-active);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
 }
 
 .nav {
@@ -986,16 +1065,21 @@ table .t-button {
 }
 .nav-item.is-active {
   background-color: var(--white-bg);
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 .nav-item.is-active a {
   color: var(--white);
 }
 .nav-item:hover {
   background-color: rgba(255, 255, 255, 0.2);
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.nav-item:active {
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 .nav-item svg {
   width: 30px;
@@ -1268,6 +1352,7 @@ table .t-button {
 }
 
 .doc {
+  position: relative;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1298,10 +1383,21 @@ table .t-button {
 .doc:hover {
   border-radius: var(--sizes-border-radius, 6px);
   border: 1px solid rgba(38, 215, 144, 0.1);
-  background: -webkit-gradient(linear, left top, right top, from(rgba(38, 215, 144, 0.3)), to(rgba(38, 215, 144, 0)));
-  background: linear-gradient(90deg, rgba(38, 215, 144, 0.3) 0%, rgba(38, 215, 144, 0) 100%);
   -webkit-transition: var(--transition);
   transition: var(--transition);
+  overflow: hidden;
+}
+.doc:hover::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(38, 215, 144, 0.3)), to(rgba(38, 215, 144, 0)));
+  background: linear-gradient(90deg, rgba(38, 215, 144, 0.3) 0%, rgba(38, 215, 144, 0) 100%);
 }
 .doc:hover .doc__name {
   color: var(--primary);
@@ -1725,11 +1821,15 @@ table .t-button {
   color: var(--white);
 }
 .section__information {
-  color: var(--white-text);
+  color: var(--white-text-darken);
   margin-top: 25px;
 }
 .section__btn {
   margin-top: 25px;
+}
+
+label.section__btn input {
+  display: none;
 }
 
 .action {

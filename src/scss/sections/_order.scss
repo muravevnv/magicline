@@ -45,12 +45,18 @@
   }
 
   &__information {
-    color: var(--white-text);
+    color: var(--white-text-darken);
     margin-top: 25px;
   }
 
   &__btn {
     margin-top: 25px;
+  }
+}
+
+label.section__btn {
+  input {
+    display: none;
   }
 }
 

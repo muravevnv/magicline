@@ -25,28 +25,28 @@
       .modal__title Внести оплату
       form.modal-form
         .form-group
-          input(type="text").form-control 
+          input(type="text" value="Доктор Дент").form-control.is-filled 
           label.form-label(for="") Клиника
             span *
         .form-group
-          input(type="text").form-control 
+          input(type="text" value="Колобов Ипполит Вадимович").form-control.is-filled 
           label.form-label(for="") Врач
             span *
         .form-group
-          input(type="text").form-control 
+          input(type="text" value="Жданов Остап Арсеньевич").form-control.is-filled
           label.form-label(for="") Пациент
             span *
         .form-row 
           .form-group
-            input(type="text").form-control 
+            input(type="text").form-control.js-date-mask 
             label.form-label(for="") Дата
               span *
-          .form-group
-            input(type="text").form-control 
+          .form-group.form-group-ruble
+            input(type="text").form-control.js-price-input 
             label.form-label(for="") Сумма
               span *
         .modal-action 
-          .btn Отменить
+          .btn.js-modal-close Отменить
           .btn.btn--primary Сохранить
 .modal(data-modal="edit-payment")
   .modal-overlay 
@@ -73,13 +73,13 @@
             input(type="text" value="15.09.2023").form-control.is-filled
             label.form-label(for="") Дата
               span *
-          .form-group
-            input(type="text" value="15.09.2023").form-control.is-filled
+          .form-group.form-group-ruble
+            input(type="text" value="2 345").form-control.is-filled.js-price-input
             label.form-label(for="") Сумма
               span *
         .modal-action 
-          .btn Отменить
-          .btn.btn--primary Сохранить
+          .btn.js-modal-close Отменить
+          .btn.btn--primary.js-modal-close Сохранить
 .modal(data-modal="remove-payment")
   .modal-overlay 
   .modal-wrapper 
@@ -88,8 +88,8 @@
         +svgSprite(30, 30, 'close')
       .modal__title Удалить запись об оплате?
       .modal-action 
-          .btn Да
-          .btn.btn--primary Нет
+          .btn.js-modal-close Да
+          .btn.btn--primary.js-modal-close Нет
 .modal(data-modal="3")
   .modal-overlay 
   .modal-wrapper 
@@ -98,7 +98,7 @@
         +svgSprite(30, 30, 'close')
       .modal__title Оплата успешно внесена!
       .modal-action 
-          .btn.btn--primary Ок
+          .btn.btn--primary.js-popup-close Ок
 .modal(data-modal="edit-summ")
   .modal-overlay 
   .modal-wrapper 
@@ -112,8 +112,8 @@
           label.form-label(for="") Сумма
             span *
         .modal-action 
-          .btn Отменить
-          .btn.btn--primary Ок
+          .btn.js-modal-close Отменить
+          .btn.btn--primary.js-modal-close Ок
 .modal(data-modal="add-docs")
   .modal-overlay 
   .modal-wrapper 

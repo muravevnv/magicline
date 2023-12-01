@@ -15,13 +15,13 @@ html(lang="en")
       .nav-main 
         a.nav__logo(href="#")
           img(src="images/logo.svg", alt="")
-        ul.nav-list 
-          li.nav-item
+        .nav-list 
+          a(href="payments.html").nav-item
             +svgSprite(30, 30, 'clients')
-            a(href="payments.html").nav-link Оплаты
-          li.nav-item.is-active 
+            span.nav-link Оплаты
+          a(href="payments.html").nav-item.is-active 
             +svgSprite(30, 30, 'debts')
-            a(href="depts.html").nav-link Долги
+            span.nav-link Долги
       .nav-user 
         .nav-user__name Циванюк Ольга
         .nav-user__post Бухгалтер
@@ -31,109 +31,54 @@ html(lang="en")
         .container 
           h1.title Долги
           .tabs 
-            .tabs-item.is-active(data-tab="clinics") Группировка по клиникам
-            .tabs-item(data-tab="all") Показать все
+            a(href="depts.html").tabs-item.is-active(data-tab="clinics") Группировка по клиникам
+            a(href="depts-all.html").tabs-item(data-tab="all") Показать все
               span 186
-          .tabs-content.is-open(data-tab="clinics")
-            .row 
-              .dept-price
-                .dept-price__title Долг
-                .dept-price__num 1 000 000 ₽
-                  span 8 000 000 ₽
-              .btn.btn--icon.btn--big.js-open-modal(data-modal="add-payment")
-                span Внести оплату
-                +svgSprite(30, 30, 'plus-big')
-            .card 
-              .card-body 
-                .table-responsive
-                  .table.table-dept
-                    .table-head 
-                      .table-cell Клиника
-                      .table-cell.table-cell--center Долг
-                      .table-cell.table-cell--right Общая сумма
-                      .table-cell
-                    a(href="depts-clinics.html").table-row 
-                      .table-celll.table-cell--light Доктор Дент
-                      .table-cell.table-cell--right 125 000 ₽
-                      .table-cell.table-cell--right 1 000 000 ₽
-                      .table-cell
-                        .show-more
-                              +svgSprite(7, 14, 'arrow-right')
-                    a(href="depts-clinics.html").table-row 
-                      .table-celll.table-cell--light TeethClinic
-                      .table-cell.table-cell--right 125 000 ₽
-                      .table-cell.table-cell--right 1 000 000 ₽
-                      .table-cell
-                        .show-more
-                              +svgSprite(7, 14, 'arrow-right')
-                    a(href="depts-clinics.html").table-row 
-                      .table-cell.table-cell--light SmileClinic
-                      .table-cell.table-cell--right 125 000 ₽
-                      .table-cell.table-cell--right 1 000 000 ₽
-                      .table-cell
-                        .show-more
-                              +svgSprite(7, 14, 'arrow-right')
-                    a(href="depts-clinics.html").table-row 
-                      .table-celll.table-cell--light Томсон
-                      .table-cell.table-cell--right 125 000 ₽
-                      .table-cell.table-cell--right 1 000 000 ₽
-                      .table-cell
-                        .show-more
-                              +svgSprite(7, 14, 'arrow-right')
-          .tabs-content(data-tab="all")
-            .row 
-              .search 
-                input.form-control.search__input(type="text" placeholder="Поиск по ФИО")
-              .btn.btn--big.btn--icon.js-open-modal(data-modal="add-payment") 
-                span Внести оплату
-                +svgSprite(30, 30, 'plus-big')
-            .card 
-              .card-body 
-                .table-responsive
-                  .table.table-dept
-                    .table-head 
-                      .table-cell Клиника
-                      .table-cell.table-cell--center Долг
-                      .table-cell.table-cell--right Общая сумма
-                      .table-cell
-                    a(href="depts-clinics.html").table-row 
-                      .table-cell Доктор Дент
-                      .table-cell 125 000 ₽
-                      .table-cell.table-cell--right 1 000 000 ₽
-                      .table-cell
-                        .show-more
-                              +svgSprite(7, 14, 'arrow-right')
-                    a(href="depts-clinics.html").table-row 
-                      .table-cell TeethClinic
-                      .table-cell 125 000 ₽
-                      .table-cell.table-cell--right 1 000 000 ₽
-                      .table-cell
-                        .show-more
-                              +svgSprite(7, 14, 'arrow-right')
-                    a(href="depts-clinics.html").table-row 
-                      .table-cell SmileClinic
-                      .table-cell 125 000 ₽
-                      .table-cell.table-cell--right 1 000 000 ₽
-                      .table-cell
-                        .show-more
-                              +svgSprite(7, 14, 'arrow-right')
-                    a(href="depts-clinics.html").table-row 
-                      .table-cell Томсон
-                      .table-cell 125 000 ₽
-                      .table-cell.table-cell--right 1 000 000 ₽
-                      .table-cell
-                        .show-more
-                              +svgSprite(7, 14, 'arrow-right')
-            .more-btn 
-              .btn.btn--big.btn--icon 
-                span Загрузить 
-                +svgSprite(30, 30, 'refresh')
-            .pagination 
-              .pagination-item.is-active 1
-              .pagination-item 2
-              .pagination-item 3
-              .pagination-dots ...
-              .pagination-item 4
+          .row 
+            .dept-price
+              .dept-price__title Долг
+              .dept-price__num 1 000 000 ₽
+                span 8 000 000 ₽
+            .btn.btn--icon.btn--big.js-open-modal(data-modal="add-payment")
+              span Внести оплату
+              +svgSprite(30, 30, 'plus-big')
+          .card 
+            .card-body 
+              .table-responsive
+                .table.table-dept
+                  .table-head 
+                    .table-cell Клиника
+                    .table-cell.table-cell--center Долг
+                    .table-cell.table-cell--right Общая сумма
+                    .table-cell
+                  a(href="depts-clinics.html").table-row 
+                    .table-celll.table-cell--light Доктор Дент
+                    .table-cell.table-cell--right 125 000 ₽
+                    .table-cell.table-cell--right 1 000 000 ₽
+                    .table-cell
+                      .show-more
+                            +svgSprite(7, 14, 'arrow-right')
+                  a(href="depts-clinics.html").table-row 
+                    .table-celll.table-cell--light TeethClinic
+                    .table-cell.table-cell--right 125 000 ₽
+                    .table-cell.table-cell--right 1 000 000 ₽
+                    .table-cell
+                      .show-more
+                            +svgSprite(7, 14, 'arrow-right')
+                  a(href="depts-clinics.html").table-row 
+                    .table-cell.table-cell--light SmileClinic
+                    .table-cell.table-cell--right 125 000 ₽
+                    .table-cell.table-cell--right 1 000 000 ₽
+                    .table-cell
+                      .show-more
+                            +svgSprite(7, 14, 'arrow-right')
+                  a(href="depts-clinics.html").table-row 
+                    .table-celll.table-cell--light Томсон
+                    .table-cell.table-cell--right 125 000 ₽
+                    .table-cell.table-cell--right 1 000 000 ₽
+                    .table-cell
+                      .show-more
+                            +svgSprite(7, 14, 'arrow-right')
     include components/footer
     include components/modal
     include includes/scripts

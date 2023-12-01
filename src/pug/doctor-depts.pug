@@ -14,16 +14,16 @@ html(lang="en")
       .nav-main 
         a.nav__logo(href="#")
           img(src="images/logo.svg", alt="")
-        ul.nav-list 
-          li.nav-item
+        .nav-list 
+          a(href="doctor-orders.html").nav-item
             +svgSprite(30, 30, 'chat')
-            a(href="doctor-orders.html").nav-link Заявки
-          li.nav-item
+            span.nav-link Заявки
+          a(href="doctor-patients.html").nav-item
             +svgSprite(30, 30, 'clients')
-            a(href="doctor-patients.html").nav-link Пациенты
-          li.nav-item.is-active 
+            span.nav-link Пациенты
+          a(href="doctor-depts.html").nav-item.is-active 
             +svgSprite(30, 30, 'debts')
-            a(href="doctor-depts.html").nav-link Долги
+            span.nav-link Долги
       .nav-user 
         .nav-user__name Циванюк Ольга
         .nav-user__post Врач
@@ -31,7 +31,7 @@ html(lang="en")
     main.main
       .content(data-role="tab")
         .container 
-          h1.title Колобов Ипполит Вадимович
+          h1.title Долги
           .row 
             .dept-price
               .dept-price__title Долг

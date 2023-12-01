@@ -15,13 +15,13 @@ html(lang="en")
       .nav-main 
         a.nav__logo(href="#")
           img(src="images/logo.svg", alt="")
-        ul.nav-list 
-          li.nav-item
+        .nav-list 
+          a(href="payments.html").nav-item
             +svgSprite(30, 30, 'clients')
-            a(href="payments.html").nav-link Оплаты
-          li.nav-item.is-active 
+            span.nav-link Оплаты
+          a(href="depts.html").nav-item.is-active 
             +svgSprite(30, 30, 'debts')
-            a(href="depts.html").nav-link Долги
+            span.nav-link Долги
       .nav-user 
         .nav-user__name Циванюк Ольга
         .nav-user__post Бухгалтер
@@ -33,7 +33,7 @@ html(lang="en")
         .error__btn.btn.btn--big.btn--primary 
           span Вернуться назад
         .error__num
-          img(src="images/num.png", alt="")
+          img(src="images/num.svg", alt="")
         .error__img 
           img(src="images/vortex.png", alt="")
 

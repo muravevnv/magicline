@@ -16,6 +16,18 @@
       max-width: 235px;
       width: 100%;
     }
+
+    &-ruble {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: '₽';
+        bottom: 20px;
+        right: 20px;
+        color: var(--white-text-darken);
+      }
+    }
   }
 
   &-label {
@@ -51,18 +63,35 @@
     border: 1px solid var(--ffffff-20, rgba(255, 255, 255, 0.20));
 
     &.is-filled + .form-label {
-      top: -20px;
+      top: -25px;
       left: 0;
       font-size: 14px;
       transition: .3s;
     }
 
     &:focus + .form-label {
-      top: -20px;
+      top: -25px;
       left: 0;
       font-size: 14px;
       transition: .3s;
     }
+
+    &:hover {
+      border-color: var(--white-text-darken);
+
+      + .form-label  {
+        color: var(--white-text-darken);
+      }
+    }
+
+    &:focus {
+      border-color: var(--white-text);
+
+      + .form-label  {
+        color: var(--white-text);
+      }
+    }
+  
 
     @include media(sm) {
       font-size: 16px;

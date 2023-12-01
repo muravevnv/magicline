@@ -1,4 +1,5 @@
 .doc {
+  position: relative;
   width: 100%;
   display: flex;
   align-items: center;
@@ -24,13 +25,21 @@
 
   &:hover {
     border-radius: var(--sizes-border-radius, 6px);
-    border: 1px solid rgba(38, 215, 144, 0.1);
-    background: linear-gradient(
-      90deg,
-      rgba(38, 215, 144, 0.3) 0%,
-      rgba(38, 215, 144, 0) 100%
-    );
+    border: 1px solid rgba(38, 215, 144, 0.10);
     transition: var(--transition);
+    overflow: hidden;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, rgba(38, 215, 144, 0.30) 0%, rgba(38, 215, 144, 0.00) 100%);
+    }
 
     .doc__name {
       color: var(--primary);

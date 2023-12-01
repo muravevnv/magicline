@@ -4,18 +4,24 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    link(href="css/choices.css" rel="stylesheet")
     link(href="css/main.css" rel="stylesheet")
     title Главная
   body
     include mixins/_mixins
     include components/header
-    +topPanel(['Пациенты','Доктор Дент','Доктор Дент'])
-    include components/navigation-doctor
+    +topPanel(['Пациенты'])
+    include components/navigation
     main.main
       .content
         .container 
-          h1.title Колобов Ипполит Вадимович
+          h1.title Пациенты
+          .tabs 
+            a(href="patients.html").tabs-item Группировка по клиникам
+            a(href="all.html").tabs-item.is-active  Показать все
+              span 186
+          .row 
+            .search 
+              input.form-control.search__input(type="text" placeholder="Поиск по ФИО")
           .card 
             .card-body 
               .table-responsive
@@ -45,5 +51,15 @@ html(lang="en")
                     .table-cell
                       .show-more
                             +svgSprite(7, 14, 'arrow-right')
+          .more-btn 
+            .btn.btn--big.btn--icon 
+              span Загрузить 
+              +svgSprite(30, 30, 'refresh')
+          .pagination 
+            .pagination-item.is-active 1
+            .pagination-item 2
+            .pagination-item 3
+            .pagination-dots ...
+            .pagination-item 4
     include components/footer
     include includes/scripts

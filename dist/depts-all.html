@@ -59,13 +59,12 @@
       <div class="content" data-role="tab">
         <div class="container"> 
           <h1 class="title">Долги</h1>
-          <div class="tabs"> <a class="tabs-item is-active" href="depts.html" data-tab="clinics">Группировка по клиникам</a><a class="tabs-item" href="depts-all.html" data-tab="all">Показать все<span>186</span></a></div>
+          <div class="tabs"> <a class="tabs-item" href="depts.html">Группировка по клиникам</a><a class="tabs-item is-active" href="depts-all.html">Показать все<span>186</span></a></div>
           <div class="row"> 
-            <div class="dept-price">
-              <div class="dept-price__title">Долг</div>
-              <div class="dept-price__num">1 000 000 ₽<span>8 000 000 ₽</span></div>
+            <div class="search"> 
+              <input class="form-control search__input" type="text" placeholder="Поиск по ФИО">
             </div>
-            <div class="btn btn--icon btn--big js-open-modal" data-modal="add-payment"><span>Внести оплату</span>
+            <div class="btn btn--big btn--icon js-open-modal" data-modal="add-payment"> <span>Внести оплату</span>
                   <svg width="30" height="30">
                     <use xlink:href="images/sprite.svg#plus-big"></use>
                   </svg>
@@ -76,12 +75,12 @@
               <div class="table-responsive">
                 <div class="table table-dept">
                   <div class="table-head"> 
-                    <div class="table-cell">Клиника</div>
+                    <div class="table-cell">Пациент</div>
                     <div class="table-cell table-cell--center">Долг</div>
                     <div class="table-cell table-cell--right">Общая сумма</div>
                     <div class="table-cell"></div>
                   </div><a class="table-row" href="depts-clinics.html"> 
-                    <div class="table-celll table-cell--light">Доктор Дент</div>
+                    <div class="table-celll table-cell--light">Вишняков Лев Матвеевич</div>
                     <div class="table-cell table-cell--right">125 000 ₽</div>
                     <div class="table-cell table-cell--right">1 000 000 ₽</div>
                     <div class="table-cell">
@@ -91,7 +90,7 @@
                             </svg>
                       </div>
                     </div></a><a class="table-row" href="depts-clinics.html"> 
-                    <div class="table-celll table-cell--light">TeethClinic</div>
+                    <div class="table-celll table-cell--light">Шаров Емельян Улебович</div>
                     <div class="table-cell table-cell--right">125 000 ₽</div>
                     <div class="table-cell table-cell--right">1 000 000 ₽</div>
                     <div class="table-cell">
@@ -101,7 +100,7 @@
                             </svg>
                       </div>
                     </div></a><a class="table-row" href="depts-clinics.html"> 
-                    <div class="table-cell table-cell--light">SmileClinic</div>
+                    <div class="table-cell table-cell--light">Жданов Остап Арсеньевич</div>
                     <div class="table-cell table-cell--right">125 000 ₽</div>
                     <div class="table-cell table-cell--right">1 000 000 ₽</div>
                     <div class="table-cell">
@@ -111,7 +110,77 @@
                             </svg>
                       </div>
                     </div></a><a class="table-row" href="depts-clinics.html"> 
-                    <div class="table-celll table-cell--light">Томсон</div>
+                    <div class="table-celll table-cell--light">Орехов Гордей Лукьевич</div>
+                    <div class="table-cell table-cell--right">125 000 ₽</div>
+                    <div class="table-cell table-cell--right">1 000 000 ₽</div>
+                    <div class="table-cell">
+                      <div class="show-more">
+                            <svg width="7" height="14">
+                              <use xlink:href="images/sprite.svg#arrow-right"></use>
+                            </svg>
+                      </div>
+                    </div></a><a class="table-row" href="depts-clinics.html"> 
+                    <div class="table-celll table-cell--light">Орехов Гордей Лукьевич</div>
+                    <div class="table-cell table-cell--right">125 000 ₽</div>
+                    <div class="table-cell table-cell--right">1 000 000 ₽</div>
+                    <div class="table-cell">
+                      <div class="show-more">
+                            <svg width="7" height="14">
+                              <use xlink:href="images/sprite.svg#arrow-right"></use>
+                            </svg>
+                      </div>
+                    </div></a><a class="table-row" href="depts-clinics.html"> 
+                    <div class="table-celll table-cell--light">Орехов Гордей Лукьевич</div>
+                    <div class="table-cell table-cell--right">125 000 ₽</div>
+                    <div class="table-cell table-cell--right">1 000 000 ₽</div>
+                    <div class="table-cell">
+                      <div class="show-more">
+                            <svg width="7" height="14">
+                              <use xlink:href="images/sprite.svg#arrow-right"></use>
+                            </svg>
+                      </div>
+                    </div></a><a class="table-row" href="depts-clinics.html"> 
+                    <div class="table-celll table-cell--light">Орехов Гордей Лукьевич</div>
+                    <div class="table-cell table-cell--right">125 000 ₽</div>
+                    <div class="table-cell table-cell--right">1 000 000 ₽</div>
+                    <div class="table-cell">
+                      <div class="show-more">
+                            <svg width="7" height="14">
+                              <use xlink:href="images/sprite.svg#arrow-right"></use>
+                            </svg>
+                      </div>
+                    </div></a><a class="table-row" href="depts-clinics.html"> 
+                    <div class="table-celll table-cell--light">Орехов Гордей Лукьевич</div>
+                    <div class="table-cell table-cell--right">125 000 ₽</div>
+                    <div class="table-cell table-cell--right">1 000 000 ₽</div>
+                    <div class="table-cell">
+                      <div class="show-more">
+                            <svg width="7" height="14">
+                              <use xlink:href="images/sprite.svg#arrow-right"></use>
+                            </svg>
+                      </div>
+                    </div></a><a class="table-row" href="depts-clinics.html"> 
+                    <div class="table-celll table-cell--light">Орехов Гордей Лукьевич</div>
+                    <div class="table-cell table-cell--right">125 000 ₽</div>
+                    <div class="table-cell table-cell--right">1 000 000 ₽</div>
+                    <div class="table-cell">
+                      <div class="show-more">
+                            <svg width="7" height="14">
+                              <use xlink:href="images/sprite.svg#arrow-right"></use>
+                            </svg>
+                      </div>
+                    </div></a><a class="table-row" href="depts-clinics.html"> 
+                    <div class="table-celll table-cell--light">Орехов Гордей Лукьевич</div>
+                    <div class="table-cell table-cell--right">125 000 ₽</div>
+                    <div class="table-cell table-cell--right">1 000 000 ₽</div>
+                    <div class="table-cell">
+                      <div class="show-more">
+                            <svg width="7" height="14">
+                              <use xlink:href="images/sprite.svg#arrow-right"></use>
+                            </svg>
+                      </div>
+                    </div></a><a class="table-row" href="depts-clinics.html"> 
+                    <div class="table-celll table-cell--light">Орехов Гордей Лукьевич</div>
                     <div class="table-cell table-cell--right">125 000 ₽</div>
                     <div class="table-cell table-cell--right">1 000 000 ₽</div>
                     <div class="table-cell">
@@ -124,6 +193,20 @@
                 </div>
               </div>
             </div>
+          </div>
+          <div class="more-btn"> 
+            <div class="btn btn--big btn--icon"> <span>Загрузить </span>
+                  <svg width="30" height="30">
+                    <use xlink:href="images/sprite.svg#refresh"></use>
+                  </svg>
+            </div>
+          </div>
+          <div class="pagination"> 
+            <div class="pagination-item is-active">1</div>
+            <div class="pagination-item">2</div>
+            <div class="pagination-item">3</div>
+            <div class="pagination-dots">...</div>
+            <div class="pagination-item">4</div>
           </div>
         </div>
       </div>

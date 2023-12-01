@@ -3,21 +3,21 @@
     a.nav__logo(href="#")
       img(src="images/logo.svg", alt="")
     ul.nav-list 
-      li.nav-item.is-active
+      a(href="orders.html").nav-item.is-active
         +svgSprite(30, 30, 'chat')
-        a(href="orders.html").nav-link Заявки
-      li.nav-item 
+        span.nav-link Заявки
+      a(href="print.html").nav-item 
         +svgSprite(30, 30, 'play')
-        a(href="print.html").nav-link Очередь на печать
-      li.nav-item 
+        span.nav-link Очередь на печать
+      a(href="patients.html").nav-item 
         +svgSprite(30, 30, 'clients')
-        a(href="patients.html").nav-link Пациенты
-      li.nav-item 
+        span.nav-link Пациенты
+      a(href="payments.html").nav-item 
         +svgSprite(30, 30, 'payments')
-        a(href="payments.html").nav-link Оплаты
-      li.nav-item 
+        span.nav-link Оплаты
+      a(href="depts.html").nav-item 
         +svgSprite(30, 30, 'debts')
-        a(href="depts.html").nav-link Долги
+        span.nav-link Долги
   .nav-user 
     .nav-user__name Циванюк Ольга
     .nav-user__post Заведующий

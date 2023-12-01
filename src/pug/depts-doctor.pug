@@ -14,13 +14,13 @@ html(lang="en")
       .nav-main 
         a.nav__logo(href="#")
           img(src="images/logo.svg", alt="")
-        ul.nav-list 
-          li.nav-item
+        .nav-list 
+          a(href="payments.html").nav-item
             +svgSprite(30, 30, 'clients')
             a(href="payments.html").nav-link Оплаты
-          li.nav-item.is-active 
+          a(href="depts.html").nav-item.is-active 
             +svgSprite(30, 30, 'debts')
-            a(href="depts.html").nav-link Долги
+            span.nav-link Долги
       .nav-user 
         .nav-user__name Циванюк Ольга
         .nav-user__post Бухгалтер
@@ -46,28 +46,28 @@ html(lang="en")
                     .table-cell.table-cell--center Долг
                     .table-cell.table-cell--right Общая сумма
                     .table-cell
-                  .table-row 
+                  a(href="#").table-row 
                     .table-celll.table-cell--light Вишняков Лев Матвеевич
                     .table-cell 125 000 ₽
                     .table-cell.table-cell--right 1 000 000 ₽
                     .table-cell
                       .show-more
                             +svgSprite(7, 14, 'arrow-right')
-                  .table-row 
+                  a(href="#").table-row 
                     .table-celll.table-cell--light Шаров Емельян Улебович
                     .table-cell 125 000 ₽
                     .table-cell.table-cell--right 1 000 000 ₽
                     .table-cell
                       .show-more
                             +svgSprite(7, 14, 'arrow-right')
-                  .table-row 
+                  a(href="#").table-row 
                     .table-celll.table-cell--light Жданов Остап Арсеньевич
                     .table-cell 125 000 ₽
                     .table-cell.table-cell--right 1 000 000 ₽
                     .table-cell
                       .show-more
                             +svgSprite(7, 14, 'arrow-right')
-                  .table-row 
+                  a(href="#").table-row 
                     .table-celll.table-cell--light Орехов Гордей Лукьевич
                     .table-cell 125 000 ₽
                     .table-cell.table-cell--right 1 000 000 ₽

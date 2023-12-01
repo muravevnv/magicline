@@ -34,7 +34,8 @@ table {
 
       .show-more {
         background-color: var(--primary);
-        color: var(--black);
+        stroke-width: 2px;
+        color: #051710;
       }
     }
   }
@@ -119,7 +120,30 @@ table {
       }
 
       .table-cell--light {
-        color: var(--primary);
+        color: var(--white);
+      }
+
+      .show-more {
+        background-color: var(--primary);
+        color: var(--black);
+      }
+    }
+
+    &:active {
+      background: linear-gradient(90deg, rgba(38, 215, 144, 0.30) 0%, rgba(38, 215, 144, 0.00) 100%);
+
+      .table-cell {
+        color: var(--white);
+      }
+
+      .table-cell--light {
+        color: var(--white);
+      }
+
+      .show-more {
+        background-color: var(--primary-active);
+        color: var(--black);
+        position: relative;
       }
     }
   }
@@ -205,6 +229,22 @@ table {
   }
 }
 
+.table-patient {
+  .table-head,
+  .table-row {
+    width: 100%;
+    grid-template-columns: 1fr 130px 73px;
+  }
+}
+
+.table-patient-single {
+  .table-head,
+  .table-row {
+    width: 100%;
+    grid-template-columns: 1fr 73px;
+  }
+}
+
 .table-section {
 
   &.is-open {
@@ -214,5 +254,23 @@ table {
       background-color: var(--primary);
       color: var(--black);
     }
+  }
+}
+
+
+
+.edit,
+.remove {
+  color: var(--white-text-darken);
+  transition: var(--transition);
+
+  &:hover {
+    color: var(--primary);
+    transition: var(--transition);
+  }
+
+  &:active {
+    color: var(--primary-active);
+    transition: var(--transition);
   }
 }

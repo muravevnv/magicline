@@ -15,6 +15,7 @@ $('.js-open-modal').on('click', openModal)
 
 $('.modal-overlay').on('click', closeModal);
 $('.modal-close').on('click', closeModal);
+$('.js-modal-close').on('click', closeModal);
 
 
 $('[data-role="tab"]').each(function(){
@@ -83,4 +84,32 @@ if (window.matchMedia("(min-width: 1024px)").matches) {
       });
     });
   });
+}
+
+
+$(".js-date-mask").each(function(){
+  let inputDate = $(this)[0];
+
+  IMask(
+    inputDate,
+    {
+      mask: '00.00.0000'
+    }
+  )
+})
+
+$(".js-price-input").each(function(){
+  let inputPrice = $(this)[0];
+
+  IMask(
+    inputPrice,
+    {
+      mask: /^[0-9,.]+\d{0,9}$/
+    }
+  )
+})
+
+function cislo(){
+  if (event.keyCode < 48 || event.keyCode > 57)
+  event.returnValue= false;
 }

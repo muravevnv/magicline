@@ -24,27 +24,30 @@ html(lang="en")
             .section 
               .section__title КЛКТ челюсти
               .section__information Форматы файлов: .zip, .bmp, .gif, .jpeg, .jpg, .jpe, .pcx, .png, .tif, .tiff, .mp3, .mp4, .aac, .wav, .au, .wmv, .avi, .mov. Максимальный размер файла — 2 Мб. 
-              .section__btn.btn.btn--icon.btn--big.js-open-modal(data-modal="add-docs")
+              label(for="file-1").section__btn.btn.btn--icon.btn--big
+                input(type="file", id="file-1" name="")
                 span Выбрать файлы
                 +svgSprite(30, 30, 'plus-big')
             .section 
               .section__title Сканы (.stl)
               .section__information Форматы файлов: .stl. Максимальный размер файла — 2 Мб. 
-              .section__btn.btn.btn--icon.btn--big.js-open-modal(data-modal="add-docs")
+              .section__btn.btn.btn--icon.btn--big
                 span Выбрать файлы
                 +svgSprite(30, 30, 'plus-big')
             .section 
               .section__title Фотографии пациента
               .section__information Форматы файлов: .stl. Максимальный размер файла — 2 Мб. 
-              .section__btn.btn.btn--icon.btn--big.js-open-modal(data-modal="add-photo")
+              label(for="file-2").section__btn.btn.btn--icon.btn--big
+                input(type="file", id="file-2" name="")
                 span Выбрать файлы
                 +svgSprite(30, 30, 'plus-big')
             .section 
               .section__title Комментарий от врача
-              .section__information Форматы файлов: .bmp, .gif, .jpeg, .jpg, .jpe, .pcx, .png, .tif, .tiff. Максимальный размер файла — 2 Мб. 
-              .form-group 
-                input.form-control(type="text")
-                label.form-label Комментарий от врача
+              label(for="file-3").section-control
+                input(type="file", id="file-3" name="")
+                .form-group 
+                  input.form-control(type="text")
+                  label.form-label Комментарий от врача
             .action
               button(disabled).btn.btn--big.btn--primary
                 span Создать заявку

@@ -1,0 +1,141 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href="css/choices.css" rel="stylesheet")
+    link(href="css/main.css" rel="stylesheet")
+    title Главная
+  body
+    include mixins/_mixins
+    include components/header
+    +topPanel(['Долги'])
+    .nav 
+      .nav-main 
+        a.nav__logo(href="#")
+          img(src="images/logo.svg", alt="")
+        .nav-list 
+          a(href="payments.html").nav-item
+            +svgSprite(30, 30, 'clients')
+            span.nav-link Оплаты
+          a(href="payments.html").nav-item.is-active 
+            +svgSprite(30, 30, 'debts')
+            span.nav-link Долги
+      .nav-user 
+        .nav-user__name Циванюк Ольга
+        .nav-user__post Бухгалтер
+      .nav-bottom «Настоящее украшение  — это здоровая и красивая улыбка»
+    main.main
+      .content(data-role="tab")
+        .container 
+          h1.title Долги
+          .tabs 
+            a(href="depts.html").tabs-item Группировка по клиникам
+            a(href="depts-all.html").tabs-item.is-active Показать все
+              span 186
+          .row 
+            .search 
+              input.form-control.search__input(type="text" placeholder="Поиск по ФИО")
+            .btn.btn--big.btn--icon.js-open-modal(data-modal="add-payment") 
+              span Внести оплату
+              +svgSprite(30, 30, 'plus-big')
+          .card 
+            .card-body 
+              .table-responsive
+                .table.table-dept
+                  .table-head 
+                    .table-cell Пациент
+                    .table-cell.table-cell--center Долг
+                    .table-cell.table-cell--right Общая сумма
+                    .table-cell
+                  a(href="depts-clinics.html").table-row 
+                    .table-celll.table-cell--light Вишняков Лев Матвеевич
+                    .table-cell.table-cell--right 125 000 ₽
+                    .table-cell.table-cell--right 1 000 000 ₽
+                    .table-cell
+                      .show-more
+                            +svgSprite(7, 14, 'arrow-right')
+                  a(href="depts-clinics.html").table-row 
+                    .table-celll.table-cell--light Шаров Емельян Улебович
+                    .table-cell.table-cell--right 125 000 ₽
+                    .table-cell.table-cell--right 1 000 000 ₽
+                    .table-cell
+                      .show-more
+                            +svgSprite(7, 14, 'arrow-right')
+                  a(href="depts-clinics.html").table-row 
+                    .table-cell.table-cell--light Жданов Остап Арсеньевич
+                    .table-cell.table-cell--right 125 000 ₽
+                    .table-cell.table-cell--right 1 000 000 ₽
+                    .table-cell
+                      .show-more
+                            +svgSprite(7, 14, 'arrow-right')
+                  a(href="depts-clinics.html").table-row 
+                    .table-celll.table-cell--light Орехов Гордей Лукьевич
+                    .table-cell.table-cell--right 125 000 ₽
+                    .table-cell.table-cell--right 1 000 000 ₽
+                    .table-cell
+                      .show-more
+                            +svgSprite(7, 14, 'arrow-right')
+                  a(href="depts-clinics.html").table-row 
+                    .table-celll.table-cell--light Орехов Гордей Лукьевич
+                    .table-cell.table-cell--right 125 000 ₽
+                    .table-cell.table-cell--right 1 000 000 ₽
+                    .table-cell
+                      .show-more
+                            +svgSprite(7, 14, 'arrow-right')
+                  a(href="depts-clinics.html").table-row 
+                    .table-celll.table-cell--light Орехов Гордей Лукьевич
+                    .table-cell.table-cell--right 125 000 ₽
+                    .table-cell.table-cell--right 1 000 000 ₽
+                    .table-cell
+                      .show-more
+                            +svgSprite(7, 14, 'arrow-right')
+                  a(href="depts-clinics.html").table-row 
+                    .table-celll.table-cell--light Орехов Гордей Лукьевич
+                    .table-cell.table-cell--right 125 000 ₽
+                    .table-cell.table-cell--right 1 000 000 ₽
+                    .table-cell
+                      .show-more
+                            +svgSprite(7, 14, 'arrow-right')
+                  a(href="depts-clinics.html").table-row 
+                    .table-celll.table-cell--light Орехов Гордей Лукьевич
+                    .table-cell.table-cell--right 125 000 ₽
+                    .table-cell.table-cell--right 1 000 000 ₽
+                    .table-cell
+                      .show-more
+                            +svgSprite(7, 14, 'arrow-right')
+                  a(href="depts-clinics.html").table-row 
+                    .table-celll.table-cell--light Орехов Гордей Лукьевич
+                    .table-cell.table-cell--right 125 000 ₽
+                    .table-cell.table-cell--right 1 000 000 ₽
+                    .table-cell
+                      .show-more
+                            +svgSprite(7, 14, 'arrow-right')
+                  a(href="depts-clinics.html").table-row 
+                    .table-celll.table-cell--light Орехов Гордей Лукьевич
+                    .table-cell.table-cell--right 125 000 ₽
+                    .table-cell.table-cell--right 1 000 000 ₽
+                    .table-cell
+                      .show-more
+                            +svgSprite(7, 14, 'arrow-right')
+                  a(href="depts-clinics.html").table-row 
+                    .table-celll.table-cell--light Орехов Гордей Лукьевич
+                    .table-cell.table-cell--right 125 000 ₽
+                    .table-cell.table-cell--right 1 000 000 ₽
+                    .table-cell
+                      .show-more
+                            +svgSprite(7, 14, 'arrow-right')
+          .more-btn 
+            .btn.btn--big.btn--icon 
+              span Загрузить 
+              +svgSprite(30, 30, 'refresh')
+          .pagination 
+            .pagination-item.is-active 1
+            .pagination-item 2
+            .pagination-item 3
+            .pagination-dots ...
+            .pagination-item 4
+    include components/footer
+    include components/modal
+    include includes/scripts

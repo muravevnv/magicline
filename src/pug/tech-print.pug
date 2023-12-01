@@ -15,13 +15,13 @@ html(lang="en")
       .nav-main 
         a.nav__logo(href="#")
           img(src="images/logo.svg", alt="")
-        ul.nav-list 
-          li.nav-item.is-active 
+        .nav-list 
+          a(href="print.html").nav-item.is-active 
             +svgSprite(30, 30, 'play')
-            a(href="print.html").nav-link Очередь на печать
-          li.nav-item 
+            span.nav-link Очередь на печать
+          a(href="patients.html").nav-item 
             +svgSprite(30, 30, 'clients')
-            a(href="patients.html").nav-link Пациенты
+            span.nav-link Пациенты
       .nav-user 
         .nav-user__name Циванюк Ольга
         .nav-user__post Заведующий
