@@ -49,4 +49,8 @@
       color: var(--white-text);
     }
   }
+
+  &:active {
+    background: linear-gradient(90deg, rgba(38, 215, 144, 0.18) 0%, rgba(38, 215, 144, 0.00) 100%);
+  }
 }

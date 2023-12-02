@@ -113,3 +113,23 @@ function cislo(){
   if (event.keyCode < 48 || event.keyCode > 57)
   event.returnValue= false;
 }
+
+let mouthguards = document.querySelectorAll('.js-mouthguards');
+
+mouthguards.forEach(function(item) {
+  item.addEventListener('click', function() {
+    this.classList.toggle('is-request');
+  } )
+})
+
+let gallerySlider = document.querySelector('.modal-gallery__slider');
+
+if(gallerySlider) {
+  let slider  = new Swiper(gallerySlider, {
+    slidesPerView: 1,
+    navigation: {
+      prevEl: '.slider-prev',
+      nextEl: '.slider-next',
+    }
+  })
+}

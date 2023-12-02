@@ -171,22 +171,22 @@
             .mouthguards__symbol 
               +svgSprite(16, 16, 'plus')
             .mouthguards-list 
-              .mouthguards__item.is-request 1
-              .mouthguards__item.is-request 2
-              .mouthguards__item.is-request 3
+              .mouthguards__item.js-mouthguards.is-request 1
+              .mouthguards__item.js-mouthguards.is-request 2
+              .mouthguards__item.js-mouthguards.is-request 3
           .mouthguards-line 
             .mouthguards__symbol
               +svgSprite(16, 16, 'minus')
             .mouthguards-list 
-              .mouthguards__item.is-request 1
-              .mouthguards__item.is-request 2
-              .mouthguards__item.is-request 3
-      form.modal-form
+              .mouthguards__item.js-mouthguards.is-request 1
+              .mouthguards__item.js-mouthguards.is-request 2
+              .mouthguards__item.js-mouthguards.is-request 3
+      form.modal-form.modal-form--comments
         .form-group
           input(type="text" placeholder="Комментарий").form-control 
         .modal-action 
-          .btn Отменить
-          .btn.btn--primary Ок
+          .btn.js-modal-close Отменить
+          .btn.btn--primary.js-modal-close Сохранит
 .modal(data-modal="print-delete")
   .modal-overlay 
   .modal-wrapper 
@@ -195,8 +195,8 @@
         +svgSprite(30, 30, 'close')
       .modal__title Удалить запись из очереди?
         .modal-action 
-          .btn Да
-          .btn.btn--primary Нет
+          .btn.js-modal-close Да
+          .btn.btn--primary.js-modal-close Нет
 .modal(data-modal="print-deleted")
   .modal-overlay 
   .modal-wrapper 
@@ -204,8 +204,8 @@
       .modal-close 
         +svgSprite(30, 30, 'close')
       .modal__title Запись успешно удалена!
-        .modal-action 
-          .btn.btn--primary Ок
+      .modal-action 
+        .btn.btn--primary.js-modal-close Ок
 .modal(data-modal="print-changed")
   .modal-overlay 
   .modal-wrapper 
@@ -213,5 +213,29 @@
       .modal-close 
         +svgSprite(30, 30, 'close')
       .modal__title Запись успешно изменена!
-        .modal-action 
-          .btn.btn--primary Ок
+      .modal-action 
+        .btn.btn--primary.js-modal-close Ок
+.modal(data-modal="gallery")
+  .modal-overlay 
+  .modal-wrapper 
+    .modal-content.modal-content--xl
+      .modal-close 
+        +svgSprite(30, 30, 'close')
+      .modal__title 15.09.2023
+      .modal-gallery 
+        .modal-gallery__slider
+          .swiper-wrapper 
+            .modal-gallery__item.swiper-slide
+              .modal-gallery__photo 
+                img(src="images/gallery.png", alt="")
+            .modal-gallery__item.swiper-slide
+              .modal-gallery__photo 
+                img(src="images/gallery.png", alt="")
+            .modal-gallery__item.swiper-slide
+              .modal-gallery__photo 
+                img(src="images/gallery.png", alt="")
+        .modal-gallery__prev.slider-prev
+          +svgSprite(7, 14, 'arrow-right')
+        .modal-gallery__next.slider-next 
+          +svgSprite(7, 14, 'arrow-right')
+      .modal-gallery__text Он доволен!)

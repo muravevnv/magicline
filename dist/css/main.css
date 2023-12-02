@@ -912,8 +912,8 @@ table .t-button {
   color: var(--black);
 }
 .table-row:active {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(38, 215, 144, 0.3)), to(rgba(38, 215, 144, 0)));
-  background: linear-gradient(90deg, rgba(38, 215, 144, 0.3) 0%, rgba(38, 215, 144, 0) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(38, 215, 144, 0.18)), to(rgba(38, 215, 144, 0)));
+  background: linear-gradient(90deg, rgba(38, 215, 144, 0.18) 0%, rgba(38, 215, 144, 0) 100%);
 }
 .table-row:active .table-cell {
   color: var(--white);
@@ -999,25 +999,32 @@ table .t-button {
 .table-section.is-open {
   background: var(--ffffff-10, rgba(255, 255, 255, 0.1));
 }
+.table-section.is-open .table-cell {
+  color: var(--white);
+}
 .table-section.is-open .show-more {
   background-color: var(--primary);
   color: var(--black);
 }
 
 .edit,
-.remove {
+.remove,
+.show {
   color: var(--white-text-darken);
   -webkit-transition: var(--transition);
   transition: var(--transition);
+  cursor: pointer;
 }
 .edit:hover,
-.remove:hover {
+.remove:hover,
+.show:hover {
   color: var(--primary);
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
 .edit:active,
-.remove:active {
+.remove:active,
+.show:active {
   color: var(--primary-active);
   -webkit-transition: var(--transition);
   transition: var(--transition);
@@ -1231,6 +1238,7 @@ table .t-button {
   width: 100%;
   height: 100vh;
   display: none;
+  z-index: 10;
 }
 .modal.is-open {
   display: block;
@@ -1274,6 +1282,10 @@ table .t-button {
   -webkit-box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.15);
 }
+.modal-content--xl {
+  max-width: 960px;
+  width: 100%;
+}
 .modal-form {
   width: 100%;
   display: -webkit-box;
@@ -1292,6 +1304,9 @@ table .t-button {
 }
 .modal-form--top {
   margin-top: 37px;
+}
+.modal-form--comments .form-group {
+  margin-bottom: 0;
 }
 .modal-docs {
   margin-top: 30px;
@@ -1349,6 +1364,59 @@ table .t-button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-bottom: 32px;
+}
+.modal-mouthguards .mouthguards__item {
+  cursor: pointer;
+}
+
+.modal-gallery {
+  padding: 0 70px;
+  position: relative;
+}
+.modal-gallery__prev, .modal-gallery__next {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.modal-gallery__prev {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.modal-gallery__prev svg {
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+.modal-gallery__next {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.modal-gallery__text {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: var(--white-text);
+}
+.modal-gallery__slider {
+  overflow: hidden;
 }
 
 .doc {
@@ -1405,6 +1473,10 @@ table .t-button {
 .doc:hover .doc__size {
   color: var(--white-text);
 }
+.doc:active {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(38, 215, 144, 0.18)), to(rgba(38, 215, 144, 0)));
+  background: linear-gradient(90deg, rgba(38, 215, 144, 0.18) 0%, rgba(38, 215, 144, 0) 100%);
+}
 
 .photos {
   display: -webkit-box;
@@ -1423,6 +1495,13 @@ table .t-button {
   border-radius: 6px;
   overflow: hidden;
   border: 1px solid var(--border);
+  position: relative;
+}
+.photos__item:hover .photos__item-action {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
 }
 .photos__item img {
   width: 100%;
@@ -1431,6 +1510,35 @@ table .t-button {
   object-fit: contain;
   -o-object-position: center;
   object-position: center;
+}
+.photos__item-action {
+  position: absolute;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 10px;
+  opacity: 0;
+  pointer-events: none;
+}
+.photos__item-show {
+  color: var(--white-text-darken);
+}
+.photos__item-remove {
+  color: var(--white-text-darken);
 }
 
 .mouthguards {
@@ -1551,10 +1659,46 @@ table .t-button {
 
 .progress-item__img {
   margin-bottom: 8px;
+  position: relative;
 }
 .progress-item__img img {
   width: 100%;
   display: block;
+}
+.progress-item__img:hover .progress-item__action {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.progress-item__action {
+  position: absolute;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 10px;
+  opacity: 0;
+  pointer-events: none;
+}
+.progress-item__show {
+  color: var(--white-text-darken);
+}
+.progress-item__remove {
+  color: var(--white-text-darken);
 }
 .progress-item__date {
   font-size: 18px;
@@ -2004,6 +2148,15 @@ label.section__btn input {
   .nav-bottom {
     padding: 30px 20px;
   }
+  .modal-gallery {
+    padding: 40px;
+  }
+  .modal-gallery__prev {
+    left: -14px;
+  }
+  .modal-gallery__next {
+    right: -15px;
+  }
   .error {
     height: calc(100vh - 185px);
     padding-bottom: 40px;
@@ -2080,6 +2233,9 @@ label.section__btn input {
   .modal__title {
     font-size: 18px;
     margin-bottom: 32px;
+  }
+  .modal-gallery {
+    padding: 0 40px;
   }
   .progress {
     grid-template-columns: repeat(3, 1fr);

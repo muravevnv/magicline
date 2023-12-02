@@ -130,7 +130,7 @@ table {
     }
 
     &:active {
-      background: linear-gradient(90deg, rgba(38, 215, 144, 0.30) 0%, rgba(38, 215, 144, 0.00) 100%);
+      background: linear-gradient(90deg, rgba(38, 215, 144, 0.18) 0%, rgba(38, 215, 144, 0.00) 100%);
 
       .table-cell {
         color: var(--white);
@@ -249,6 +249,9 @@ table {
 
   &.is-open {
     background: var(--ffffff-10, rgba(255, 255, 255, 0.10));
+    .table-cell {
+      color: var(--white);
+    }
 
     .show-more {
       background-color: var(--primary);
@@ -260,9 +263,11 @@ table {
 
 
 .edit,
-.remove {
+.remove,
+.show {
   color: var(--white-text-darken);
   transition: var(--transition);
+  cursor: pointer;
 
   &:hover {
     color: var(--primary);

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/choices.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/swiper.css">
     <link href="css/main.css" rel="stylesheet">
     <title>Главная</title>
   </head>
@@ -12,121 +13,36 @@
     <header class="header">
       <div class="header-burger"> <span></span><span></span><span></span></div>
     </header>
-        <div class="top">
-          <div class="container">
-            <ul class="breadcrumbs"> 
-              <li class="breadcrumbs-item"> <a href="#"> 
-                      <svg width="24" height="20">
-                        <use xlink:href="images/sprite.svg#house"></use>
-                      </svg></a></li>
-              <li class="breadcrumbs-item">
-                    <svg width="10" height="10">
-                      <use xlink:href="images/sprite.svg#bc-arrow"></use>
-                    </svg><a href="">Долги</a>
-              </li>
-            </ul>
-            <div class="theme-choices"> 
-              <div class="theme-choices__thumb"> 
-                    <svg width="18" height="18">
-                      <use xlink:href="images/sprite.svg#night"></use>
-                    </svg>
-              </div>
-            </div>
-            <div class="logout">
-                  <svg width="20" height="20">
-                    <use xlink:href="images/sprite.svg#logout"></use>
-                  </svg>
-            </div>
-          </div>
-        </div>
     <div class="nav"> 
       <div class="nav-main"> <a class="nav__logo" href="#"><img src="images/logo.svg" alt=""></a>
-        <div class="nav-list"> <a class="nav-item" href="payments.html">
+        <div class="nav-list"> <a class="nav-item" href="orders.html">
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#chat"></use>
+                </svg><span class="nav-link">Заявки</span></a><a class="nav-item is-active" href="print.html"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#play"></use>
+                </svg><span class="nav-link">Очередь на печать</span></a><a class="nav-item" href="patients.html"> 
                 <svg width="30" height="30">
                   <use xlink:href="images/sprite.svg#clients"></use>
-                </svg><span class="nav-link">Оплаты</span></a><a class="nav-item is-active" href="payments.html"> 
+                </svg><span class="nav-link">Пациенты</span></a><a class="nav-item" href="payments.html"> 
+                <svg width="30" height="30">
+                  <use xlink:href="images/sprite.svg#payments"></use>
+                </svg><span class="nav-link">Оплаты</span></a><a class="nav-item" href="depts.html"> 
                 <svg width="30" height="30">
                   <use xlink:href="images/sprite.svg#debts"></use>
                 </svg><span class="nav-link">Долги</span></a></div>
       </div>
       <div class="nav-user"> 
         <div class="nav-user__name">Циванюк Ольга</div>
-        <div class="nav-user__post">Бухгалтер</div>
+        <div class="nav-user__post">Заведующий</div>
       </div>
       <div class="nav-bottom">«Настоящее украшение  — это здоровая и красивая улыбка»</div>
     </div>
     <main class="main">
-      <div class="content" data-role="tab">
-        <div class="container"> 
-          <h1 class="title">Долги</h1>
-          <div class="tabs"> <a class="tabs-item is-active" href="depts.html" data-tab="clinics">Группировка по клиникам</a><a class="tabs-item" href="depts-all.html" data-tab="all">Показать все<span>186</span></a></div>
-          <div class="row"> 
-            <div class="dept-price">
-              <div class="dept-price__title">Долг</div>
-              <div class="dept-price__num">1 000 000 ₽<span>8 000 000 ₽</span></div>
-            </div>
-            <div class="btn btn--icon btn--big js-open-modal" data-modal="add-payment"><span>Внести оплату</span>
-                  <svg width="30" height="30">
-                    <use xlink:href="images/sprite.svg#plus-big"></use>
-                  </svg>
-            </div>
-          </div>
-          <div class="card"> 
-            <div class="card-body"> 
-              <div class="table-responsive">
-                <div class="table table-dept">
-                  <div class="table-head"> 
-                    <div class="table-cell">Клиника</div>
-                    <div class="table-cell table-cell--center">Долг</div>
-                    <div class="table-cell table-cell--right">Общая сумма</div>
-                    <div class="table-cell"></div>
-                  </div><a class="table-row" href="depts-clinics.html"> 
-                    <div class="table-celll table-cell--light">Доктор Дент</div>
-                    <div class="table-cell table-cell--right">125 000 ₽</div>
-                    <div class="table-cell table-cell--right">1 000 000 ₽</div>
-                    <div class="table-cell">
-                      <div class="show-more">
-                            <svg width="7" height="14">
-                              <use xlink:href="images/sprite.svg#arrow-right"></use>
-                            </svg>
-                      </div>
-                    </div></a><a class="table-row" href="depts-clinics.html"> 
-                    <div class="table-celll table-cell--light">TeethClinic</div>
-                    <div class="table-cell table-cell--right">125 000 ₽</div>
-                    <div class="table-cell table-cell--right">1 000 000 ₽</div>
-                    <div class="table-cell">
-                      <div class="show-more">
-                            <svg width="7" height="14">
-                              <use xlink:href="images/sprite.svg#arrow-right"></use>
-                            </svg>
-                      </div>
-                    </div></a><a class="table-row" href="depts-clinics.html"> 
-                    <div class="table-cell table-cell--light">SmileClinic</div>
-                    <div class="table-cell table-cell--right">125 000 ₽</div>
-                    <div class="table-cell table-cell--right">1 000 000 ₽</div>
-                    <div class="table-cell">
-                      <div class="show-more">
-                            <svg width="7" height="14">
-                              <use xlink:href="images/sprite.svg#arrow-right"></use>
-                            </svg>
-                      </div>
-                    </div></a><a class="table-row" href="depts-clinics.html"> 
-                    <div class="table-celll table-cell--light">Томсон</div>
-                    <div class="table-cell table-cell--right">125 000 ₽</div>
-                    <div class="table-cell table-cell--right">1 000 000 ₽</div>
-                    <div class="table-cell">
-                      <div class="show-more">
-                            <svg width="7" height="14">
-                              <use xlink:href="images/sprite.svg#arrow-right"></use>
-                            </svg>
-                      </div>
-                    </div></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="content" data-role="tab"></div>
+      <div class="btn btn--big js-open-modal" data-modal="print-changed">Заявка успешно изменена</div><br><br>
+      <div class="btn btn--big js-open-modal" data-modal="print-deleted">Заявка успешно удалена</div><br><br>
+      <div class="btn btn--big js-open-modal" data-modal="gallery">Модалка с фото</div>
     </main>
     <div class="modal" data-modal="auth">
       <div class="modal-overlay"> </div>

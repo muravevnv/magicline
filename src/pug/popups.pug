@@ -1,0 +1,49 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href="css/choices.css" rel="stylesheet")
+    link(rel="stylesheet", href="css/swiper.css")
+    link(href="css/main.css" rel="stylesheet")
+    title Главная
+  body
+    include mixins/_mixins
+    include components/header
+    .nav 
+      .nav-main 
+        a.nav__logo(href="#")
+          img(src="images/logo.svg", alt="")
+        .nav-list 
+          a(href="orders.html").nav-item
+            +svgSprite(30, 30, 'chat')
+            span.nav-link Заявки
+          a(href="print.html").nav-item.is-active 
+            +svgSprite(30, 30, 'play')
+            span.nav-link Очередь на печать
+          a(href="patients.html").nav-item 
+            +svgSprite(30, 30, 'clients')
+            span.nav-link Пациенты
+          a(href="payments.html").nav-item 
+            +svgSprite(30, 30, 'payments')
+            span.nav-link Оплаты
+          a(href="depts.html").nav-item 
+            +svgSprite(30, 30, 'debts')
+            span.nav-link Долги
+      .nav-user 
+        .nav-user__name Циванюк Ольга
+        .nav-user__post Заведующий
+      .nav-bottom «Настоящее украшение  — это здоровая и красивая улыбка»
+    main.main
+      .content(data-role="tab")
+      .btn.btn--big.js-open-modal(data-modal="print-changed") Заявка успешно изменена
+      br
+      br
+      .btn.btn--big.js-open-modal(data-modal="print-deleted") Заявка успешно удалена
+      br
+      br
+      .btn.btn--big.js-open-modal(data-modal="gallery") Модалка с фото
+    include components/footer
+    include components/modal
+    include includes/scripts
