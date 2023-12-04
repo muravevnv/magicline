@@ -10,7 +10,30 @@ html(lang="en")
     include mixins/_mixins
     include components/header
     +topPanel(['Пациенты'])
-    include components/navigation
+    .nav 
+      .nav-main 
+        a.nav__logo(href="#")
+          img(src="images/logo.svg", alt="")
+        ul.nav-list 
+          a(href="orders.html").nav-item
+            +svgSprite(30, 30, 'chat')
+            span.nav-link Заявки
+          a(href="print.html").nav-item 
+            +svgSprite(30, 30, 'play')
+            span.nav-link Очередь на печать
+          a(href="patients.html").nav-item.is-active 
+            +svgSprite(30, 30, 'clients')
+            span.nav-link Пациенты
+          a(href="payments.html").nav-item 
+            +svgSprite(30, 30, 'payments')
+            span.nav-link Оплаты
+          a(href="depts.html").nav-item 
+            +svgSprite(30, 30, 'debts')
+            span.nav-link Долги
+      .nav-user 
+        .nav-user__name Циванюк Ольга
+        .nav-user__post Заведующий
+      .nav-bottom «Настоящее украшение  — это здоровая и красивая улыбка»
     main.main
       .content
         .container 

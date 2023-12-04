@@ -5,7 +5,11 @@
   background-color: var(--white-bg);
   border-radius: 30px;
   gap: 5px;
+  overflow-x: auto;
 
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
 
   &-item {

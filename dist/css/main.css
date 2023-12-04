@@ -712,6 +712,10 @@ h2 {
   background-color: var(--white-bg);
   border-radius: 30px;
   gap: 5px;
+  overflow-x: auto;
+}
+.breadcrumbs::-webkit-scrollbar {
+  display: none;
 }
 .breadcrumbs-item {
   display: -webkit-box;
@@ -763,7 +767,6 @@ h2 {
   border: 1px solid rgba(38, 215, 144, 0.2);
   background: var(--ffffff-5, rgba(255, 255, 255, 0.05));
   margin: 40px 0;
-  overflow: hidden;
 }
 .card.is-new .card-title span {
   background-color: var(--primary);
@@ -874,10 +877,6 @@ table .t-button {
 }
 .table-responsive {
   width: 100%;
-  overflow-x: auto;
-}
-.table-responsive::-webkit-scrollbar {
-  display: none;
 }
 .table-head {
   display: grid;
@@ -990,6 +989,9 @@ table .t-button {
   grid-template-columns: 1fr 130px 73px;
 }
 
+.table-patient-single {
+  min-width: initial;
+}
 .table-patient-single .table-head,
 .table-patient-single .table-row {
   width: 100%;
@@ -2177,7 +2179,16 @@ label.section__btn input {
     font-size: 21px;
   }
   .card {
+    overflow: hidden;
+  }
+  .card {
     margin: 30px 0;
+  }
+  .table-responsive {
+    overflow-x: auto;
+  }
+  .table-responsive::-webkit-scrollbar {
+    display: none;
   }
   .table-cell__action {
     opacity: 1;

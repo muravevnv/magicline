@@ -10,7 +10,7 @@ html(lang="en")
   body
     include mixins/_mixins
     include components/header
-    +topPanel(['Оплаты'])
+    +topPanel(['Оплаты','Жданов Остап Арсеньевич'])
     .nav 
       .nav-main 
         a.nav__logo(href="#")
@@ -37,7 +37,9 @@ html(lang="en")
                 span 100 000 ₽
               .dept-price__edit.js-open-modal(data-modal="edit-summ") 
                 +svgSprite(30, 30, 'edit')
-            .btn.btn--big.btn--primary.js-open-modal(data-modal="add-payment") Внести оплату
+            .btn.btn--big.btn--primary.btn--icon.js-open-modal(data-modal="add-payment") 
+              span Внести оплату
+              +svgSprite(30, 30, 'plus-big')
           .card 
             .card-body 
               .table-responsive

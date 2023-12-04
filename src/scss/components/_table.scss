@@ -88,10 +88,14 @@ table {
 
   &-responsive {
     width: 100%;
-    overflow-x: auto;
+    
 
-    &::-webkit-scrollbar {
-      display: none;
+    @include media(md) {
+      overflow-x: auto;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
   }
 
@@ -238,6 +242,8 @@ table {
 }
 
 .table-patient-single {
+  min-width: initial;
+
   .table-head,
   .table-row {
     width: 100%;
