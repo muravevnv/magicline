@@ -875,6 +875,15 @@ table .t-button {
   min-width: 890px;
   width: 100%;
 }
+
+.table > *:first-child {
+  border-radius: 20px 20px 0 0;
+}
+
+.table > *:last-child {
+  border-radius: 0 0 20px 20px ;
+}
+
 .table-responsive {
   width: 100%;
 }
@@ -966,6 +975,14 @@ table .t-button {
 .table-print .show-more svg {
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
+}
+
+.table-print > *:last-child .table-row {
+  border-radius: 0 0 20px 20px;
+}
+
+.table-print > *:last-child.is-open .table-row {
+  border-radius: 0;
 }
 
 .table-payment .table-head,
